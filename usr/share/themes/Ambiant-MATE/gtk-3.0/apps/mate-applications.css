@@ -169,3 +169,13 @@ WnckPager:hover {
     -PanelMenuBar-icon-visible: true;
 }
 
+/*****************
+ * Mate-terminal *
+ *****************/
+
+TerminalWindow.mate-terminal TerminalScreen {
+    -TerminalScreen-background-darkness: 0.95;
+    background-color: @dark_bg_color;
+    color: @dark_fg_color;
+}
+
