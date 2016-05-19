@@ -1,0 +1,20 @@
+/**************
+ * Mate-Panel *
+ **************/
+
+/* override gnome-panel settings */
+MatePanelApplet > #clock-applet-button > ClockBox,
+MatePanelApplet > #clock-applet-button > ClockBox > ClockBox {
+    text-shadow: none;
+}
+
+MatePanelApplet > #clock-applet-button {
+    text-shadow: 0 -1px shade (@dark_bg_color, 0.6);
+    color: @dark_fg_color;
+}
+
+MatePanelApplet > #clock-applet-button:hover,
+MatePanelApplet > #clock-applet-button:checked {
+    color: @fg_color;
+}
+
