@@ -1940,16 +1940,20 @@ GtkTextView {
 /***********
  * tooltip *
  ***********/
-.tooltip {
-    background-image: -gtk-gradient (radial, center 0, 0, center 0, 0.8,
-                                     from (alpha (mix (@tooltip_bg_color, #ffffff, 0.2), 0.86)),
-                                     to (alpha (@tooltip_bg_color, 0.86)));
+.tooltip,
+.tooltip.background {
+    background-image: none;
     border-color: alpha (#ffffff, 0.2);
-    border-radius: 5px;
+    border-radius: 0px;
     border-style: solid;
-    border-width: 1px;
-
+    border-width: 2px;
+    background-color: @tooltip_bg_color;
     color: @tooltip_fg_color;
+    text-shadow: none;
+}
+
+.tooltip * {
+    background-color: transparent;
 }
 
 /************
