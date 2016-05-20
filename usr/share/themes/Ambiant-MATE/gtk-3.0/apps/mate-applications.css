@@ -70,26 +70,10 @@ PanelMenuBar.menubar .menuitem {
     text-shadow: 0 -1px shade (@dark_bg_color, 0.6);
 }
 
-/* set normal menubar menuitem */
-PanelMenuBar.menubar .menu .menuitem {
-    transition: all 300ms ease-out;
-}
-
-/* set single menubar menuitem */
-PanelMenuButton .menu .menuitem {
-    transition: all 300ms ease-out;
-}
-
-/* set WnckSelector menuitem */
-WnckSelector.menubar .menu .menuitem {
-    transition: all 300ms ease-out;
-}
-
 /* desktop-applet, clockapplet, drivemount, character-map,
 dictionary */
 MatePanelApplet .button,
 MatePanelApplet .button.flat {
-    transition: all 400ms ease-out;
     background-image: none;
     background-color: transparent;
     /* normal panel */
