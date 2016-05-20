@@ -1720,6 +1720,10 @@ GtkTextView {
     color: @dark_fg_color;
     text-shadow: 0 -1px shade (@dark_bg_color, 0.7);
     border-image-source: url("assets/button-toolbar.png");
+    padding: 3px;
+}
+
+.header-bar .button {
     padding: 9px;
 }
 
