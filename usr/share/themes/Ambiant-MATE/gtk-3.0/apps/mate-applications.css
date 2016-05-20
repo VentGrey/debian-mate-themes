@@ -143,6 +143,26 @@ PanelMenuBar.menubar .menuitem {
     text-shadow: 0 -1px shade (@dark_bg_color, 0.6);
 }
 
+/* set normal menubar menu menuitem */
+PanelMenuBar.menubar > .menuitem > .popup.csd > .menu > .menuitem {
+    -GtkMenuItem-horizontal-padding: 0;
+    padding: 0px 5px 0px 5px;
+    border-width: 0px;
+}
+
+/* set Mate menu menuitem */
+PanelMenuButton.button .menu .menuitem {
+    -GtkMenuItem-horizontal-padding: 0;
+    padding: 0px 5px 0px 5px;
+    border-width: 0px;
+}
+
+PanelMenuButton.button .menu .menuitem.separator,
+PanelMenuBar.menubar > .menuitem > .popup.csd > .menu > .menuitem.separator {
+    -GtkMenuItem-horizontal-padding: 0;
+    border-width: 0px;
+}
+
 /* desktop-applet, clockapplet, drivemount, character-map,
 dictionary */
 MatePanelApplet .button,
