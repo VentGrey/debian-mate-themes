@@ -215,7 +215,7 @@ WnckPager:hover {
 TerminalWindow.mate-terminal TerminalScreen,
 TerminalWindow.mate-terminal .entry {
     -TerminalScreen-background-darkness: 0.95;
-    background-color: @dark_bg_color;
+    background-color: #373633;
     color: @dark_fg_color;
 }
 
