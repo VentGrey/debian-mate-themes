@@ -777,6 +777,5 @@ widget_class "*MozContainer*"		style "performance-fix" # Firefox (Not sure if th
 #include "apps/banshee.rc"
 include "apps/chromium.rc"
 include "apps/ff.rc"
-include "apps/libreoffice.rc"
 include "apps/caja.rc"
 include "apps/mate-panel.rc"
