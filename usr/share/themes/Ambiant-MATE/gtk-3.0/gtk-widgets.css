@@ -2144,6 +2144,7 @@ GtkTextView {
  * primary-toolbar *
  *******************/
 .primary-toolbar,
+.primary-toolbar .toolbar,
 .header-bar,
 .maximized .titlebar.header-bar.toolbar-mode:not(:backdrop) {
     -GtkWidget-window-dragging: true;
@@ -2168,6 +2169,7 @@ GtkTextView {
 }
 
 .primary-toolbar:backdrop,
+.primary-toolbar .toolbar:backdrop,
 .header-bar:backdrop {
     background-image: none;
     background-color: @dark_bg_color;
@@ -2179,6 +2181,7 @@ GtkTextView {
 }
 
 .primary-toolbar :insensitive,
+.primary-toolbar .toolbar :insensitive,
 .header-bar :insensitive {
     text-shadow: 0 -1px shade (@dark_bg_color, 0.7);
 }
