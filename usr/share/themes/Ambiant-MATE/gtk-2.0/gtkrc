@@ -377,7 +377,7 @@ style "menu" = "dark" {
 
 style "menu_item" = "menu" {
 	xthickness = 2
-	ythickness = 7
+	ythickness = 3
 
 	fg[PRELIGHT] = @selected_fg_color
 
