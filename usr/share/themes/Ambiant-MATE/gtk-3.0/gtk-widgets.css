@@ -718,6 +718,9 @@ GtkIconView.cell {
 /********
  * menu *
  ********/
+
+.toolbar .menu,
+GtkComboBox .menu,
 GtkTreeMenu.menu,
 .toolbar .header-bar .menu,
 GtkMenuToolButton.menu,
@@ -742,24 +745,6 @@ GtkMenuToolButton.menu,
                 inset 1px 0 shade (@dark_bg_color, 1.18);
 
     margin: 1px;
-}
-
-.toolbar .menu,
-GtkComboBox .menu {
-    background-image: none;
-    background-color: @bg_color;
-    border-bottom-color: shade (@bg_color, 0.66);
-    border-left-color: shade (@bg_color, 0.7);
-    border-right-color: shade (@bg_color, 0.7);
-    border-top-color: shade (@bg_color, 0.8);
-    border-style: solid;
-    padding: 0;
-
-    color: @fg_color;
-
-    box-shadow: inset -1px 0 shade (@bg_color, 1.18),
-                inset 1px 0 shade (@bg_color, 1.18),
-                inset 0 1px shade (@bg_color, 1.18);
 }
 
 .menu:selected {
@@ -840,15 +825,6 @@ GtkComboBox .menu {
     color: @dark_fg_color;
 }
 
-/* Workaround for lp:949368 */
-GtkComboBox .menuitem * {
-    color: @fg_color;
-}
-
-GtkComboBox .menuitem *:hover {
-    color: @selected_fg_color;
-}
-
 .popover .menuitem:checked:hover,
 .menuitem:hover,
 .menu .menuitem:hover {
@@ -879,6 +855,10 @@ GtkComboBox .menuitem *:hover {
     box-shadow: none;
 }
 
+.toolbar .menu .menuitem:insensitive,
+.toolbar .menu .menuitem *:insensitive,
+GtkComboBox .menu .menuitem:insensitive,
+GtkComboBox .menu .menuitem *:insensitive,
 GtkTreeMenu.menu .menuitem:insensitive,
 GtkTreeMenu.menu .menuitem *:insensitive,
 .toolbar .header-bar .menu .menuitem:insensitive,
@@ -893,14 +873,6 @@ GtkMenuToolButton.menu .menuitem *:insensitive,
 .menuitem *:insensitive {
     color: mix (@dark_fg_color, @dark_bg_color, 0.5);
     text-shadow: 0 -1px shade (@dark_bg_color, 0.6);
-}
-
-.toolbar .menu .menuitem:insensitive,
-.toolbar .menu .menuitem *:insensitive,
-GtkComboBox .menu .menuitem:insensitive,
-GtkComboBox .menu .menuitem *:insensitive {
-    color: mix (@fg_color, @bg_color, 0.5);
-    text-shadow: 0 1px shade (@bg_color, 1.14);
 }
 
 .menuitem GtkCalendar,
