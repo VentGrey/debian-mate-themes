@@ -1333,16 +1333,42 @@ GtkProgressBar {
 .menubar .menuitem .scale.highlight.left,
 .scale.highlight.left,
 .progressbar,
+.toolbar .progressbar,
+.entry.progressbar,
 .progressbar row,
 .progressbar row:hover,
 .progressbar row:selected,
 .progressbar row:selected:focused,
 .progressbar row:nth-child(odd) {
     border-radius: 8px;
-    border-width: 0px;
-    background-image: none;
-    background-color: #8FAF53;
+    border-width: 1px;
     border-style: solid;
+    background-image: linear-gradient(to bottom,
+                                      @progressbar_fill_a,
+                                      @progressbar_fill_b);
+    border-top-color:    shade(@button_border_active, 0.80);
+    border-left-color:   shade(@button_border_active, 0.85);
+    border-right-color:  shade(@button_border_active, 0.85);
+    border-bottom-color: shade(@button_border_active, 0.80);
+/* Label font color of progressbar*/
+    color: @theme_fg_color;
+    text-shadow: none;
+}
+
+.progressbar.vertical {
+    border-radius: 8px;
+    border-width: 1px;
+    border-style: solid;
+    background-image: linear-gradient(to right,
+                                      @progressbar_fill_a,
+                                      @progressbar_fill_b);
+    border-top-color:    shade(@button_border_active, 0.80);
+    border-left-color:   shade(@button_border_active, 0.85);
+    border-right-color:  shade(@button_border_active, 0.85);
+    border-bottom-color: shade(@button_border_active, 0.80);
+/* Label font color of progressbar*/
+    color: @theme_fg_color;
+    text-shadow: none;
 }
 
 .progressbar:backdrop,
@@ -1351,11 +1377,36 @@ GtkProgressBar {
 .progressbar row:selected:backdrop,
 .progressbar row:selected:focused:backdrop,
 .scale.highlight.bottom:backdrop,
+.progressbar:backdrop {
+    border-radius: 8px;
+    border-width: 1px;
+    border-style: solid;
+    background-image: linear-gradient(to bottom,
+                                      @progressbar_backdrop_fill_a,
+                                      @progressbar_backdrop_fill_b);
+    border-top-color:    shade(@button_border_backdrop_active, 0.80);
+    border-left-color:   shade(@button_border_backdrop_active, 0.85);
+    border-right-color:  shade(@button_border_backdrop_active, 0.85);
+    border-bottom-color: shade(@button_border_backdrop_active, 0.80);
+/* Label font color of progressbar*/
+    color: @backdrop_fg_color;
+    text-shadow: none;
+}
+
 .progressbar.vertical:backdrop {
     border-radius: 8px;
-    border-width: 0px;
-    background-image: none;
-    background-color: @backdrop_filling_bg;
+    border-width: 1px;
+    border-style: solid;
+    background-image: linear-gradient(to right,
+                                      @progressbar_backdrop_fill_a,
+                                      @progressbar_backdrop_fill_b);
+    border-top-color:    shade(@button_border_backdrop_active, 0.80);
+    border-left-color:   shade(@button_border_backdrop_active, 0.85);
+    border-right-color:  shade(@button_border_backdrop_active, 0.85);
+    border-bottom-color: shade(@button_border_backdrop_active, 0.80);
+/* Label font color of progressbar*/
+    color: @backdrop_fg_color;
+    text-shadow: none;
 }
 
 .scale.highlight.left:insensitive {
