@@ -122,10 +122,6 @@
 
 .button:hover:focus {
     border-image-source: url("assets/button-focused-hover.png");
-    box-shadow: inset  0px  1px shade (@theme_selected_bg_color, 1.3),
-                inset  1px  0px shade (@theme_selected_bg_color, 1.3),
-                inset -1px  0px shade (@theme_selected_bg_color, 1.3),
-                inset  0px -1px shade (@theme_selected_bg_color, 1.3);
 }
 
 .button:insensitive {
@@ -196,6 +192,14 @@
 .button.default:focus {
     border-color: @focus_color_dialog;
     border-style: solid;
+}
+
+.button.default:hover:focus {
+    border-image-source: url("assets/button-focused-hover.png");
+    box-shadow: inset  0px  1px shade (@theme_selected_bg_color, 1.3),
+                inset  1px  0px shade (@theme_selected_bg_color, 1.3),
+                inset -1px  0px shade (@theme_selected_bg_color, 1.3),
+                inset  0px -1px shade (@theme_selected_bg_color, 1.3);
 }
 
 /******************
