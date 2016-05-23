@@ -790,6 +790,7 @@ GtkMenuToolButton.menu,
 /***************
  * menubaritem *
  ***************/
+
 .menubar.menuitem:hover,
 .menubar .menuitem:hover {
     background-color: transparent;
@@ -804,14 +805,20 @@ GtkMenuToolButton.menu,
     text-shadow: 0 -1px shade (@dark_bg_color, 0.7);
 }
 
+.menubar > .menuitem {
+    padding: 3px 5px 3px 5px;
+}
+
 /************
  * menuitem *
  ************/
-.menuitem {
+
+.menuitem,
+.menu > .menuitem {
     -GtkMenuItem-horizontal-padding: 0;
     background: transparent;
     border-radius: 0;
-    padding: 3px 5px 3px 5px;
+    padding: 6px 2px;
     text-shadow: none;
 }
 
@@ -820,7 +827,7 @@ GtkMenuToolButton.menu,
     background-image: none;
     background-color: shade (@dark_bg_color, 1.08);
     border-radius: 0;
-    padding: 3px 5px 3px 5px;
+    padding: 6px 2px;
     text-shadow: none;
     color: @dark_fg_color;
 }
