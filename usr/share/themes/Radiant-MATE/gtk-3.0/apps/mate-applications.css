@@ -1,3 +1,28 @@
+/********
+ * Caja *
+ ********/
+
+/* notebook */
+.caja-notebook .header {
+    border-width: 1px 1px 0px 1px;
+    border-radius: 3px 3px 0px 0px;
+}
+
+.caja-notebook tab.top {
+    padding: 6px 4px 6px 6px;
+    border-width: 1px 1px 0px 1px;
+}
+
+#caja-tab-close-button {
+    border-image: none;
+    background-image: none;
+    background-color: transparent;
+    border-style: none;
+    border-width: 0px;
+    icon-shadow: none;
+    padding: 0px;
+}
+
 /**************
  * Mate-Panel *
  **************/
@@ -56,5 +81,29 @@ TerminalWindow.mate-terminal .entry {
     -TerminalScreen-background-darkness: 0.95;
     background-color: #373633;
     color: @dark_fg_color;
+}
+
+/*********
+ * Pluma *
+ *********/
+
+.pluma-window .notebook .header {
+    border-width: 1px 1px 0px 1px;
+    border-radius: 0px;
+}
+
+.pluma-window .notebook tab.top {
+    padding: 5px 3px 5px 6px;
+    border-width: 1px 1px 0px 1px;
+}
+#caja-tab-close-button,
+PlumaCloseButton.button.flat {
+    border-image: none;
+    background-image: none;
+    background-color: transparent;
+    border-style: none;
+    border-width: 0px;
+    icon-shadow: none;
+    padding: 0px;
 }
 
