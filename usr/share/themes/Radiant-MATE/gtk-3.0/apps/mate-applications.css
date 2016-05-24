@@ -2,6 +2,40 @@
  * Mate-Panel *
  **************/
 
+/* volume applet */
+.mate-panel-applet-slider {
+    background: transparent;
+}
+
+.mate-panel-applet-slider .frame {
+    background-color: @theme_bg_color;
+    border-image: none;
+    border-style: none;
+    border-radius:3px;
+    padding: 1px;
+    margin: 0px;
+    box-shadow: inset  0px  1px shade (@theme_bg_color, 0.8),
+                inset  1px  0px shade (@theme_bg_color, 0.8),
+                inset -1px  0px shade (@theme_bg_color, 0.8),
+                inset  0px -1px shade (@theme_bg_color, 0.8);
+}
+
+.mate-panel-applet-slider .frame .frame{
+    background-color:transparent;
+    box-shadow: none;
+}
+
+/* brightness applet */
+.mate-panel-applet-slider .frame .button {
+    padding: 4px 5px 4px 0px;
+    background-image: none;
+    background-color: transparent;
+    border-style: none;
+    border-image: none;
+    color: @theme_fg_color;
+    margin: 0px 0px 0px -4px;
+}
+
 CalendarWindow#MatePanelPopupWindow {
 	border-radius: 3px;
 }
