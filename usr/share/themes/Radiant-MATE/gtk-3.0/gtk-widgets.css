@@ -2112,6 +2112,44 @@ GtkViewport.frame {
     background: none;
 }
 
+/**************
+ * Calendar   *
+ **************/
+
+GtkCalendar {
+	padding: 1px;
+}
+
+GtkCalendar.view {
+	border-radius: 3px;
+	border-style: solid;
+	border-width: 1px;
+    border-color: shade (@bg_color, 0.82);
+	padding: 0px;
+}
+
+GtkCalendar.header {
+	border-radius: 3px 3px 0px 0px;
+	background-image: linear-gradient(to bottom,
+		shade(@theme_bg_color, 1.04),
+		shade(@theme_bg_color, 0.89));
+	border-width: 0px;
+}
+
+GtkCalendar.button,
+GtkCalendar.button:insensitive {
+	background-image: none;
+	background-color: transparent;
+}
+
+GtkCalendar.highlight {
+	background-color: @theme_selected_bg_color;
+	color: @theme_selected_fg_color;
+	border-radius: 0px;
+	padding: 0px;
+	border-width: 0px;
+}
+
 /*****************************************************************************
  * states [please keep this section at the end of the file (CSS precedence)] *
  *****************************************************************************/
