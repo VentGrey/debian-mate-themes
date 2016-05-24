@@ -209,20 +209,21 @@ GtkAssistant .sidebar {
     border-image-source: url("assets/backdrop-button-active-disabled.png");
 }
 
-.button.default {
-    border-image-source: url("assets/button-default.png");
-}
-
-.button.default:hover {
-    border-image-source: url("assets/button-default-hover.png");
-}
-
 .button.default:focus {
-    border-image-source: url("assets/button-default-focused.png");
+    border-color: @focus_color_dialog;
+    border-style: solid;
+    box-shadow: inset  0px  1px shade (@theme_selected_bg_color, 1.0),
+                inset  1px  0px shade (@theme_selected_bg_color, 1.0),
+                inset -1px  0px shade (@theme_selected_bg_color, 1.0),
+                inset  0px -1px shade (@theme_selected_bg_color, 1.0);
 }
 
-.button.default:focus:hover {
-    border-image-source: url("assets/button-default-focused-hover.png");
+.button.default:hover:focus {
+    border-image-source: url("assets/button-focused-hover.png");
+    box-shadow: inset  0px  1px shade (@theme_selected_bg_color, 1.3),
+                inset  1px  0px shade (@theme_selected_bg_color, 1.3),
+                inset -1px  0px shade (@theme_selected_bg_color, 1.3),
+                inset  0px -1px shade (@theme_selected_bg_color, 1.3);
 }
 
 .button GtkLabel {
