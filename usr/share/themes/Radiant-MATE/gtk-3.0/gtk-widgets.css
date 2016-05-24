@@ -225,6 +225,10 @@ GtkAssistant .sidebar {
     border-image-source: url("assets/button-default-focused-hover.png");
 }
 
+.button GtkLabel {
+    padding: 0px 0px 0px 4px;
+}
+
 /******************
  * Linked Widgets *
  *****************/
