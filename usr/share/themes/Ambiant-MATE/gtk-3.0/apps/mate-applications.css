@@ -27,7 +27,7 @@
 }
 
 .caja-notebook tab.top {
-    padding: 5px 4px 5px 6px;
+    padding: 6px 4px 6px 6px;
     border-width: 1px 1px 0px 1px;
 }
 
@@ -306,7 +306,7 @@ TerminalWindow.mate-terminal .entry {
 }
 
 .pluma-window .notebook tab.top {
-    padding: 4px 3px 4px 6px;
+    padding: 5px 3px 5px 6px;
     border-width: 1px 1px 0px 1px;
 }
 #caja-tab-close-button,
