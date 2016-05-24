@@ -8,6 +8,26 @@
 @define-color tooltip_bg_color #000000;
 @define-color tooltip_fg_color #ffffff;
 
+@define-color theme_fg_color @fg_color;
+@define-color theme_bg_color @bg_color;
+@define-color theme_base_color @base_color;
+@define-color theme_selected_bg_color @selected_bg_color;
+@define-color theme_selected_fg_color @selected_fg_color;
+@define-color insensitive_bg_color @bg_color;
+@define-color insensitive_fg_color @fg_color;
+@define-color insensitive_base_color @base_color;
+@define-color theme_unfocused_fg_color @backdrop_fg_color;
+@define-color theme_unfocused_bg_color @bg_color;
+@define-color theme_unfocused_base_color @base_color;
+@define-color theme_unfocused_selected_bg_color @selected_bg_color;
+@define-color theme_unfocused_selected_fg_color @selected_fg_color;
+@define-color borders shade(@bg_color, 0.82);
+@define-color unfocused_borders transparent;
+
+@define-color warning_color @warning_fg_color;
+@define-color error_color @error_fg_color;
+@define-color success_color @success_color;
+
 /* misc colors used by gtk+
  *
  * Gtk doesn't currently expand color variables for style properties. Thus,
@@ -69,4 +89,4 @@
 @import url("apps/glade.css");
 @import url("apps/software-center.css");
 @import url("apps/calendar.css");
-@import url("public-colors.css");
+@import url("apps/mate-applications.css");
