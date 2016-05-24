@@ -47,3 +47,14 @@ CalendarWindow#MatePanelPopupWindow ClockMap {
     border-color: shade (@bg_color, 0.82);
 }
 
+/*****************
+ * Mate-terminal *
+ *****************/
+
+TerminalWindow.mate-terminal TerminalScreen,
+TerminalWindow.mate-terminal .entry {
+    -TerminalScreen-background-darkness: 0.95;
+    background-color: #373633;
+    color: @dark_fg_color;
+}
+
