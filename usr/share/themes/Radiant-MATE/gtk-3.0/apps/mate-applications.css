@@ -10,7 +10,7 @@
 .caja-navigation-window .caja-side-pane CajaHistorySidebar .view,
 .caja-navigation-window .caja-side-pane CajaInformationPanel,
 .caja-navigation-window .caja-side-pane CajaEmblemSidebar {
-    background-color: shade (@base_color, 1.00);
+    background-color: shade (@bg_color, 0.95);
 }
 
 .caja-navigation-window .caja-side-pane CajaInformationPanel > GtkBox,

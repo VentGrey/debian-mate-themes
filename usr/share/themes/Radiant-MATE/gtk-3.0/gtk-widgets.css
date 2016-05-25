@@ -1728,12 +1728,12 @@ GtkComboBox .menuitem.separator {
  ***********/
 
 .sidebar {
-    background-color: shade (@base_color, 1.00);
+    background-color: shade (@bg_color, 0.95);
 }
 
 
 GtkPlacesSidebar.sidebar .view {
-    background-color: shade (@base_color, 1.00);
+    background-color: shade (@bg_color, 0.95);
     color: @fg_color;
     text-shadow: 0 1px shade (shade (@bg_color, 0.95), 1.04);
 }
