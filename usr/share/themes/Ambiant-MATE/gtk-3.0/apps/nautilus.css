@@ -42,7 +42,7 @@
 
 /* Toolbar */
 
-/* Here we use the .button background-image colors from Adwaita, but ligthen them,
+/* Here we use the button background-image colors from Adwaita, but ligthen them,
  * since is not possible to use lighten () in common css. */
 @keyframes needs_attention_keyframes {
     0% {background-image: linear-gradient(to bottom, #fafafa, #ededed 40%,  #e0e0e0); border-color: @borders; }
@@ -83,7 +83,7 @@
   border-color: @unfocused_borders;
 }
 
-.floating-bar .button {
+.floating-bar button {
     padding: 4px;
 }
 
