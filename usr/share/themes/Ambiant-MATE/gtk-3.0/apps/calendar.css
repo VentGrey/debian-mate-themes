@@ -6,7 +6,7 @@ GcalWindow { background-color: transparent; }
     outline-style: dashed;
     outline-color: @selected_bg_color;
     outline-width: 2px;
-    outline-radius: 8px;
+    -gtk-outline-radius: 8px;
     outline-offset: -4px;
 }
 

@@ -37,7 +37,7 @@
     background-color: transparent;
     border-style: none;
     border-width: 0px;
-    icon-shadow: none;
+    -gtk-icon-shadow: none;
     padding: 0px;
 }
 
@@ -166,21 +166,21 @@ PanelMenuBar.menubar .menuitem {
 
 /* set normal menubar menu menuitem */
 PanelMenuBar.menubar > .menuitem > .popup.csd > .menu > .menuitem {
-    -GtkMenuItem-horizontal-padding: 0;
+/*    -GtkMenuItem-horizontal-padding: 0; deprecated */
     padding: 0px 5px 0px 5px;
     border-width: 0px;
 }
 
 /* set Mate menu menuitem */
 PanelMenuButton.button .menu .menuitem {
-    -GtkMenuItem-horizontal-padding: 0;
+/*    -GtkMenuItem-horizontal-padding: 0; deprecated */
     padding: 0px 5px 0px 5px;
     border-width: 0px;
 }
 
 PanelMenuButton.button .menu .menuitem.separator,
 PanelMenuBar.menubar > .menuitem > .popup.csd > .menu > .menuitem.separator {
-    -GtkMenuItem-horizontal-padding: 0;
+/*    -GtkMenuItem-horizontal-padding: 0; deprecated */
     border-width: 0px;
 }
 
@@ -316,7 +316,7 @@ PlumaCloseButton.button.flat {
     background-color: transparent;
     border-style: none;
     border-width: 0px;
-    icon-shadow: none;
+    -gtk-icon-shadow: none;
     padding: 0px;
 }
 
