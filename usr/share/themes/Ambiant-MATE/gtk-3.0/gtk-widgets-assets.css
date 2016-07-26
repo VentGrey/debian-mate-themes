@@ -11,15 +11,15 @@ check:hover {
     -gtk-icon-source: url("assets/check-unselected-hover.png");
 }
 
-check row,
-check row:selected,
-check row:selected:focus {
+row check,
+row:selected check,
+row:selected:focus check {
     -gtk-icon-source: url("assets/check-unselected-alt.png");
 }
 
-check row:hover,
-check row:selected:hover,
-check row:selected:focus:hover {
+row:hover check,
+row:selected:hover check,
+row:selected:focus:hover check {
     -gtk-icon-source: url("assets/check-unselected-hover-alt.png");
 }
 
@@ -27,13 +27,13 @@ check:disabled {
     -gtk-icon-source: url("assets/check-unselected-disabled.png");
 }
 
-check row:disabled {
+row:disabled check {
     background-color: transparent;
 }
 
-check row:disabled,
-check row:selected:disabled,
-check row:selected:focus:disabled {
+row:disabled check,
+row:selected:disabled check,
+row:selected:focus:disabled check {
     background-color: transparent;
     -gtk-icon-source: url("assets/check-unselected-disabled-alt.png");
 }
@@ -46,13 +46,13 @@ check:hover:backdrop {
     -gtk-icon-source: url("assets/backdrop-check-unselected-hover.png");
 }
 
-check row:backdrop,
-check row:selected:backdrop {
+row:backdrop check,
+row:selected:backdrop check {
     -gtk-icon-source: url("assets/backdrop-check-unselected-alt.png");
 }
 
-check row:hover:backdrop,
-check row:selected:hover:backdrop {
+row:hover:backdrop check,
+row:selected:hover:backdrop check {
     -gtk-icon-source: url("assets/backdrop-check-unselected-hover-alt.png");
 }
 
@@ -60,7 +60,7 @@ check:disabled:backdrop {
     -gtk-icon-source: url("assets/backdrop-check-unselected-disabled.png");
 }
 
-check row:selected:disabled:backdrop {
+row:selected:disabled:backdrop check {
     -gtk-icon-source: url("assets/backdrop-check-unselected-disabled-alt.png");
 }
 
@@ -72,15 +72,15 @@ check:checked:hover {
     -gtk-icon-source: url("assets/check-selected-hover.png");
 }
 
-check row:checked,
-check row:selected:checked,
-check row:selected:focus:checked {
+row:checked check,
+row:selected:checked check,
+row:selected:focus:checked check {
     -gtk-icon-source: url("assets/check-selected-alt.png");
 }
 
-check row:checked:hover,
-check row:selected:checked:hover,
-check row:selected:checked:focus:hover {
+row:checked:hover check,
+row:selected:checked:hover check,
+row:selected:checked:focus:hover check {
     -gtk-icon-source: url("assets/check-selected-hover-alt.png");
 }
 
@@ -88,9 +88,9 @@ check:checked:disabled {
     -gtk-icon-source: url("assets/check-selected-disabled.png");
 }
 
-check row:checked:disabled,
-check row:selected:checked:disabled,
-check row:selected:focus:checked:disabled {
+row:checked:disabled check,
+row:selected:checked:disabled check,
+row:selected:focus:checked:disabled check {
     -gtk-icon-source: url("assets/check-selected-disabled-alt.png");
 }
 
@@ -102,13 +102,13 @@ check:checked:backdrop {
     -gtk-icon-source: url("assets/backdrop-check-selected-hover.png");
 }
 
-check row:checked:backdrop,
-check row:selected:checked:backdrop {
+row:checked:backdrop check,
+row:selected:checked:backdrop check {
     -gtk-icon-source: url("assets/backdrop-check-selected-alt.png");
 }
 
-check row:checked:hover:backdrop,
-check row:selected:checked:hover:backdrop {
+row:checked:hover:backdrop check,
+row:selected:checked:hover:backdrop check {
     -gtk-icon-source: url("assets/backdrop-check-selected-hover-alt.png");
 }
 
@@ -116,7 +116,7 @@ check:checked:disabled:backdrop {
     -gtk-icon-source: url("assets/backdrop-check-selected-disabled.png");
 }
 
-check row:selected:checked:disabled:backdrop {
+row:selected:checked:disabled:backdrop check {
     -gtk-icon-source: url("assets/backdrop-check-selected-disabled-alt.png");
 }
 
@@ -128,15 +128,15 @@ check:indeterminate:hover {
     -gtk-icon-source: url("assets/check-mixed-hover.png");
 }
 
-check row:indeterminate,
-check row:selected:indeterminate,
-check row:selected:focus:indeterminate {
+row:indeterminate check,
+row:selected:indeterminate check,
+row:selected:focus:indeterminate check {
     -gtk-icon-source: url("assets/check-mixed-alt.png");
 }
 
-check row:indeterminate:hover,
-check row:selected:indeterminate:hover,
-check row:selected:focus:indeterminate:hover {
+row:indeterminate:hover check,
+row:selected:indeterminate:hover check,
+row:selected:focus:indeterminate:hover check {
     -gtk-icon-source: url("assets/check-mixed-hover-alt.png");
 }
 
@@ -144,9 +144,9 @@ check:indeterminate:disabled {
     -gtk-icon-source: url("assets/check-mixed-disabled.png");
 }
 
-check row:indeterminate:disabled,
-check row:selected:indeterminate:disabled,
-check row:selected:focus:indeterminate:disabled {
+row:indeterminate:disabled check,
+row:selected:indeterminate:disabled check,
+row:selected:focus:indeterminate:disabled check {
     -gtk-icon-source: url("assets/check-mixed-disabled-alt.png");
 }
 
@@ -158,13 +158,13 @@ check:indeterminate:hover:backdrop {
     -gtk-icon-source: url("assets/backdrop-check-mixed-hover.png");
 }
 
-check row:indeterminate:backdrop,
-check row:selected:indeterminate:backdrop {
+row:indeterminate:backdrop check,
+row:selected:indeterminate:backdrop check {
     -gtk-icon-source: url("assets/backdrop-check-mixed-alt.png");
 }
 
-check row:indeterminate:hover:backdrop,
-check row:selected:indeterminate:hover:backdrop {
+row:indeterminate:hover:backdrop check,
+row:selected:indeterminate:hover:backdrop check {
     -gtk-icon-source: url("assets/backdrop-check-mixed-hover-alt.png");
 }
 
@@ -172,7 +172,7 @@ check:indeterminate:disabled:backdrop {
     -gtk-icon-source: url("assets/backdrop-check-mixed-disabled.png");
 }
 
-check row:selected:indeterminate:disabled:backdrop {
+row:selected:indeterminate:disabled:backdrop check {
     -gtk-icon-source: url("assets/backdrop-check-mixed-disabled-alt.png");
 }
 
@@ -184,15 +184,15 @@ radio:hover {
     -gtk-icon-source: url("assets/radio-unselected-hover.png");
 }
 
-radio row,
-radio row:selected,
-radio row:selected:focus {
+row radio,
+row:selected radio,
+row:selected:focus radio {
     -gtk-icon-source: url("assets/radio-unselected-alt.png");
 }
 
-radio row:hover,
-radio row:selected:hover,
-radio row:selected:focus:hover {
+row:hover radio,
+row:selected:hover radio,
+row:selected:focus:hover radio {
     -gtk-icon-source: url("assets/radio-unselected-hover-alt.png");
 }
 
@@ -200,13 +200,13 @@ radio:disabled {
     -gtk-icon-source: url("assets/radio-unselected-disabled.png");
 }
 
-radio row:disabled {
+row:disabled radio {
     background-color: transparent;
 }
 
-radio row:disabled,
-radio row:selected:disabled,
-radio row:selected:focus:disabled {
+row:disabled radio,
+row:selected:disabled radio,
+row:selected:focus:disabled radio {
     -gtk-icon-source: url("assets/radio-unselected-disabled-alt.png");
 }
 
@@ -218,13 +218,13 @@ radio:hover:backdrop {
     -gtk-icon-source: url("assets/backdrop-radio-unselected-hover.png");
 }
 
-radio row:backdrop,
-radio row:selected:backdrop {
+row:backdrop radio,
+row:selected:backdrop radio {
     -gtk-icon-source: url("assets/backdrop-radio-unselected-alt.png");
 }
 
-radio row:hover:backdrop,
-radio row:selected:hover:backdrop {
+row:hover:backdrop radio,
+row:selected:hover:backdrop radio {
     -gtk-icon-source: url("assets/backdrop-radio-unselected-hover-alt.png");
 }
 
@@ -232,7 +232,7 @@ radio:disabled:backdrop {
     -gtk-icon-source: url("assets/backdrop-radio-unselected-disabled.png");
 }
 
-radio row:selected:disabled:backdrop {
+row:selected:disabled:backdrop radio {
     -gtk-icon-source: url("assets/backdrop-radio-unselected-disabled-alt.png");
 }
 
@@ -244,15 +244,15 @@ radio:checked:hover {
     -gtk-icon-source: url("assets/radio-selected-hover.png");
 }
 
-radio row:checked,
-radio row:selected:checked,
-radio row:selected:focus:checked {
+row:checked radio,
+row:selected:checked radio,
+row:selected:focus:checked radio {
     -gtk-icon-source: url("assets/radio-selected-alt.png");
 }
 
-radio row:checked:hover,
-radio row:selected:checked:hover,
-radio row:selected:focus:checked:hover {
+row:checked:hover radio,
+row:selected:checked:hover radio,
+row:selected:focus:checked:hover radio {
     -gtk-icon-source: url("assets/radio-selected-hover-alt.png");
 }
 
@@ -260,9 +260,9 @@ radio:checked:disabled {
     -gtk-icon-source: url("assets/radio-selected-disabled.png");
 }
 
-radio row:disabled,
-radio row:selected:checked:disabled,
-radio row:selected:focus:checked:disabled {
+row:disabled radio,
+row:selected:checked:disabled radio,
+row:selected:focus:checked:disabled radio {
     -gtk-icon-source: url("assets/radio-selected-disabled-alt.png");
 }
 
@@ -274,13 +274,13 @@ radio:checked:hover:backdrop {
     -gtk-icon-source: url("assets/backdrop-radio-selected-hover.png");
 }
 
-radio row:checked:backdrop,
-radio row:selected:checked:backdrop {
+row:checked:backdrop radio,
+row:selected:checked:backdrop radio {
     -gtk-icon-source: url("assets/backdrop-radio-selected-alt.png");
 }
 
-radio row:checked:hover:backdrop,
-radio row:selected:checked:hover:backdrop {
+row:checked:hover:backdrop radio,
+row:selected:checked:hover:backdrop radio {
     -gtk-icon-source: url("assets/backdrop-radio-selected-hover-alt.png");
 }
 
@@ -288,7 +288,7 @@ radio:checked:disabled:backdrop {
     -gtk-icon-source: url("assets/backdrop-radio-selected-disabled.png");
 }
 
-radio row:selected:checked:disabled:backdrop {
+row:selected:checked:disabled:backdrop radio {
     -gtk-icon-source: url("assets/backdrop-radio-selected-disabled-alt.png");
 }
 
@@ -300,15 +300,15 @@ radio:indeterminate:hover {
     -gtk-icon-source: url("assets/radio-mixed-hover.png");
 }
 
-radio row:indeterminate,
-radio row:selected:indeterminate,
-radio row:selected:focus:indeterminate {
+row:indeterminate radio,
+row:selected:indeterminate radio,
+row:selected:focus:indeterminate radio {
     -gtk-icon-source: url("assets/radio-mixed-alt.png");
 }
 
-radio row:indeterminate:hover,
-radio row:selected:indeterminate:hover,
-radio row:selected:focus:indeterminate:hover {
+row:indeterminate:hover radio,
+row:selected:indeterminate:hover radio,
+row:selected:focus:indeterminate:hover radio {
     -gtk-icon-source: url("assets/radio-mixed-hover-alt.png");
 }
 
@@ -316,9 +316,9 @@ radio:indeterminate:disabled {
     -gtk-icon-source: url("assets/radio-mixed-disabled.png");
 }
 
-radio row:indeterminate:disabled,
-radio row:selected:indeterminate:disabled,
-radio row:selected:focus:indeterminate:disabled {
+row:indeterminate:disabled radio,
+row:selected:indeterminate:disabled radio,
+row:selected:focus:indeterminate:disabled radio {
     -gtk-icon-source: url("assets/radio-mixed-disabled-alt.png");
 }
 
@@ -330,13 +330,13 @@ radio:indeterminate:hover:backdrop {
     -gtk-icon-source: url("assets/backdrop-radio-mixed-hover.png");
 }
 
-radio row:indeterminate:backdrop,
-radio row:selected:indeterminate:backdrop {
+row:indeterminate:backdrop radio,
+row:selected:indeterminate:backdrop radio {
     -gtk-icon-source: url("assets/backdrop-radio-mixed-alt.png");
 }
 
-radio row:indeterminate:hover:backdrop,
-radio row:selected:indeterminate:hover:backdrop {
+row:indeterminate:hover:backdrop radio,
+row:selected:indeterminate:hover:backdrop radio {
     -gtk-icon-source: url("assets/backdrop-radio-mixed-hover-alt.png");
 }
 
@@ -344,7 +344,7 @@ radio:indeterminate:disabled:backdrop {
     -gtk-icon-source: url("assets/backdrop-radio-mixed-disabled.png");
 }
 
-radio row:selected:indeterminate:disabled:backdrop {
+row:selected:indeterminate:disabled:backdrop radio {
     -gtk-icon-source: url("assets/backdrop-radio-mixed-disabled-alt.png");
 }
 
