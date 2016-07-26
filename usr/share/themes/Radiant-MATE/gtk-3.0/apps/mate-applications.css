@@ -37,7 +37,7 @@
     background-color: transparent;
     border-style: none;
     border-width: 0px;
-    icon-shadow: none;
+    -gtk-icon-shadow: none;
     padding: 0px;
 }
 
@@ -172,7 +172,7 @@ PlumaCloseButton.button.flat {
     background-color: transparent;
     border-style: none;
     border-width: 0px;
-    icon-shadow: none;
+    -gtk-icon-shadow: none;
     padding: 0px;
 }
 

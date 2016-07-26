@@ -48,15 +48,15 @@
     box-shadow: inset 1px 0 shade (@dark_bg_color, 0.9);
 }
 
-.primary-toolbar .linked .button:insensitive,
-.primary-toolbar .button.raised.linked:insensitive,
-.primary-toolbar .raised.linked .button:insensitive,
-.menubar.toolbar .linked .button:insensitive,
-.menubar.toolbar .button.raised.linked:insensitive,
-.menubar.toolbar .raised.linked .button:insensitive,
-.header-bar .linked .button:insensitive,
-.header-bar .button.raised.linked:insensitive,
-.header-bar .raised.linked .button:insensitive {
+.primary-toolbar .linked .button:disabled,
+.primary-toolbar .button.raised.linked:disabled,
+.primary-toolbar .raised.linked .button:disabled,
+.menubar.toolbar .linked .button:disabled,
+.menubar.toolbar .button.raised.linked:disabled,
+.menubar.toolbar .raised.linked .button:disabled,
+.header-bar .linked .button:disabled,
+.header-bar .button.raised.linked:disabled,
+.header-bar .raised.linked .button:disabled {
     box-shadow: inset -1px 0 shade (@dark_bg_color, 0.9);
 }
 
@@ -89,8 +89,8 @@
     text-shadow: 0 -1px shade (@selected_bg_color, 0.7);
 }
 
-.menuitem:insensitive,
-.menuitem *:insensitive {
+.menuitem:disabled,
+.menuitem *:disabled {
     color: mix (@fg_color, @bg_color, 0.5);
     text-shadow: 0 1px shade (@bg_color, 1.14);
 }
@@ -117,9 +117,9 @@
     text-shadow: 0 1px shade (@dark_bg_color, 1.1);
 }
 
-.primary-toolbar :insensitive,
-.menubar.toolbar :insensitive,
-.header-bar :insensitive {
+.primary-toolbar :disabled,
+.menubar.toolbar :disabled,
+.header-bar :disabled {
     text-shadow: 0 1px shade (@dark_bg_color, 1.1);
 }
 
@@ -139,17 +139,17 @@
 .primary-toolbar .raised.button,
 .primary-toolbar .button:hover,
 .primary-toolbar .button:active,
-.primary-toolbar .button:insensitive,
+.primary-toolbar .button:disabled,
 .menubar.toolbar .raised .button,
 .menubar.toolbar .raised.button,
 .menubar.toolbar .button:hover,
 .menubar.toolbar .button:active,
-.menubar.toolbar .button:insensitive,
+.menubar.toolbar .button:disabled,
 .header-bar .raised .button,
 .header-bar .raised.button,
 .header-bar .button:hover,
 .header-bar .button:active,
-.header-bar .button:insensitive {
+.header-bar .button:disabled {
     background-image: -gtk-gradient (linear, left top, left bottom,
                                      from (shade (@dark_bg_color, 1.03)),
                                      to (shade (@dark_bg_color, 0.96)));

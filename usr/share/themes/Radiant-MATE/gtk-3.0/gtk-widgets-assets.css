@@ -32,17 +32,17 @@
     -gtk-icon-source: url("assets/check-unselected-hover-alt.png");
 }
 
-.check:insensitive {
+.check:disabled {
     -gtk-icon-source: url("assets/check-unselected-disabled.png");
 }
 
-.check row:insensitive {
+.check row:disabled {
     background-color: transparent;
 }
 
-.check row:insensitive,
-.check row:selected:insensitive,
-.check row:selected:focus:insensitive {
+.check row:disabled,
+.check row:selected:disabled,
+.check row:selected:focus:disabled {
     background-color: transparent;
     -gtk-icon-source: url("assets/check-unselected-disabled-alt.png");
 }
@@ -65,11 +65,11 @@
     -gtk-icon-source: url("assets/backdrop-check-unselected-hover-alt.png");
 }
 
-.check:insensitive:backdrop {
+.check:disabled:backdrop {
     -gtk-icon-source: url("assets/backdrop-check-unselected-disabled.png");
 }
 
-.check row:selected:insensitive:backdrop {
+.check row:selected:disabled:backdrop {
     -gtk-icon-source: url("assets/backdrop-check-unselected-disabled-alt.png");
 }
 
@@ -93,13 +93,13 @@
     -gtk-icon-source: url("assets/check-selected-hover-alt.png");
 }
 
-.check:checked:insensitive {
+.check:checked:disabled {
     -gtk-icon-source: url("assets/check-selected-disabled.png");
 }
 
-.check row:checked:insensitive,
-.check row:selected:checked:insensitive,
-.check row:selected:focus:checked:insensitive {
+.check row:checked:disabled,
+.check row:selected:checked:disabled,
+.check row:selected:focus:checked:disabled {
     -gtk-icon-source: url("assets/check-selected-disabled-alt.png");
 }
 
@@ -121,67 +121,67 @@
     -gtk-icon-source: url("assets/backdrop-check-selected-hover-alt.png");
 }
 
-.check:checked:insensitive:backdrop {
+.check:checked:disabled:backdrop {
     -gtk-icon-source: url("assets/backdrop-check-selected-disabled.png");
 }
 
-.check row:selected:checked:insensitive:backdrop {
+.check row:selected:checked:disabled:backdrop {
     -gtk-icon-source: url("assets/backdrop-check-selected-disabled-alt.png");
 }
 
-.check:inconsistent {
+.check:indeterminate {
     -gtk-icon-source: url("assets/check-mixed.png");
 }
 
-.check:inconsistent:hover {
+.check:indeterminate:hover {
     -gtk-icon-source: url("assets/check-mixed-hover.png");
 }
 
-.check row:inconsistent,
-.check row:selected:inconsistent,
-.check row:selected:focus:inconsistent {
+.check row:indeterminate,
+.check row:selected:indeterminate,
+.check row:selected:focus:indeterminate {
     -gtk-icon-source: url("assets/check-mixed-alt.png");
 }
 
-.check row:inconsistent:hover,
-.check row:selected:inconsistent:hover,
-.check row:selected:focus:inconsistent:hover {
+.check row:indeterminate:hover,
+.check row:selected:indeterminate:hover,
+.check row:selected:focus:indeterminate:hover {
     -gtk-icon-source: url("assets/check-mixed-hover-alt.png");
 }
 
-.check:inconsistent:insensitive {
+.check:indeterminate:disabled {
     -gtk-icon-source: url("assets/check-mixed-disabled.png");
 }
 
-.check row:inconsistent:insensitive,
-.check row:selected:inconsistent:insensitive,
-.check row:selected:focus:inconsistent:insensitive {
+.check row:indeterminate:disabled,
+.check row:selected:indeterminate:disabled,
+.check row:selected:focus:indeterminate:disabled {
     -gtk-icon-source: url("assets/check-mixed-disabled-alt.png");
 }
 
-.check:inconsistent:backdrop {
+.check:indeterminate:backdrop {
     -gtk-icon-source: url("assets/backdrop-check-mixed.png");
 }
 
-.check:inconsistent:hover:backdrop {
+.check:indeterminate:hover:backdrop {
     -gtk-icon-source: url("assets/backdrop-check-mixed-hover.png");
 }
 
-.check row:inconsistent:backdrop,
-.check row:selected:inconsistent:backdrop {
+.check row:indeterminate:backdrop,
+.check row:selected:indeterminate:backdrop {
     -gtk-icon-source: url("assets/backdrop-check-mixed-alt.png");
 }
 
-.check row:inconsistent:hover:backdrop,
-.check row:selected:inconsistent:hover:backdrop {
+.check row:indeterminate:hover:backdrop,
+.check row:selected:indeterminate:hover:backdrop {
     -gtk-icon-source: url("assets/backdrop-check-mixed-hover-alt.png");
 }
 
-.check:inconsistent:insensitive:backdrop {
+.check:indeterminate:disabled:backdrop {
     -gtk-icon-source: url("assets/backdrop-check-mixed-disabled.png");
 }
 
-.check row:selected:inconsistent:insensitive:backdrop {
+.check row:selected:indeterminate:disabled:backdrop {
     -gtk-icon-source: url("assets/backdrop-check-mixed-disabled-alt.png");
 }
 
@@ -205,17 +205,17 @@
     -gtk-icon-source: url("assets/radio-unselected-hover-alt.png");
 }
 
-.radio:insensitive {
+.radio:disabled {
     -gtk-icon-source: url("assets/radio-unselected-disabled.png");
 }
 
-.radio row:insensitive {
+.radio row:disabled {
     background-color: transparent;
 }
 
-.radio row:insensitive,
-.radio row:selected:insensitive,
-.radio row:selected:focus:insensitive {
+.radio row:disabled,
+.radio row:selected:disabled,
+.radio row:selected:focus:disabled {
     -gtk-icon-source: url("assets/radio-unselected-disabled-alt.png");
 }
 
@@ -237,11 +237,11 @@
     -gtk-icon-source: url("assets/backdrop-radio-unselected-hover-alt.png");
 }
 
-.radio:insensitive:backdrop {
+.radio:disabled:backdrop {
     -gtk-icon-source: url("assets/backdrop-radio-unselected-disabled.png");
 }
 
-.radio row:selected:insensitive:backdrop {
+.radio row:selected:disabled:backdrop {
     -gtk-icon-source: url("assets/backdrop-radio-unselected-disabled-alt.png");
 }
 
@@ -265,13 +265,13 @@
     -gtk-icon-source: url("assets/radio-selected-hover-alt.png");
 }
 
-.radio:checked:insensitive {
+.radio:checked:disabled {
     -gtk-icon-source: url("assets/radio-selected-disabled.png");
 }
 
-.radio row:insensitive,
-.radio row:selected:checked:insensitive,
-.radio row:selected:focus:checked:insensitive {
+.radio row:disabled,
+.radio row:selected:checked:disabled,
+.radio row:selected:focus:checked:disabled {
     -gtk-icon-source: url("assets/radio-selected-disabled-alt.png");
 }
 
@@ -293,67 +293,67 @@
     -gtk-icon-source: url("assets/backdrop-radio-selected-hover-alt.png");
 }
 
-.radio:checked:insensitive:backdrop {
+.radio:checked:disabled:backdrop {
     -gtk-icon-source: url("assets/backdrop-radio-selected-disabled.png");
 }
 
-.radio row:selected:checked:insensitive:backdrop {
+.radio row:selected:checked:disabled:backdrop {
     -gtk-icon-source: url("assets/backdrop-radio-selected-disabled-alt.png");
 }
 
-.radio:inconsistent {
+.radio:indeterminate {
     -gtk-icon-source: url("assets/radio-mixed.png");
 }
 
-.radio:inconsistent:hover {
+.radio:indeterminate:hover {
     -gtk-icon-source: url("assets/radio-mixed-hover.png");
 }
 
-.radio row:inconsistent,
-.radio row:selected:inconsistent,
-.radio row:selected:focus:inconsistent {
+.radio row:indeterminate,
+.radio row:selected:indeterminate,
+.radio row:selected:focus:indeterminate {
     -gtk-icon-source: url("assets/radio-mixed-alt.png");
 }
 
-.radio row:inconsistent:hover,
-.radio row:selected:inconsistent:hover,
-.radio row:selected:focus:inconsistent:hover {
+.radio row:indeterminate:hover,
+.radio row:selected:indeterminate:hover,
+.radio row:selected:focus:indeterminate:hover {
     -gtk-icon-source: url("assets/radio-mixed-hover-alt.png");
 }
 
-.radio:inconsistent:insensitive {
+.radio:indeterminate:disabled {
     -gtk-icon-source: url("assets/radio-mixed-disabled.png");
 }
 
-.radio row:inconsistent:insensitive,
-.radio row:selected:inconsistent:insensitive,
-.radio row:selected:focus:inconsistent:insensitive {
+.radio row:indeterminate:disabled,
+.radio row:selected:indeterminate:disabled,
+.radio row:selected:focus:indeterminate:disabled {
     -gtk-icon-source: url("assets/radio-mixed-disabled-alt.png");
 }
 
-.radio:inconsistent:backdrop {
+.radio:indeterminate:backdrop {
     -gtk-icon-source: url("assets/backdrop-radio-mixed.png");
 }
 
-.radio:inconsistent:hover:backdrop {
+.radio:indeterminate:hover:backdrop {
     -gtk-icon-source: url("assets/backdrop-radio-mixed-hover.png");
 }
 
-.radio row:inconsistent:backdrop,
-.radio row:selected:inconsistent:backdrop {
+.radio row:indeterminate:backdrop,
+.radio row:selected:indeterminate:backdrop {
     -gtk-icon-source: url("assets/backdrop-radio-mixed-alt.png");
 }
 
-.radio row:inconsistent:hover:backdrop,
-.radio row:selected:inconsistent:hover:backdrop {
+.radio row:indeterminate:hover:backdrop,
+.radio row:selected:indeterminate:hover:backdrop {
     -gtk-icon-source: url("assets/backdrop-radio-mixed-hover-alt.png");
 }
 
-.radio:inconsistent:insensitive:backdrop {
+.radio:indeterminate:disabled:backdrop {
     -gtk-icon-source: url("assets/backdrop-radio-mixed-disabled.png");
 }
 
-.radio row:selected:inconsistent:insensitive:backdrop {
+.radio row:selected:indeterminate:disabled:backdrop {
     -gtk-icon-source: url("assets/backdrop-radio-mixed-disabled-alt.png");
 }
 
@@ -383,12 +383,12 @@
     -gtk-icon-source: url("assets/check-menuitem.png");
 }
 
-.primary-toolbar .menu .check:checked:insensitive,
-.menubar.toolbar .menu .check:checked:insensitive,
-.header-bar .menu .check:checked:insensitive,
-.toolbar .menu .check:checked:hover:insensitive,
-.menu .check:checked:insensitive,
-.menu .check:checked:hover:insensitive {
+.primary-toolbar .menu .check:checked:disabled,
+.menubar.toolbar .menu .check:checked:disabled,
+.header-bar .menu .check:checked:disabled,
+.toolbar .menu .check:checked:hover:disabled,
+.menu .check:checked:disabled,
+.menu .check:checked:hover:disabled {
     -gtk-icon-source: url("assets/check-menuitem-insensitive.png");
 }
 
@@ -397,12 +397,12 @@
     -gtk-icon-source: url("assets/radio-menuitem.png");
 }
 
-.primary-toolbar .menu .radio:checked:insensitive,
-.menubar.toolbar .menu .radio:checked:insensitive,
-.header-bar .menu .radio:checked:insensitive,
-.toolbar .menu .radio:checked:hover:insensitive,
-.menu .radio:checked:insensitive,
-.menu .radio:checked:hover:insensitive {
+.primary-toolbar .menu .radio:checked:disabled,
+.menubar.toolbar .menu .radio:checked:disabled,
+.header-bar .menu .radio:checked:disabled,
+.toolbar .menu .radio:checked:hover:disabled,
+.menu .radio:checked:disabled,
+.menu .radio:checked:hover:disabled {
     -gtk-icon-source: url("assets/radio-menuitem-insensitive.png");
 }
 
@@ -418,7 +418,7 @@
     -gtk-icon-source: url("assets/check-menuitem-dark.png");
 }
 
-.toolbar .menu .check:checked:insensitive {
+.toolbar .menu .check:checked:disabled {
     -gtk-icon-source: url("assets/check-menuitem-insensitive-dark.png");
 }
 
@@ -426,7 +426,7 @@
     -gtk-icon-source: url("assets/radio-menuitem-dark.png");
 }
 
-.toolbar .menu .radio:checked:insensitive {
+.toolbar .menu .radio:checked:disabled {
     -gtk-icon-source: url("assets/radio-menuitem-insensitive-dark.png");
 }
 
@@ -448,23 +448,23 @@
     background-image: url("assets/slider-horizontal-hover.png");
 }
 
-.scale.slider:focused,
-.scale.slider.horizontal:focused {
+.scale.slider:focus,
+.scale.slider.horizontal:focus {
     background-image: url("assets/slider-horizontal-focused.png");
 }
 
-.scale.slider:hover:focused,
-.scale.slider.horizontal:hover:focused {
+.scale.slider:hover:focus,
+.scale.slider.horizontal:hover:focus {
     background-image: url("assets/slider-horizontal-focused-hover.png");
 }
 
-.scale.slider:insensitive,
-.scale.slider.horizontal:insensitive {
+.scale.slider:disabled,
+.scale.slider.horizontal:disabled {
     background-image: url("assets/slider-horizontal-disabled.png");
 }
 
-.scale.slider:insensitive:backdrop,
-.scale.slider.horizontal:insensitive:backdrop {
+.scale.slider:disabled:backdrop,
+.scale.slider.horizontal:disabled:backdrop {
     /*background-image: url("assets/slider-horizontal-backdrop-disabled.png");*/
 }
 
@@ -480,19 +480,19 @@
     background-image: url("assets/slider-vertical-hover.png");
 }
 
-.scale.slider.vertical:focused {
+.scale.slider.vertical:focus {
     background-image: url("assets/slider-vertical-focused.png");
 }
 
-.scale.slider.vertical:hover:focused {
+.scale.slider.vertical:hover:focus {
     background-image: url("assets/slider-vertical-focused-hover.png");
 }
 
-.scale.slider.vertical:insensitive {
+.scale.slider.vertical:disabled {
     background-image: url("assets/slider-vertical-disabled.png");
 }
 
-.scale.slider.vertical:insensitive:backdrop {
+.scale.slider.vertical:disabled:backdrop {
     /*background-image: url("assets/slider-vertical-backdrop-disabled.png");*/
 }
 
@@ -500,7 +500,7 @@
     background-image: url("assets/slider-up.png");
 }
 
-.scale.scale-has-marks-above.slider.horizontal:insensitive {
+.scale.scale-has-marks-above.slider.horizontal:disabled {
     background-image: url("assets/slider-up-disabled.png");
 }
 
@@ -508,7 +508,7 @@
     background-image: url("assets/slider-up-backdrop.png");
 }
 
-.scale.scale-has-marks-above.slider.horizontal:backdrop:insensitive {
+.scale.scale-has-marks-above.slider.horizontal:backdrop:disabled {
     background-image: url("assets/slider-up-backdrop-disabled.png");
 }
 
@@ -516,7 +516,7 @@
     background-image: url("assets/slider-left.png");
 }
 
-.scale.scale-has-marks-above.slider.vertical:insensitive {
+.scale.scale-has-marks-above.slider.vertical:disabled {
     background-image: url("assets/slider-left-disabled.png");
 }
 
@@ -524,7 +524,7 @@
     background-image: url("assets/slider-left-backdrop.png");
 }
 
-.scale.scale-has-marks-above.slider.vertical:backdrop:insensitive {
+.scale.scale-has-marks-above.slider.vertical:backdrop:disabled {
     background-image: url("assets/slider-left-backdrop-disabled.png");
 }
 
@@ -532,7 +532,7 @@
     background-image: url("assets/slider-down.png");
 }
 
-.scale.scale-has-marks-below.slider.horizontal:insensitive {
+.scale.scale-has-marks-below.slider.horizontal:disabled {
     background-image: url("assets/slider-down-disabled.png");
 }
 
@@ -540,7 +540,7 @@
     background-image: url("assets/slider-down-backdrop.png");
 }
 
-.scale.scale-has-marks-below.slider.horizontal:backdrop:insensitive {
+.scale.scale-has-marks-below.slider.horizontal:backdrop:disabled {
     background-image: url("assets/slider-down-backdrop-disabled.png");
 }
 
@@ -548,7 +548,7 @@
     background-image: url("assets/slider-right.png");
 }
 
-.scale.scale-has-marks-below.slider.vertical:insensitive {
+.scale.scale-has-marks-below.slider.vertical:disabled {
     background-image: url("assets/slider-right-disabled.png");
 }
 
@@ -556,7 +556,7 @@
     background-image: url("assets/slider-right-backdrop.png");
 }
 
-.scale.scale-has-marks-below.slider.vertical:backdrop:insensitive {
+.scale.scale-has-marks-below.slider.vertical:backdrop:disabled {
     background-image: url("assets/slider-right-backdrop-disabled.png");
 }*/
 

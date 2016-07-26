@@ -28,11 +28,11 @@
     border-image: url("assets/entry-focused.png") 10 12 10 12 / 10px 12px 10px 12px stretch;
 }
 
-.entry:insensitive {
+.entry:disabled {
     border-image: url("assets/entry-disabled.png") 10 12 10 12 / 10px 12px 10px 12px stretch;
 }
 
-.entry:insensitive:backdrop {
+.entry:disabled:backdrop {
     border-image: url("assets/backdrop-entry-disabled.png") 10 12 10 12 / 10px 12px 10px 12px stretch;
 }
 
@@ -88,11 +88,11 @@ GtkComboBox.combobox-entry .button:focus {
     border-image: url("assets/combobox-button-focused.png") 10 12 10 1 / 10px 12px 10px 1px stretch;
 }
 
-GtkComboBox.combobox-entry .button:insensitive {
+GtkComboBox.combobox-entry .button:disabled {
     border-image: url("assets/combobox-button-disabled.png") 10 12 10 1 / 10px 12px 10px 1px stretch;
 }
 
-GtkComboBox.combobox-entry .button:insensitive:backdrop {
+GtkComboBox.combobox-entry .button:disabled:backdrop {
     border-image: url("assets/backdrop-combobox-button-disabled.png") 10 12 10 1 / 10px 12px 10px 1px stretch;
 }
 
@@ -101,11 +101,11 @@ GtkComboBox.combobox-entry .button:active:focus {
 }
 
 .primary-toolbar GtkComboBox.combobox-entry .button,
-.primary-toolbar GtkComboBox.combobox-entry .button:focus:insensitive,
+.primary-toolbar GtkComboBox.combobox-entry .button:focus:disabled,
 .menubar.toolbar GtkComboBox.combobox-entry .button,
-.menubar.toolbar GtkComboBox.combobox-entry .button:focus:insensitive,
+.menubar.toolbar GtkComboBox.combobox-entry .button:focus:disabled,
 .header-bar GtkComboBox.combobox-entry .button,
-.header-bar GtkComboBox.combobox-entry .button:focus:insensitive {
+.header-bar GtkComboBox.combobox-entry .button:focus:disabled {
     border-image: url("assets/combobox-button-toolbar.png") 10 12 10 1 / 10px 12px 10px 1px stretch;
 }
 
@@ -203,8 +203,8 @@ GtkSwitch.trough:active {
 /* XXX temporary */
 GtkSwitch.trough:backdrop,
 GtkSwitch.trough:active:backdrop,
-GtkSwitch.trough:insensitive,
-GtkSwitch.trough:active:insensitive {
+GtkSwitch.trough:disabled,
+GtkSwitch.trough:active:disabled {
     border-image: url("assets/switch-trough-disabled.png") 10 12 10 12 / 10px 12px 10px 12px stretch;
 }
 
@@ -218,13 +218,13 @@ GtkSwitch.slider:active {
 
 /* XXX temporary */
 GtkSwitch.slider:backdrop,
-GtkSwitch.slider:insensitive {
+GtkSwitch.slider:disabled {
     border-image: url("assets/switch-button-off-disabled.png") 9 11 9 11 / 9px 11px 9px 11px stretch;
 }
 
 /* XXX temporary */
 GtkSwitch.slider:active:backdrop,
-GtkSwitch.slider:active:insensitive {
+GtkSwitch.slider:active:disabled {
     border-image: url("assets/switch-button-on-disabled.png") 9 11 9 11 / 9px 11px 9px 11px stretch;
 }
 
@@ -232,7 +232,7 @@ GtkSwitch.slider:active:insensitive {
     border-image: url("assets/scale-horizontal-trough.png") 2 6 2 6 / 2px 6px 2px 6px stretch;
 }
 
-.scale.trough:insensitive {
+.scale.trough:disabled {
     border-image: url("assets/scale-horizontal-trough-disabled.png") 2 6 2 6 / 2px 6px 2px 6px stretch;
 }
 
@@ -244,7 +244,7 @@ GtkSwitch.slider:active:insensitive {
     border-image: url("assets/scale-vertical-trough.png") 6 2 6 2 / 6px 2px 6px 2px stretch;
 }
 
-.scale.trough.vertical:insensitive {
+.scale.trough.vertical:disabled {
     border-image: url("assets/scale-vertical-trough-disabled.png") 6 2 6 2 / 6px 2px 6px 2px stretch;
 }
 
@@ -256,7 +256,7 @@ GtkSwitch.slider:active:insensitive {
     border-image: url("assets/scale-vertical-trough-backdrop.png") 6 2 6 2 / 6px 2px 6px 2px stretch;
 }
 
-.scale.trough.highlight.left:insensitive {
+.scale.trough.highlight.left:disabled {
     border-image: url("assets/scale-horizontal-fill-disabled.png") 2 6 2 6 / 2px 6px 2px 6px stretch;
 }
 
@@ -268,7 +268,7 @@ GtkSwitch.slider:active:insensitive {
     border-image: url("assets/scale-vertical-fill.png") 6 2 6 2 / 6px 2px 6px 2px stretch;
 }
 
-.scale.trough.highlight.bottom.vertical:insensitive {
+.scale.trough.highlight.bottom.vertical:disabled {
     border-image: url("assets/scale-vertical-fill-disabled.png") 6 2 6 2 / 6px 2px 6px 2px stretch;
 }
 

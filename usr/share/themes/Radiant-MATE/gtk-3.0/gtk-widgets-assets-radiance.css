@@ -10,7 +10,7 @@
     -gtk-icon-source: url("assets/check-menuitem-dark.png");
 }
 
-.menu .check:checked:insensitive {
+.menu .check:checked:disabled {
     -gtk-icon-source: url("assets/check-menuitem-insensitive-dark.png");
 }
 
@@ -18,6 +18,6 @@
     -gtk-icon-source: url("assets/radio-menuitem-dark.png");
 }
 
-.menu .radio:checked:insensitive {
+.menu .radio:checked:disabled {
     -gtk-icon-source: url("assets/radio-menuitem-insensitive-dark.png");
 }

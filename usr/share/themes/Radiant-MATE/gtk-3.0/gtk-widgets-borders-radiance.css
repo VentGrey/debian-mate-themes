@@ -12,11 +12,11 @@
 }
 
 .primary-toolbar GtkComboBox.combobox-entry .button,
-.primary-toolbar GtkComboBox.combobox-entry .button:focus:insensitive,
+.primary-toolbar GtkComboBox.combobox-entry .button:focus:disabled,
 .menubar.toolbar GtkComboBox.combobox-entry .button,
-.menubar.toolbar GtkComboBox.combobox-entry .button:focus:insensitive,
+.menubar.toolbar GtkComboBox.combobox-entry .button:focus:disabled,
 .header-bar GtkComboBox.combobox-entry .button,
-.header-bar GtkComboBox.combobox-entry .button:focus:insensitive {
+.header-bar GtkComboBox.combobox-entry .button:focus:disabled {
     border-image: url("assets/radiance-combobox-button-toolbar.png") 10 12 10 1 / 10px 12px 10px 1px stretch;
 }
 
