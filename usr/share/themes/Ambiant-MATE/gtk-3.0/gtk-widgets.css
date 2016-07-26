@@ -357,7 +357,8 @@ button.text-button:focus label {
     background: none;
 }
 
-menu .radio * {
+menu radio *,
+.menu radio * {
     box-shadow: none;
 }
 
@@ -573,8 +574,7 @@ decoration:backdrop {
 }
   
 .ssd decoration,
-decoration.ssd,
-.window-frame.ssd {
+decoration.ssd {
     box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.23);
 }
   
@@ -875,12 +875,14 @@ menu menuitem:hover {
 }
 
 menuitem check:checked,
-menuitem .radio:checked {
+menuitem radio:checked {
     color: @fg_color;
 }
 
 menu menuitem check:hover,
-menu menuitem radio:hover {
+menu menuitem radio:hover,
+.menu menuitem check:hover,
+.menu menuitem radio:hover {
     box-shadow: none;
 }
 
@@ -1599,7 +1601,7 @@ scrollbar.vertical .button.down:hover {
 }
 
 scrollbar.horizontal button.up:hover,
-scrollbar.vertical .button.down:hover {
+scrollbar.horizontal .button.down:hover {
 	box-shadow: inset -1px 0 mix(@scrollbar_slider, @scrollbar_trough, 0.8);
 }
 
@@ -2497,10 +2499,10 @@ popover menuitem:backdrop:hover {
 }
 
 popover menuitem:checked,
-popover menuitem.check,
-popover menuitem.check:checked,
-popover menuitem.radio,
-popover menuitem.radio:checked {
+popover menuitem check,
+popover menuitem check:checked,
+popover menuitem radio,
+popover menuitem radio:checked {
     background-image: none;
     border: none;
 }
