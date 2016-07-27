@@ -430,8 +430,6 @@ treeview header:nth-child(last) button {
     background-color: shade (@bg_color, 1.03);
 }
 
-.view:selected,
-.view:active,
 .content-view.view:selected,
 .content-view.view:active {
     background-color: @selected_bg_color;
@@ -610,14 +608,40 @@ messagedialog.csd decoration {
   margin: 0px;
 }
 
-/************
- * iconview *
- ************/
+/***********************
+ * iconview & textview *
+ ***********************/
+
 .view text,
 textview,
 .view {
     background-color: @base_color;
     color: @text_color;
+}
+
+.view text selection:disabled,
+.view:disabled {
+	background-color: @insensitive_bg_color;
+	color: @insensitive_fg_color;
+}
+
+.view text selection,
+.view:selected,
+.view:active {
+    background-color: @theme_selected_bg_color;
+    color: @theme_selected_fg_color;
+}
+
+.view text selection:hover,
+.view:hover {
+	background-color: shade (@theme_selected_bg_color, 1.55);
+	color: shade (@theme_selected_bg_color, 0.35);
+}
+
+.view text selection:backdrop,
+.view:selected:backdrop {
+	background-color: shade(@theme_unfocused_bg_color, 0.94);
+	color: @theme_fg_color;
 }
 
 iconview .cell:selected,
@@ -630,7 +654,6 @@ iconview .cell:selected:focus {
     border-width: 1px;
     border-color: shade (@selected_bg_color, 0.8);
     border-bottom-color: shade (@selected_bg_color, 0.7);
-
     box-shadow: inset 1px 0 shade (@selected_bg_color, 1.05),
                 inset -1px 0 shade (@selected_bg_color, 1.05),
                 inset 0 1px shade (@selected_bg_color, 1.08),
@@ -2000,12 +2023,9 @@ switch slider:backdrop {
     text-shadow: 0 1px alpha (shade (@button_bg_color, 1.25), 0.2);
 }
 
-/************
- * textview *
- ************/
-textview {
-    background-color: @base_color;
-}
+/*************
+ * headerbar *
+ *************/
 
 headerbar {
     padding: 2px 6px;
