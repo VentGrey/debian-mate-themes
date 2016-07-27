@@ -461,7 +461,6 @@ entry {
                                      from (shade (@base_color, 0.96)),
                                      to (@base_color));
     padding: 5px 7px;
-
     color: @text_color;
 }
 
@@ -477,15 +476,17 @@ entry:backdrop {
     color: @backdrop_text_color;
 }
 
+entry selection,
+entry selection:focus,
 entry:selected,
 entry:selected:focus {
+    color: @theme_selected_fg_color;
     background-color: @selected_bg_color;
 }
 
 entry:disabled {
     background-color: #f5f5f5;
     background-image: none;
-
     color: mix (@text_color, @base_color, 0.4);
 }
 
@@ -496,7 +497,6 @@ entry.readonly {
 
 entry:disabled:backdrop {
     background-color: mix (#f5f5f5, @bg_color, 0.5);
-
     color: mix (@text_color, @base_color, 0.4);
 }
 
@@ -510,7 +510,6 @@ entry progressbar {
                                      color-stop (0.1, shade (@selected_bg_color, 0.9)),
                                      to (shade (@selected_bg_color, 1.1)));
     border-width: 0;
-
     color: @selected_fg_color;
 }
 
