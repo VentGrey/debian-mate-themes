@@ -1236,41 +1236,77 @@ paned > separator {
     border-color: shade (@bg_color, 0.84);
 }
 
-/*************************
- * progressbar and scale *
- *************************/
-scale,
+/****************
+ * Progress bar *
+ ****************/
+
 progressbar {
-    border-radius: 8px;
-    border-width: 0px;
-    padding: 1px;
+	border-radius: 6px;
+	padding: 0;
+	font-size: smaller;
 }
 
-scale trough {
-    margin: 7px 0 6px 0;
+progressbar.horizontal {
+    min-height: 16px;
 }
 
-scale.vertical trough {
-    margin: 0 7px 0 6px;
+progressbar.vertical {
+    min-width: 16px;
 }
 
-menubar menuitem scale highlight.left,
-.menubar menuitem scale highlight.left,
-scale highlight.left,
-progressbar,
-toolbar progressbar,
-entry progressbar,
-row progressbar,
-row:hover progressbar,
-row:selected progressbar,
-row:selected:focus progressbar,
-row:nth-child(odd) progressbar,
+/* progress component */
+progressbar.horizontal trough {
+    min-height: 18px;
+    border-radius: 6px;
+}
+
+progressbar.horizontal progress {
+    min-height: 16px;
+    border-radius: 6px;
+}
+
+progressbar.vertical trough {
+    min-width: 18px;
+    border-radius: 6px;
+}
+
+progressbar.vertical progress {
+    min-width: 16px;
+    border-radius: 6px;
+}
+
+progressbar progress.left {
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+
+progressbar progress.right {
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+progressbar progress.top {
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+}
+
+progressbar progress.bottom {
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+
+progressbar.horizontal progress,
+row progressbar progress,
+row:hover progressbar progress,
+row:selected progressbar progress,
+row:selected:focus progressbar progress,
+row:nth-child(odd) progressbar progress,
 .progressbar row,
 .progressbar row:hover,
 .progressbar row:selected,
 .progressbar row:selected:focus,
 .progressbar row:nth-child(odd) {
-    border-radius: 8px;
+    border-radius: 6px;
     border-width: 1px;
     border-style: solid;
     background-image: linear-gradient(to bottom,
@@ -1285,8 +1321,8 @@ row:nth-child(odd) progressbar,
     text-shadow: none;
 }
 
-progressbar.vertical {
-    border-radius: 8px;
+progressbar.vertical progress {
+    border-radius: 6px;
     border-width: 1px;
     border-style: solid;
     background-image: linear-gradient(to right,
@@ -1301,18 +1337,16 @@ progressbar.vertical {
     text-shadow: none;
 }
 
-progressbar:backdrop,
-.progressbar row:backdrop,
-.progressbar row:hover:backdrop,
-.progressbar row:selected:backdrop,
-.progressbar row:selected:focus:backdrop,
-row:backdrop progressbar,
-row:hover:backdrop progressbar,
-row:selected:backdrop progressbar,
-row:selected:focus:backdrop progressbar,
-scale highlight.bottom:backdrop,
-progressbar:backdrop {
-    border-radius: 8px;
+progressbar:backdrop progress,
+row:backdrop progressbar progress,
+row:hover:backdrop progressbar progress,
+row:selected:backdrop progressbar progress,
+row:selected:focus:backdrop progressbar progress,
+.progressbar row:backdrop progress,
+.progressbar row:hover:backdrop progress,
+.progressbar row:selected:backdrop progress,
+.progressbar row:selected:focus:backdrop progress {
+    border-radius: 6px;
     border-width: 1px;
     border-style: solid;
     background-image: linear-gradient(to bottom,
@@ -1327,8 +1361,8 @@ progressbar:backdrop {
     text-shadow: none;
 }
 
-progressbar.vertical:backdrop {
-    border-radius: 8px;
+progressbar.vertical:backdrop progress {
+    border-radius: 6px;
     border-width: 1px;
     border-style: solid;
     background-image: linear-gradient(to right,
@@ -1343,48 +1377,34 @@ progressbar.vertical:backdrop {
     text-shadow: none;
 }
 
-scale highlight.left:disabled {
-    background-image: -gtk-gradient (linear, left top, left bottom,
-                                     from (shade (@bg_color, 0.95)),
-                                     to (shade (@bg_color, 0.85)));
-}
-
-scale highlight.bottom:disabled {
-    background-image: -gtk-gradient (linear, left top, right top,
-                                     from (shade (@bg_color, 0.95)),
-                                     to (shade (@bg_color, 0.85)));
-}
-
-trough,
-row trough,
-row:hover trough,
-row:selected trough,
-row:selected:focus trough {
+progressbar trough {
     background-image: -gtk-gradient (linear, left top, left bottom,
                                      from (#d1d1d1),
                                      to (#e8e8e8));
     border-style: solid;
     border-width: 1px;
-
     color: @text_color;
 }
 
-trough.vertical {
+progressbar.vertical trough {
     background-image: -gtk-gradient (linear, left top, right top,
                                      from (#d1d1d1),
                                      to (#e8e8e8));
 }
 
-/* level bars as used for password quality or remaining power */
+/*************
+ * Level bar *
+ *************/
 
+/* level bars as used for password quality or remaining power */
 levelbar {
-/*    -GtkLevelBar-min-block-width: 34;
-    -GtkLevelBar-min-block-height: 3; deprecated */
+    min-width: 34px;
+    min-height: 3px;
 }
 
 levelbar.vertical {
-/*    -GtkLevelBar-min-block-width: 3;
-    -GtkLevelBar-min-block-height: 34; deprecated */
+    min-width: 3px;
+    min-height: 34px;
 }
 
 levelbar trough {
@@ -1394,7 +1414,6 @@ levelbar trough {
 levelbar block.filled {
     border-width: 1px;
     border-style: solid;
-
     border-color: @selected_bg_color;
     background-color: #8FAF53;
 }
@@ -1412,7 +1431,6 @@ levelbar block.filled.low:backdrop {
     background-image: none;
 }
 
-
 levelbar.discrete.horizontal block.filled {
     margin: 0 1px;
 }
@@ -1421,7 +1439,16 @@ levelbar.discrete.vertical block.filled {
     margin: 1px 0;
 }
 
-levelbar block.filled.high {
+levelbar block.low {
+    border-color: shade(@warning_bg_color, 0.80);
+    background-image: linear-gradient(to bottom,
+                                      shade(@warning_bg_color, 1.3),
+                                      @warning_bg_color 75%,
+                                      shade(@warning_bg_color, 0.90)
+                                      );
+}
+
+levelbar block.high {
     border-color: shade(@success_color, 0.85);
     background-image: linear-gradient(to bottom,
                                       shade(@success_color, 1.2),
@@ -1430,13 +1457,12 @@ levelbar block.filled.high {
                                       );
 }
 
-levelbar block.filled.low {
-    border-color: shade(@warning_bg_color, 0.80);
+levelbar block.full {
+    border-color: shade(@success_color, 0.95);
     background-image: linear-gradient(to bottom,
-                                      shade(@warning_bg_color, 1.3),
-                                      @warning_bg_color 75%,
-                                      shade(@warning_bg_color, 0.90)
-                                      );
+                                      shade(@success_color, 1.2),
+                                      @success_color 75%,
+                                      shade(@success_color, 0.95));
 }
 
 levelbar block.empty {
@@ -1450,39 +1476,88 @@ levelbar block.empty:backdrop {
     background-color: transparent;
 }
 
-scale {
-/*    -GtkRange-slider-width: 18;
-    -GtkRange-trough-border: 0;
-    -GtkScale-slider-length: 14; deprecated */
-}
+
+/*********
+ * scale *
+ *********/
 
 scale.vertical {
-/*    -GtkScale-slider-length: 13; deprecated */
+    min-width: 10px;
 }
 
-scale trough highlight {
-    background-color: #8FAF53;
-    background-image: none;
-    background-clip: content-box;
+scale.horizontal {
+    min-height: 10px;
 }
 
-scale trough highlight:disabled {
+scale.horizontal trough {
+    min-height: 4px;
+    margin: 8px 0;
+    border-radius: 8px;
+}
+
+scale trough,
+scale.vertical trough {
+    min-width: 4px;
+    margin: 0 6px;
+    border-radius: 8px;
+}
+
+scale trough,
+scale.horizontal trough {
+    background-image: -gtk-gradient (linear, left top, left bottom,
+                                     from (#d1d1d1),
+                                     to (#e8e8e8));
+    border-style: solid;
+    border-width: 1px;
+}
+
+scale.vertical trough {
+    background-image: -gtk-gradient (linear, left top, right top,
+                                     from (#d1d1d1),
+                                     to (#e8e8e8));
+}
+
+scale trough:disabled,
+scale.horizontal trough:disabled,
+scale.vertical trough:disabled {
+	background-color: shade(@insensitive_bg_color, 0.96);
+	border-color: shade(@insensitive_scale_borders, 0.75);
+	box-shadow: none;
+	background-image: none;
+}
+
+scale  contents trough highlight,
+scale.horizontal contents trough highlight,
+scale.horizontal.marks-after contents trough highlight,
+scale.vertical contents trough highlight {
+    border-radius: 8px;
+    border-width: 1px;
+    border-style: solid;
+    background-image: linear-gradient(to bottom,
+                                      @progressbar_fill_a,
+                                      @progressbar_fill_b);
+    border-top-color:    shade(@button_border_active, 0.80);
+    border-left-color:   shade(@button_border_active, 0.85);
+    border-right-color:  shade(@button_border_active, 0.85);
+    border-bottom-color: shade(@button_border_active, 0.80);
+}
+
+scale contents trough highlight:disabled,
+scale.horizontal contents trough highlight:disabled,
+scale.vertical contents trough highlight:disabled {
     background-color: #b5b5b5;
     background-image: none;
+    border-color: transparent;
 }
 
-scale trough highlight.left {
-    margin: 7px 0 7px 0;
-}
-
-scale trough highlight:backdrop {
+scale contents trough highlight:backdrop,
+scale.horizontal contents trough highlight:backdrop,
+scale.vertical contents trough highlight:backdrop {
     background-color: #dcdcdc;
     background-image: none;
+    border-color: transparent;
 }
 
-scale trough highlight.bottom {
-    margin: 0 7px 0 7px;
-}
 
 /* defines the color of the actuall marks on the scale */
 scale marks indicator {
@@ -1500,6 +1575,87 @@ scale.vertical indicator,
 scale.vertical.fine-tune indicator {
     min-height: 1px;
     min-width: 8px;
+}
+
+scale slider,
+scale slider:hover,
+scale slider:disabled {
+	border-radius: 8px;
+	border-style: none;
+	background-color: transparent;
+	/* background-image in -assets variant */
+}
+
+scale.vertical slider,
+scale.horizontal slider {
+    background-size: 105%;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-width: 18px;
+    margin: -9px 0px -9px 0px;
+}
+
+scale.vertical slider:hover,
+scale.horizontal slider:hover {
+    background-size: 110%;
+}
+
+scale.horizontal slider,
+scale.horizontal.marks-after slider {
+    min-width: 14px;
+    margin: -9px 0px -9px 0px;
+}
+
+scale.vertical slider {
+    min-height: 18px;
+    margin: 0px -9px 0px -9px;
+}
+
+scale.horizontal.color.marks-before,
+scale.vertical.color.marks-after {
+    margin: 0px 0px 0px 0px;
+    padding: 0px;
+}
+
+scale.horizontal.color.marks-before trough,
+scale.vertical.color.marks-after trough {
+      border-color: @scale_highlight_border;
+      border-radius: 3px;
+      background-repeat: no-repeat;
+}
+
+scale.vertical.color.marks-after slider {
+    min-height: 18px;
+    min-width: 20px;
+    padding: 0px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0px 0px 0px 0px;
+}
+
+scale.horizontal.color.marks-before slider {
+    min-height: 12px;
+    min-width: 18px;
+    margin: 0px 0px 0px 0px;
+    padding: 5px 0px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+scale.horizontal.color.marks-before slider:hover,
+scale.vertical.color.marks-after slider:hover {
+    background-size: 105%;
+}
+
+scale.horizontal.color.marks-before.fine-tune slider,
+scale.vertical.color.marks-after.fine-tune slider,
+scale.vertical.fine-tune slider:active,
+scale.vertical.fine-tune slider:active:hover,
+scale.horizontal.fine-tune slider:active,
+scale.horizontal.fine-tune slider:hover:active {
+	background-size: 80%;
 }
 
 /*************
