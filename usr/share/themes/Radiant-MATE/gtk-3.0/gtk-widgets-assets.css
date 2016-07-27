@@ -550,3 +550,27 @@ scale.vertical.marks-after slider:backdrop:disabled {
     background-image: url("assets/slider-right-backdrop-disabled.png");
 }*/
 
+/*************
+ * scrollbar *
+ *************/
+
+scrollbar.vertical button.up,
+scrollbar.vertical .button.up {
+    -gtk-icon-source: -gtk-icontheme("pan-up-symbolic");
+}
+
+scrollbar.vertical button.down,
+scrollbar.vertical .button.down {
+    -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
+}
+
+scrollbar.horizontal button.up,
+scrollbar.horizontal .button.up {
+    -gtk-icon-source: -gtk-icontheme("pan-start-symbolic");
+}
+
+scrollbar.horizontal button.down,
+scrollbar.horizontal .button.down {
+    -gtk-icon-source: -gtk-icontheme("pan-end-symbolic");
+}
+
