@@ -566,68 +566,6 @@ frame > border.flat,
     border: none;
 }
 
-/**********************
- * Window Decorations *
- *********************/
-decoration {
-    border-radius: 10px 10px 0 0;
-    border-width: 0px;
-    box-shadow: 0 3px 9px 1px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(0, 0, 0, 0.23);
-
-    /* this is used for the resize cursor area */
-    margin: 10px;
-}
-
-decoration:backdrop {
-    box-shadow: 0 2px 6px 2px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.18);    
-}
-  
-.tiled decoration {
-     border-radius: 0;
-}
-  
-.csd.popup decoration {
-     box-shadow: none;
-}
-  
-.ssd decoration,
-decoration.ssd {
-    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.23);
-}
-  
-.csd.popup decoration {
-    border-radius: 0;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.13);
-}
-  
-tooltip.csd decoration {
-    border-radius: 5px;
-    box-shadow: none;
-}
-  
-messagedialog.csd decoration {
-    border-radius: 10px;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.13);
-}
-
-/****************
- * window-frame *
- ****************/
-
-.csd.popup decoration {
-    border-style: none;
-    border-radius: 0;
-    box-shadow: 0 3px 8px @shadow_color;
-}
-
-.solid-csd decoration {
-  border-radius: 0;
-  background-color: @bg_color;
-  border: 1px solid darker(@bg_color);
-  box-shadow: none;
-  margin: 0px;  
-}
-
 /***********************
  * iconview & textview *
  ***********************/
@@ -2175,6 +2113,65 @@ headerbar .subtitle {
     color: #8b8379;
     -gtk-icon-shadow: none;
     background-image: linear-gradient(to top, #ece9e6, #e8e4e1);
+}
+
+/***************************************
+ * Window Decorations and window-frame *
+ ***************************************/
+
+/* workaround to avoid unwanted black frames if switching compositor on/off
+   for none csd windows, eg. menus from mate-panel */
+.background decoration  {
+    box-shadow: none;
+}
+
+.background.csd decoration {
+    border-radius: 10px 10px 0 0;
+    border-width: 0px;
+    box-shadow: 0 3px 9px 1px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(0, 0, 0, 0.23);
+    /* this is used for the resize cursor area */
+    margin: 10px;
+}
+
+decoration:backdrop {
+    box-shadow: 0 2px 6px 2px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.18);
+}
+
+.tiled decoration {
+     border-radius: 0;
+}
+
+.csd.popup decoration {
+     box-shadow: none;
+}
+
+.ssd decoration,
+decoration.ssd {
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.23);
+}
+
+.solid-csd decoration {
+    border-radius: 0;
+    background-color: @fg_color;
+    border: 1px solid darker(@fg_color);
+    box-shadow: none;
+    margin: 0px;
+}
+
+.csd.popup decoration {
+    border-style: none;
+    border-radius: 0;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.13);
+}
+
+tooltip.csd decoration {
+    border-radius: 5px;
+    box-shadow: none;
+}
+
+messagedialog.csd decoration {
+    border-radius: 10px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.13);
 }
 
 /***********
