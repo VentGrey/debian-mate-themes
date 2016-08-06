@@ -937,17 +937,42 @@ menuitem > box > image + label {
 notebook {
     padding: 0;
     background-clip: border-box;
+    border-style: none;
+    background-color: shade (@theme_bg_color, 1.1);
+}
+
+notebook.frame {
+    padding: 0;
+    background-color: shade (@theme_bg_color, 1.1);
+    background-clip: border-box;
     border-style: solid;
     border-color: shade (@bg_color, 0.82);
-    border-width: 0px;
+    border-width: 1px;
+    border-radius:  4px;
+}
+
+window.background > box.vertical > notebook, /* pavu-control */
+window.background.csd > box.vertical > notebook,
+window.background.ssd > box.vertical > notebook,
+window.background.solid-csd > box.vertical > notebook {
     background-color: shade (@theme_bg_color, 1.1);
-/*    -GtkNotebook-initial-gap: 0;
-    -GtkNotebook-arrow-spacing: 5;
-    -GtkNotebook-tab-curvature: 0;
-    -GtkNotebook-tab-overlap: 1;
-    -GtkNotebook-has-tab-gap: false;
-    -GtkWidget-focus-padding: 0;
-    -GtkWidget-focus-line-width: 0; deprecated */
+    border-style: none;
+    border-width: 0px;
+    border-radius: 4px 4px 0px 0px;
+}
+
+printdialog > box.view.vertical.dialog-vbox > box.vertical > notebook {
+    background-color: shade (@theme_bg_color, 1.1);
+    border-radius: 0px;
+    border-style: solid;
+    border-color: @borders;
+    border-width: 0px 0px 1px 0px;
+}
+
+dialog.background.csd > box.vertical.dialog-vbox > notebook, /* meld preferences */
+dialog.background.ssd > box.vertical.dialog-vbox > notebook,
+dialog.background.solid-csd > box.vertical.dialog-vbox > notebook {
+    background-color: shade (@theme_bg_color, 1.1);
 }
 
 notebook :hover {
@@ -955,48 +980,35 @@ notebook :hover {
     color: @theme_fg_color;
 }
 
-notebook.frame.top {
-    border-width: 0px 1px 1px 1px;
-    border-radius:  0px 0px 4px 4px;
-}
-
-notebook.frame.bottom {
-    border-width: 1px 1px 0px 1px;
-    border-radius: 4px 4px 0px 0px;
-}
-
-notebook.frame.left {
-    border-width: 1px 1px 1px 0px;
-    border-radius: 0px 4px 4px 0px;
-}
-
-notebook.frame.right {
-    border-width: 1px 0px 1px 1px;
-    border-radius: 4px 0px 0px 4px;
-}
-
-notebook.header {
+notebook header {
     background-image: none;
     background-color: shade (@theme_bg_color, 1.0);
     border-width: 0px;
 }
 
-notebook.header.top {
+notebook header.top {
     border-width: 0px 0px 1px 0px;
     border-radius: 4px 4px 0px 0px;
 }
 
-notebook.header.bottom {
+printdialog notebook header.top,
+dialog.background.csd > box.vertical.dialog-vbox > notebook > header.top,
+dialog.background.ssd > box.vertical.dialog-vbox > notebook > header.top,
+dialog.background.solid-csd > box.vertical.dialog-vbox > notebook > header.top {
+    border-radius: 0px;
+}
+
+notebook header.bottom {
     border-width: 1px 0px 0px 0px;
     border-radius: 0px 0px 4px 4px;
 }
 
-notebook.header.left {
+notebook header.left {
     border-width: 0px 1px 0px 0px;
     border-radius: 4px 0px 0px 4px;
 }
 
-notebook.header.right {
+notebook header.right {
     border-width: 0px 0px 0px 1px;
     border-radius: 0px 4px 4px 0px;
 }
@@ -1006,7 +1018,7 @@ notebook viewport {
     border-width: 0px;
 }
 
-notebook tab {
+notebook header tab {
     border-color: transparent;
     border-width: 1px;
     background-image: none;
@@ -1014,116 +1026,239 @@ notebook tab {
     padding: 4px 6px;
 }
 
-notebook tab label {
+notebook header tab label {
     color: mix (@theme_fg_color, @theme_bg_color, 0.40);
     font-weight: normal;
 }
 
-notebook .prelight-page,
-notebook .prelight-page label {
+notebook header .prelight-page,
+notebook header .prelight-page label {
     color: mix (@theme_fg_color, @theme_bg_color, 0.15);
 }
 
-notebook .active-page,
-notebook tab .active-page label {
+notebook header .active-page,
+notebook header tab .active-page label {
     color: @theme_fg_color;
 }
 
-notebook tab.top,
-/* wtf, why this doesn't work? */
-notebook tab.bottom {
-    padding: 4px 6px;
-}
-
-/* workaround for wtf */
-notebook tab.bottom:active {
-    padding: 4px 6px;
-}
-
-notebook tab.top {
+/* tabs and header in view areas, ie. pluma-, caja-tabs */
+.gedit-bottom-panel-paned > grid > notebook > header.top,
+window.background > notebook > header.top, /* nautilus preferences */
+paned.horizontal > box.vertical > notebook > header.top,
+paned.horizontal > paned.vertical > notebook > header.top {
+    border-style: solid;
+    border-color: shade (@bg_color, 0.82);
+    border-width: 1px 0px 0px 1px;
     border-radius: 4px 4px 0px 0px;
-    border-width: 1px;
+    box-shadow: none;
+}
+
+paned.horizontal > box.vertical > notebook scrolledwindow.frame,
+paned.horizontal > paned.vertical > notebook scrolledwindow.frame {
+    border-width: 1px 1px 1px 1px;
+    border-style: solid;
+    border-color: shade (@bg_color, 0.82);
+}
+
+.gedit-bottom-panel-paned > grid > notebook > header tab,
+window.background > notebook > header tab,
+paned.horizontal > notebook > header tab,
+paned.horizontal > box.vertical > notebook > header tab,
+paned.horizontal > paned.vertical > notebook > header tab {
+    padding: 4px 6px;
+    margin: 0px -0px 0px -1px;
+    border-width: 0px 1px 0 1px;
+    border-style: solid;
+    border-radius: 4px 4px 0 0;
+    border-color: shade (@bg_color, 0.82);
+}
+
+.gedit-bottom-panel-paned > grid > notebook > header tab:checked,
+.gedit-bottom-panel-paned > grid > notebook > header tab:checked:hover,
+window.background > notebook > header.top tab:checked,
+window.background > notebook > header.top tab:checked:hover,
+paned.horizontal > notebook > header.top tab:checked,
+paned.horizontal > notebook > header.top tab:checked:hover,
+paned.horizontal > box.vertical > notebook > header.top tab:checked,
+paned.horizontal > box.vertical > notebook > header.top tab:checked:hover,
+paned.horizontal > paned.vertical > notebook > header.top tab:checked,
+paned.horizontal > paned.vertical > notebook > header.top tab:checked:hover {
+    background-image: linear-gradient(to bottom,
+                                      shade(@theme_bg_color, 1.18),
+                                      shade(@theme_bg_color, 1.1));
+    border-radius: 4px 4px 0 0;
+    border-width: 0px 1px 0 1px;
     border-style: solid;
     border-color: shade (@bg_color, 0.82);
     box-shadow: none;
 }
 
-notebook tab.top:active,
-notebook tab.top:active:hover {
+.gedit-bottom-panel-paned > grid > notebook > header button.flat.small-button,
+paned.horizontal > box.vertical > notebook > header button.flat,
+paned.horizontal > paned.vertical > notebook > header button.flat {
+    padding: 1px;
+}
+
+/* other notebooks */
+stack frame > paned.horizontal > notebook {
+    border-width: 0px;
+    border-style: solid;
+    border-color: shade (@bg_color, 0.82);
+    border-radius: 4px 4px 0px 0px;
+}
+
+stack frame > paned.horizontal > notebook:first-child {
+    border-width: 0px 1px 0px 0px;
+}
+
+stack frame > paned.horizontal > notebook:last-child {
+    border-width: 0px 0px 0px 1px;
+}
+
+stack frame > paned.horizontal > notebook:only-child {
+    border-width: 0px 1px 0px 1px;
+}
+
+paned.horizontal > notebook > header {
+    border-width: 0px 0px 0px 0px;
+    border-style: solid;
+    border-color: shade (@bg_color, 0.82);
+    border-radius: 4px 4px 0px 0px;
+}
+
+paned.horizontal > notebook > header label {
+    padding: 4px;
+}
+
+paned.horizontal > notebook > header button.flat.small-button {
+    padding: 1px;
+}
+
+/* tabs in dialog windows */
+/* horizontal tabs */
+window.background > box.vertical > notebook > header.top tab, /* pavu-control */
+window.background.csd > box.vertical > notebook > header.top tab,
+window.background.ssd > box.vertical > notebook > header.top tab,
+window.background.solid-csd > box.vertical > notebook > header.top tab,
+dialog.background.csd > box.vertical.dialog-vbox > notebook > header.top tab, /* meld preferences */
+dialog.background.ssd > box.vertical.dialog-vbox > notebook > header.top tab,
+dialog.background.solid-csd > box.vertical.dialog-vbox > notebook > header.top tab,
+printdialog notebook > header.top tab,
+notebook.frame > header.top tab,
+notebook.frame > header.bottom tab {
+    margin: 0px 0px 0px -1px;
+    border-width: 0px 1px 1px 1px;
+    border-style: solid;
+    border-color: transparent;
+}
+
+window.background > box.vertical > notebook > header.top tab, /* pavu-control */
+window.background.csd > box.vertical > notebook > header.top tab,
+window.background.ssd > box.vertical > notebook > header.top tab,
+window.background.solid-csd > box.vertical > notebook > header.top tab,
+dialog.background.csd > box.vertical.dialog-vbox > notebook > header.top tab,
+dialog.background.ssd > box.vertical.dialog-vbox > notebook > header.top tab,
+dialog.background.solid-csd > box.vertical.dialog-vbox > notebook > header.top tab,
+printdialog notebook > header.top tab,
+notebook.frame > header.top tab {
+    padding: 4px 6px;
+    border-radius: 4px 4px 0px 0px;
+}
+
+window.background > box.vertical > notebook > header.top tab:checked, /* pavu-control */
+window.background.csd > box.vertical > notebook > header.top tab:checked,
+window.background.ssd > box.vertical > notebook > header.top tab:checked,
+window.background.solid-csd > box.vertical > notebook > header.top tab:checked,
+dialog.background.csd > box.vertical.dialog-vbox > notebook > header.top tab:checked,
+dialog.background.ssd > box.vertical.dialog-vbox > notebook > header.top tab:checked,
+dialog.background.solid-csd > box.vertical.dialog-vbox > notebook > header.top tab:checked,
+dialog.background.csd > box.vertical.dialog-vbox > notebook > header.top tab:checked:hover,
+dialog.background.ssd > box.vertical.dialog-vbox > notebook > header.top tab:checked:hover,
+dialog.background.solid-csd > box.vertical.dialog-vbox > notebook > header.top tab:checked:hover,
+printdialog notebook > header.top tab:checked,
+printdialog notebook > header.top tab:checked:hover,
+notebook.frame > header.top tab:checked,
+notebook.frame > header.top tab:checked:hover {
     background-image: linear-gradient(to bottom,
                                       shade(@theme_bg_color, 1.18),
                                       shade(@theme_bg_color, 1.1));
     border-radius: 4px 4px 0px 0px;
-    border-width: 1px 1px 0px 1px;
+    border-width: 0px 1px 0px 1px;
     border-style: solid;
     border-color: shade (@bg_color, 0.82);
-    box-shadow: none;
 }
 
-notebook tab.bottom {
-    border-radius: 0px 0px 4px 4px;
-    border-width: 1px;
-    border-style: solid;
-    border-color: shade (@bg_color, 0.82);
-    box-shadow: none;
-}
-
-notebook tab.bottom:active,
-notebook tab.bottom:active:hover {
-    background-image: linear-gradient(to top,
-                                      shade(@theme_bg_color, 1.18),
-                                      shade(@theme_bg_color, 1.1));
-    border-radius: 0 0 4px 4px;
-    border-style: solid;
-    border-width: 0px 1px 1px 1px;
-    border-color: shade (@bg_color, 0.82);
-    box-shadow: none;
-}
-
-/* vertical tabs */
-
-notebook tab.left,
-notebook tab.right {
+notebook.frame > header.bottom tab {
     padding: 4px 6px;
 }
 
-notebook tab.left {
-    border-radius: 4px 0px 0px 4px;
-    border-width: 1px;
+notebook.frame > header.bottom tab:checked,
+notebook.frame > header.bottom tab:checked:hover {
+    background-image: linear-gradient(to top,
+                                      shade(@theme_bg_color, 1.18),
+                                      shade(@theme_bg_color, 1.1));
+    border-radius: 0px 0px 4px 4px;
+    border-style: solid;
+    border-width: 0px 1px 0px 1px;
     border-color: shade (@bg_color, 0.82);
 }
 
-notebook tab.left:active,
-notebook tab.left:active:hover {
+/* vertical tabs */
+notebook.frame > header.left tab,
+notebook.frame > header.right tab {
+    padding: 4px 6px;
+    margin: -1px 0px 0px 0px;
+    border-width: 1px 0px 1px 0px;
+    border-style: solid;
+    border-color: transparent;
+}
+
+notebook.frame > header.left tab {
+    border-radius: 4px 0px 0px 4px;
+}
+
+
+notebook.frame > header.left tab:checked,
+notebook.frame > header.left tab:checked:hover {
     background-image: linear-gradient(to right,
                                       shade(@theme_bg_color, 1.18),
                                       shade(@theme_bg_color, 1.1));
+    border-style: solid;
+    border-width: 1px 0px 1px 0px;
+    border-color: shade (@bg_color, 0.82);
     border-radius: 4px 0px 0px 4px;
-    border-width: 1px 0px 1px 1px;
-    border-color: shade (@bg_color, 0.82);
 }
 
-notebook tab.right {
+notebook.frame > header.right tab {
     border-radius: 0px 4px 4px 0px;
-    border-width: 1px;
-    border-color: shade (@bg_color, 0.82);
 }
 
-notebook tab.right:active,
-notebook tab.right:active:hover {
+notebook.frame > header.right tab:checked,
+notebook.frame > header.right tab:checked:hover {
     background-image: linear-gradient(to left,
                                       shade(@theme_bg_color, 1.18),
                                       shade(@theme_bg_color, 1.1));
-    border-radius:  0px 4px 4px 0px;
-    border-width: 1px 1px 1px 0px;
+    border-style: solid;
+    border-width: 1px 0px 1px 0px;
     border-color: shade (@bg_color, 0.82);
+    border-radius: 0px 4px 4px 0px;
+}
+
+notebook tab.reorderable-page:checked,
+notebook tab.reorderable-page:checked:hover {
+    background-image: linear-gradient(to bottom,
+                                      shade(@theme_bg_color, 1.18),
+                                      shade(@theme_bg_color, 1.1));
+    border-radius: 4px 4px 0 0;
+    box-shadow: none;
+    border-style: solid;
 }
 
 /* close button styling */
-notebook tab button,
-notebook tab button.flat,
-notebook tab button:hover:active,
-notebook tab button.flat:hover:active {
+notebook button.flat,
+notebook button.flat.small-button,
+notebook button.flat:hover:active,
+notebook button.flat.small-button:hover:active {
     color: mix (@theme_fg_color, @theme_bg_color, 0.85);
     border-image: none;
     background-image: none;
@@ -1135,15 +1270,14 @@ notebook tab button.flat:hover:active {
     -gtk-icon-shadow: none;
 }
 
-notebook .prelight-page button,
-notebook tab.prelight-page button,
-notebook .active-page button,
-notebook tab.active-page button {
+notebook .prelight-page button.flat.small-button,
+notebook .active-page button.flat.small-button {
     color: mix(@theme_fg_color, @theme_base_color, 0.6);
     -gtk-icon-shadow: 0 1px @button_text_shadow;
 }
 
-notebook tab button:hover {
+notebook button.flat:hover,
+notebook button.flat.small-button:hover {
     color: @theme_fg_color;
     border-color: transparent;
     border-image: none;
@@ -1151,8 +1285,10 @@ notebook tab button:hover {
     background-color: transparent;
 }
 
-notebook tab button:active,
-notebook tab button:active:hover {
+notebook button.flat:checked,
+notebook button.flat:hover:checked,
+notebook button.flat.small-button:checked,
+notebook button.flat.small-button:hover:active {
     color:  @button_active_text;
     background-color: alpha(black, 0.08);
     box-shadow: inset 0 1px alpha(black, 0.05);
@@ -1163,10 +1299,28 @@ notebook tab button:active:hover {
                         alpha(black, 0.13);
 }
 
+notebook header.top tabs arrow.up,
+notebook header.bottom tabs arrow.up {
+    -gtk-icon-source: -gtk-icontheme("pan-end-symbolic");
+}
+
+notebook header.top tabs arrow.down,
+notebook header.bottom tabs arrow.down {
+    -gtk-icon-source: -gtk-icontheme("pan-start-symbolic");
+}
+
+notebook header.left tabs arrow.up,
+notebook header.right tabs arrow.up {
+    -gtk-icon-source: -gtk-icontheme("pan-up-symbolic");
+}
+
+notebook header.left tabs arrow.down,
+notebook header.right tabs arrow.down {
+    -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
+}
+
 notebook header tabs arrow {
-    /* FIXME, why this doesn't work? */
-    -GtkNotebook-arrow-scaling: 0.5;
-    color: shade(@theme_fg_color, 2.6);
+    color: @theme_fg_color;
 }
 
 notebook header tabs arrow:hover {
@@ -1185,7 +1339,7 @@ notebook header tabs arrow:backdrop {
     color: rgba(84, 89, 90, 0.4);
 }
 
-notebook header tabs arrow:backdrop:disabled {
+notebook header tabs arrow:disabled {
     color: #c7c7c7;
 }
 
