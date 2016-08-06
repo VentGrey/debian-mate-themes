@@ -63,21 +63,41 @@
 /**********
  * button *
  **********/
-button {
-    padding: 5px 6px;
 
+button,
+button.color,
+button.text-button.toggle,
+button.text-button.radio,
+button.titlebutton,
+button.image-button,
+button.flat,
+button.font,
+button.file,
+button.toggle.popup,
+button.link {
+    -gtk-icon-style: regular;
+    padding: 5px 6px;
+    min-height: 18px;
+    min-width: 14px;
+}
+
+button.combo {
+    -gtk-icon-style: regular;
+    padding: 4px 6px;
+    min-height: 18px;
+    min-width: 12px;
+}
+
+button {
     background-image: -gtk-gradient (linear, left top, left bottom,
                                      from (shade (@button_bg_color, 1.08)),
                                      color-stop (0.5, @button_bg_color),
                                      to (shade (@button_bg_color, 0.94)));
-
     color: @fg_color;
     text-shadow: 0 1px alpha (shade (@button_bg_color, 1.25), 0.4);
-
     border: 1px solid transparent;
     border-radius: 8px;
     border-image-source: url("assets/button.png");
-
     /* all button border images have the same size and are sliced in the same way */
     border-image-width: 10px 12px 10px 12px;
     border-image-slice: 10 12 10 12;
@@ -93,7 +113,6 @@ button:backdrop {
     background-image: none;
     background-color: @bg_color;
     border-image-source: url("assets/backdrop-button.png");
-
     color: @backdrop_fg_color;
     text-shadow: 0 1px alpha (shade (@button_bg_color, 1.25), 0.2);
 }
@@ -126,14 +145,12 @@ button:hover:focus {
 button:disabled {
     background-image: none;
     background-color: mix (#ebebeb, @bg_color, 0.5);
-
     text-shadow: 0 1px alpha (shade (@button_bg_color, 1.25), 0.4);
     border-image-source: url("assets/button-disabled.png");
 }
 
 button:disabled:backdrop {
     background-color: #ebebeb;
-
     text-shadow: 0 1px alpha (shade (@button_bg_color, 1.25), 0.2);
     border-image-source: url("assets/backdrop-button-disabled.png");
 }
@@ -208,9 +225,83 @@ button label {
 /******************
  * Linked Widgets *
  *****************/
+
+/* Set up shadows and hilights for button visual separation */
+.linked button,
+.linked.horizontal > combobox > .linked > button.combo,
+toolbar .raised.linked button,
+toolbar .linked button.raised,
+toolbar.inline-toolbar button,
+toolbar.inline-toolbar toolbutton > button {
+	box-shadow: inset 1px 0 @inset_light_color, inset -1px 0 @inset_dark_color;
+}
+
+.linked button:first-child,
+.linked.horizontal > combobox:first-child > .linked > button.combo:first-child,
+toolbar .raised.linked button:first-child,
+toolbar .linked button.raised:first-child,
+toolbar.inline-toolbar button:first-child,
+toolbar.inline-toolbar toolbutton > button:first-child {
+	box-shadow: inset -1px 0 @inset_dark_color;
+}
+
+.linked button:last-child,
+.linked.horizontal > combobox:last-child > .linked > button.combo:last-child,
+toolbar .raised.linked button:last-child,
+toolbar .linked button.raised:last-child,
+toolbar.inline-toolbar button:last-child,
+toolbar.inline-toolbar toolbutton > button:last-child {
+	box-shadow: inset 1px 0 @inset_light_color;
+}
+
+.linked button:checked,
+.linked.horizontal > combobox > .linked > button.combo:checked,
+toolbar .raised.linked button:checked,
+toolbar .linked button.raised:checked,
+toolbar.inline-toolbar button:checked,
+toolbar.inline-toolbar toolbutton > button:checked {
+	box-shadow: inset 1px 0 @inset_dark_color;
+}
+
+.linked button:disabled,
+.linked.horizontal > combobox > .linked > button.combo:disabled,
+toolbar .raised.linked button:disabled,
+toolbar .linked button.raised:disabled,
+toolbar.inline-toolbar button:disabled,
+toolbar.inline-toolbar toolbutton > button:disabled {
+	box-shadow: inset -1px 0 @inset_dark_color;
+}
+
+/* remove box shadow from last-child and only-child */
+.linked button:disabled:last-child,
+.linked button:only-child,
+toolbar .raised.linked button:disabled:last-child,
+toolbar .linked button.raised:disabled:last-child,
+toolbar.inline-toolbar button:disabled:last-child,
+toolbar.inline-toolbar button:only-child,
+toolbar.inline-toolbar toolbutton > button:disabled:last-child,
+toolbar.inline-toolbar toolbutton > button:only-child {
+	box-shadow: none;
+}
+
+/* remove inset from first-child and only-child active buttons */
+.linked button:checked:only-child,
+toolbar .raised.linked button:checked:only-child,
+toolbar .linked button.raised:checked:only-child,
+toolbar.inline-toolbar button:only-child:checked,
+toolbar.inline-toolbar toolbutton > button:checked:only-child,
+.linked button:checked:first-child,
+toolbar .raised.linked button:checked:first-child,
+toolbar .linked button.raised:checked:first-child,
+toolbar.inline-toolbar button:checked:first-child,
+toolbar.inline-toolbar toolbutton > button:checked:first-child {
+	box-shadow: inset 0 1px 1px alpha(black, 0.1);
+}
+
 .linked > entry,
 .linked > button,
-.linked > combobox > button.combo {
+combobox > .linked button.combo,
+.linked > combobox > .linked button.combo {
     border-radius: 0;
     border-image-width: 10px 0 10px 0;
     border-width: 1px 0 1px 0;
@@ -219,24 +310,30 @@ button label {
 
 .linked > entry:first-child,
 .linked > button:first-child,
-.linked > combobox:first-child > button.combo {
+combobox > .linked button.combo:first-child,
+.linked > combobox:first-child > .linked button.combo:first-child {
     border-image-width: 10px 0 10px 12px;
+    border-width: 1px 0px 1px 1px;
     border-radius: 8px 0 0 8px;
 }
 
 .linked > entry:last-child,
 .linked > button:last-child,
-.linked > combobox:last-child > button.combo {
+combobox > .linked button.combo:last-child,
+.linked > combobox:last-child > .linked button.combo:last-child {
     border-image-width: 10px 12px 10px 0;
     border-radius: 0 8px 8px 0;
+    border-width: 1px 1px 1px 0px;
     box-shadow: none;
 }
 
 .linked > entry:only-child,
 .linked > button:only-child,
-.linked > combobox:only-child > button.combo {
+combobox > .linked button.combo:only-child,
+.linked > combobox:only-child > .linked button.combo:only-child {
     border-image-width: 10px 12px 10px 12px;
     border-radius: 8px;
+    border-width: 1px;
 }
 
 .primary-toolbar .linked button,
@@ -1341,6 +1438,41 @@ notebook header tabs arrow:backdrop {
 
 notebook header tabs arrow:disabled {
     color: #c7c7c7;
+}
+
+/**************
+ * ComboBoxes *
+ **************/
+
+combobox .linked button.combo:only-child {
+    border-image-width: 10px 12px 10px 12px;
+    border-radius: 8px;
+    border-width: 1px;
+}
+
+.linked combobox .linked button.combo {
+    border-image-width: 10px 0px 10px 0px;
+    border-radius: 0px;
+    border-width: 1px 0px;
+}
+
+.linked combobox:first-child .linked button.combo:first-child {
+    border-image-width: 10px 0px 10px 12px;
+    border-radius: 8px 0 0 8px;
+    border-width: 1px 0px 1px 1px;
+}
+
+.linked combobox:last-child .linked button.combo:last-child {
+    border-image-width: 10px 12px 10px 0px;
+    border-radius: 0px 8px 8px 0px;
+    border-width: 1px 1px 1px 0px;
+}
+
+combobox arrow {
+    -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
+    color: @theme_fg_color;
+    min-height: 16px;
+    min-width: 16px;
 }
 
 /*******************

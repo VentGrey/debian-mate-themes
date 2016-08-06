@@ -85,6 +85,9 @@
 @define-color progressbar_backdrop_fill_b shade(mix(@backdrop_selected_bg_color, grey, 0.10), 0.91);
 @define-color button_border_backdrop_active shade(@backdrop_selected_bg_color, 0.95);
 
+@define-color inset_light_color alpha(white, 0.45);
+@define-color inset_dark_color alpha(black, 0.07);
+
 @import url("gtk-widgets-borders.css");
 @import url("gtk-widgets-assets.css");
 @import url("gtk-widgets.css");

@@ -77,27 +77,27 @@ combobox button.combo:last-child {
 }
 
 combobox button.combo {
-    border-image: url("assets/combobox-button.png") 10 12 10 1 / 10px 12px 10px 1px stretch;
+    border-image: url("assets/combobox-button.png") 10 12 10 12 / 10px 12px 10px 12px stretch;
 }
 
 combobox button.combo:backdrop {
-    border-image: url("assets/backdrop-combobox-button.png") 10 12 10 1 / 10px 12px 10px 1px stretch;
+    border-image: url("assets/backdrop-combobox-button.png") 10 12 10 12 / 10px 12px 10px 12px stretch;
 }
 
 combobox button.combo:focus {
-    border-image: url("assets/combobox-button-focused.png") 10 12 10 1 / 10px 12px 10px 1px stretch;
+    border-image: url("assets/combobox-button-focused.png") 10 12 10 12 / 10px 12px 10px 12px stretch;
 }
 
 combobox button.combo:disabled {
-    border-image: url("assets/combobox-button-disabled.png") 10 12 10 1 / 10px 12px 10px 1px stretch;
+    border-image: url("assets/combobox-button-disabled.png") 10 12 10 12 / 10px 12px 10px 12px stretch;
 }
 
 combobox button.combo:disabled:backdrop {
-    border-image: url("assets/backdrop-combobox-button-disabled.png") 10 12 10 1 / 10px 12px 10px 1px stretch;
+    border-image: url("assets/backdrop-combobox-button-disabled.png") 10 12 10 12 / 10px 12px 10px 12px stretch;
 }
 
 combobox button.combo:active:focus {
-    border-image: url("assets/combobox-button-pressed-focused.png") 10 12 10 1 / 10px 12px 10px 1px stretch;
+    border-image: url("assets/combobox-button-pressed-focused.png") 10 12 10 12 / 10px 12px 10px 12px stretch;
 }
 
 .primary-toolbar combobox button.combo,
@@ -143,19 +143,19 @@ headerbar combobox button.combo:last-child {
     border-left-width: 0;
 }
 
-notebook tab.top:active {
+notebook header.top tab:checked {
     border-image: url("assets/notebook-tab-top.png") 8 10 1 10 / 8px 10px 1px 10px stretch;
 }
 
-notebook tab.right:active {
+notebook header.right tab:checked {
     border-image: url("assets/notebook-tab-right.png") 10 8 10 1 / 10px 8px 10px 1px stretch;
 }
 
-notebook tab.bottom:active {
+notebook header.bottom tab:checked {
     border-image: url("assets/notebook-tab-bottom.png") 1 10 8 10 / 1px 10px 8px 10px stretch;
 }
 
-notebook tab.left:active {
+notebook header.left tab:checked {
     border-image: url("assets/notebook-tab-left.png") 10 1 10 8 / 10px 1px 10px 8px stretch;
 }
 
@@ -167,6 +167,7 @@ trough highlight {
     border-color: transparent;
 }
 
+progressbar trough,
 trough {
     border-image: url("assets/progressbar-horizontal-trough.png") 6 7 6 7 / 6px 7px 6px 7px stretch;
 }
