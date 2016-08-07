@@ -481,11 +481,12 @@ menu radio *,
 /*****************
  * column-header *
  *****************/
-treeview header button,
-treeview header button:active {
+
+treeview header button {
     border-radius: 0;
     border-width: 0 1px 1px 0;
     border-image: none;
+	padding: 0 4px;
 }
 
 treeview header button {
@@ -514,8 +515,8 @@ treeview header button:backdrop {
 
 treeview header button:hover {
     background-image: -gtk-gradient (linear, left top, left bottom,
-                                     from (shade (@bg_color, 1.13)),
-                                     to (shade (@bg_color, 1.08)));
+                                     from (shade (@bg_color, 1.0)),
+                                     to (shade (@bg_color, 0.95)));
     border-image: -gtk-gradient (linear, left top, left bottom,
                                  from (shade (@bg_color, 0.99)),
                                  to (shade (@bg_color, 0.9))) 1;
@@ -531,7 +532,7 @@ treeview header button:hover:backdrop {
 }
 
 
-treeview header:nth-child(last) button {
+treeview header button:nth-child(last) {
     border-width: 0 0 1px 0;
 }
 
