@@ -2501,14 +2501,10 @@ statusbar {
 /**********
  * switch *
  **********/
-switch {
-    border-radius: 8px;
-	padding: 8px; /* 8px to avoid padding list-row issue if active */
-    padding: 0;
-}
 
 switch {
-    border-radius: 8px;
+    border-radius: 6px;
+    padding: 1px 0px 2px 0px;
     background-image: -gtk-gradient (linear, left top, left bottom,
                                      from (#cecece),
                                      to (#e8e8e8));
@@ -2516,11 +2512,11 @@ switch {
     text-shadow: 0 1px alpha (shade (@bg_color, 1.25), 0.5);
 }
 
-switch:active {
+switch:checked {
+    padding: 1px 0px 2px 0px;
     background-image: -gtk-gradient (linear, left top, left bottom,
                                      from (shade (@selected_bg_color, 0.93)),
                                      to (shade (@selected_bg_color, 0.99)));
-
     color: @selected_fg_color;
     text-shadow: 0 1px shade (@selected_bg_color, 0.7);
 }
@@ -2537,21 +2533,18 @@ switch:disabled {
     background-image: -gtk-gradient (linear, left top, left bottom,
                                      from (shade (@bg_color, 0.93)),
                                      to (shade (@bg_color, 0.99)));
-
     color: shade (@bg_color, 0.6);
     text-shadow: 0 1px alpha (shade (@bg_color, 1.25), 0.5);
 }
 
 switch slider {
-    padding: 1px;
+    padding: 2px;
     border-radius: 6px;
     border-style: solid;
-
     background-image: -gtk-gradient (linear, left top, left bottom,
                                      from (shade (@button_bg_color, 1.08)),
                                      color-stop (0.5, @button_bg_color),
                                      to (shade (@button_bg_color, 0.94)));
-
     color: @fg_color;
     text-shadow: 0 1px alpha (shade (@button_bg_color, 1.25), 0.4);
 }
@@ -2559,7 +2552,6 @@ switch slider {
 switch slider:backdrop {
     background-image: none;
     background-color: @bg_color;
-
     color: @backdrop_fg_color;
     text-shadow: 0 1px alpha (shade (@button_bg_color, 1.25), 0.2);
 }
