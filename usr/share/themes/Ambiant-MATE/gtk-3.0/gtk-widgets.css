@@ -886,6 +886,7 @@ menubar menuitem:hover,
 menubar > menuitem,
 .menubar > menuitem {
     padding: 3px 5px 3px 5px;
+    border: 1px solid transparent;
 }
 
 /************
