@@ -2454,10 +2454,7 @@ spinbutton.horizontal entry:focus,
 spinbutton.horizontal entry:backdrop,
 row.activatable spinbutton.horizontal entry,
 row.activatable spinbutton.horizontal entry:focus,
-row.activatable spinbutton.horizontal entry:backdrop,
-stack box.vertical.linked spinbutton.horizontal entry,
-stack box.vertical.linked spinbutton.horizontal entry:focus,
-stack box.vertical.linked spinbutton.horizontal entry:backdrop {
+row.activatable spinbutton.horizontal entry:backdrop {
     padding: 5px 10px 5px 4px;
     border-image:none;
     border-style: none;
@@ -2508,6 +2505,29 @@ spinbutton.vertical button:active {
 spinbutton.vertical button:last-child,
 spinbutton.vertical button:active:last-child {
     border-radius: 0 0 7px 7px;
+}
+
+.vertical.linked > spinbutton.horizontal,
+.vertical.linked > spinbutton.horizontal:focus,
+.vertical.linked > spinbutton.horizontal:backdrop {
+    border-color: alpha (shade (@bg_color, 0.6), 0.22);
+    border-width: 0px 1px 1px 1px;
+    border-style: solid;
+    border-radius: 0px;
+    box-shadow: inset -1px -1px shade (@bg_color, 0.84);
+}
+
+.vertical.linked > spinbutton.horizontal button,
+.vertical.linked > spinbutton.horizontal:focus button,
+.vertical.linked > spinbutton.horizontal:backdrop button,
+.vertical.linked > spinbutton.horizontal entry,
+.vertical.linked > spinbutton.horizontal:focus entry,
+.vertical.linked > spinbutton.horizontal:backdrop entry,
+stack box.vertical.linked spinbutton.horizontal entry,
+stack box.vertical.linked spinbutton.horizontal entry:focus,
+stack box.vertical.linked spinbutton.horizontal entry:backdrop  {
+    box-shadow: inset 1px 0 @inset_dark_color;
+    border-radius: 0px;
 }
 
 /***********
