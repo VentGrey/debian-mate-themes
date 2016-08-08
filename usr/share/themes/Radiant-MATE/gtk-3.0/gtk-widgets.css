@@ -425,8 +425,6 @@ messagedialog .linked.dialog-action-area button:hover {
  * cell and row *
  ****************/
 .cell {
-/*    -GtkCheckButton-indicator-size: 16; deprecated */
-
     background-color: @base_color;
     border-radius: 0;
     border-width: 0;
@@ -445,7 +443,7 @@ row.activatable:selected {
 }
 
 row:selected:backdrop,
-row.activatable:selected {
+row.activatable:backdrop {
     background-image: -gtk-gradient (linear, left bottom, left top,
                                      from (shade (@backdrop_selected_bg_color, 1.06)),
                                      to (shade (@backdrop_selected_bg_color, 0.94)));
@@ -2308,23 +2306,27 @@ combobox menuitem separator {
 }
 
 
-placessidebar .view {
+placessidebar .view,
+stacksidebar.sidebar viewport {
     background-color: shade (@bg_color, 0.95);
     color: @fg_color;
     text-shadow: 0 1px shade (shade (@bg_color, 0.95), 1.04);
 }
 
-placessidebar:backdrop {
+placessidebar:backdrop,
+stacksidebar.sidebar viewport:backdrop {
     color: mix (@fg_color, shade (@bg_color, 0.95), 0.2);
     text-shadow: 0 1px shade (shade (@bg_color, 0.95), 1.02);
 }
 
-placessidebar row:selected {
+placessidebar row:selected,
+stacksidebar.sidebar viewport row:selected {
     color: @selected_fg_color;
     text-shadow: 0 1px shade (@selected_bg_color, 0.7);
 }
 
-placessidebar row:selected:backdrop {
+placessidebar row:selected:backdrop,
+stacksidebar.sidebar viewport row:selected:backdrop {
     background-image: -gtk-gradient (linear, left top, left bottom,
                                      from (shade (shade (@bg_color, 0.95), 0.94)),
                                      to (shade (shade (@bg_color, 0.95), 0.86)));
