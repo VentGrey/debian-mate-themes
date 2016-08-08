@@ -358,6 +358,42 @@ combobox > .linked button.combo:only-child,
     border-width: 1px;
 }
 
+/* vertical */
+.vertical.linked > entry,
+.vertical.linked > button {
+    border-radius: 0;
+    border-image-width: 0 12px 0 12px;
+    border-width: 0 1px 0 1px;
+    box-shadow: inset -1px -1px shade (@bg_color, 0.84);
+}
+
+.vertical.linked > button {
+    padding: 5px 0px;
+}
+
+.vertical.linked > entry:first-child,
+.vertical.linked > button:first-child {
+    border-image-width: 10px 12px 0px 12px;
+    border-width: 1px 1px 1px 1px;
+    border-radius: 8px 8px 0 0;
+    box-shadow: inset -1px -1px shade (@bg_color, 0.84);
+}
+
+.vertical.linked > entry:last-child,
+.vertical.linked > button:last-child {
+    border-image-width: 0px 12px 10px 12px;
+    border-radius: 0 0 8px 8px;
+    border-width: 0px 1px 1px 1px;
+    box-shadow: none;
+}
+
+.vertical.linked > entry:only-child,
+.vertical.linked > button:only-child {
+    border-image-width: 10px 12px 10px 12px;
+    border-radius: 8px;
+    border-width: 1px;
+}
+
 .primary-toolbar .linked button:first-child,
 headerbar .linked button:first-child {
     box-shadow: inset -1px 0 shade (@dark_bg_color, 0.9);
@@ -1533,6 +1569,21 @@ combobox .linked button.combo:only-child {
     border-image-width: 10px 12px 10px 0px;
     border-radius: 0px 8px 8px 0px;
     border-width: 1px 1px 1px 0px;
+}
+
+/* vertical */
+.vertical.linked > combobox .linked button.combo {
+    border-radius: 0;
+    border-image-width: 0 12px 0 12px;
+    border-width: 0 1px 0 1px;
+    box-shadow: inset -1px -1px shade (@bg_color, 0.84);
+}
+
+.vertical.linked combobox .linked button.combo:first-child {
+    border-image-width: 10px 12px 0px 12px;
+    border-width: 1px 1px 1px 1px;
+    border-radius: 8px 8px 0 0;
+    box-shadow: inset -1px -1px shade (@bg_color, 0.84);
 }
 
 combobox arrow {
