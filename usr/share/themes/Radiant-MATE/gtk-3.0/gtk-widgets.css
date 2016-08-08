@@ -432,18 +432,20 @@ messagedialog .linked.dialog-action-area button:hover {
     border-width: 0;
 }
 
-row:selected {
+row:selected,
+row.activatable:selected {
     background-image: -gtk-gradient (linear, left bottom, left top,
                                      from (shade (@selected_bg_color, 1.06)),
                                      to (shade (@selected_bg_color, 0.94)));
     border-top-color: shade (@selected_bg_color, 0.88);
     border-style: solid;
-    border-width: 1px 0 0 0;
+    border-width: 0;
 
     color: @selected_fg_color;
 }
 
-row:selected:backdrop {
+row:selected:backdrop,
+row.activatable:selected {
     background-image: -gtk-gradient (linear, left bottom, left top,
                                      from (shade (@backdrop_selected_bg_color, 1.06)),
                                      to (shade (@backdrop_selected_bg_color, 0.94)));
@@ -3076,14 +3078,14 @@ viewport.frame {
 /************
  * listbox  *
  ************/
-list row button {
+list row.activatable {
     border-image: none;
     border-style: none;
     border-radius: 0;
     background-image: none;
 }
 
-list row button:selected {
+list row.activatable:selected {
     text-shadow: none;
 }
 
