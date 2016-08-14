@@ -3705,57 +3705,230 @@ progressbar .osd {
 /************
  * popover  *
  ************/
-popover {
-    background-clip: border-box;
 
+popover.background {
+    background-clip: border-box;
+    background-color: shade (@dark_bg_color, 1.08);
     border-radius: 5px;
     border: 1px solid darker(@bg_color);
-
+    color: @dark_fg_color;
     box-shadow: 0 2px 3px @shadow_color;
     margin: 10px;
     padding: 2px;
 }
 
-popover:backdrop {
+popover.background:backdrop {
     box-shadow: none;
 }
 
-/* Popover menuitems are actually buttons. The following rules reset most of
- * the button styles for them.
- */
-popover menuitem,
-popover menuitem:checked,
-popover menuitem:hover,
-popover menuitem:active,
-popover menuitem:disabled,
-popover menuitem:backdrop {
+popover separator {
+    background-color: shade (@theme_bg_color, 0.6);
+    border: 0;
+}
+
+modelbutton.flat,
+modelbutton.flat:checked,
+modelbutton.flat:hover,
+modelbutton.flat:active,
+modelbutton.flat:disabled,
+modelbutton.flat:backdrop {
     border-image: none;
     border: none;
     text-shadow: none;
     border-radius: 3px;
+    padding: 0px 0px 0px 4px;
 }
 
-popover menuitem:backdrop:hover {
+modelbutton.flat:backdrop:hover {
     border: none;
     border-image: none;
     background: transparent;
     color: @fg_color;
 }
 
-popover menuitem:checked,
-popover menuitem check,
-popover menuitem check:checked,
-popover menuitem radio,
-popover menuitem radio:checked {
-    background-image: none;
-    border: none;
+modelbutton.flat:hover,
+modelbutton.flat:backdrop:hover {
+    background-image: -gtk-gradient (linear, left top, left bottom,
+                                     from (shade (@selected_bg_color, 1.1)),
+                                     to (shade (@selected_bg_color, 0.9)));
+    border-image: -gtk-gradient (linear, left top, left bottom,
+                                 from (shade (@selected_bg_color, 0.7)),
+                                 to (shade (@selected_bg_color, 0.7))) 1;
+    color: @selected_fg_color;
+    text-shadow: 0 -1px shade (@selected_bg_color, 0.7);
 }
 
-popover menuitem:disabled,
-popover menuitem *:disabled {
+modelbutton.flat check,
+modelbutton.flat check:hover,
+modelbutton.flat check:checked,
+modelbutton.flat radio,
+modelbutton.flat radio:hover,
+modelbutton.flat radio:checked {
+    background-image: none;
+    border: none;
+    padding: 0px 3px 0px 0px;
+}
+
+modelbutton.flat arrow.left {
+    -gtk-icon-source: -gtk-icontheme("pan-start-symbolic");
+}
+
+modelbutton.flat arrow.right {
+    -gtk-icon-source: -gtk-icontheme("pan-end-symbolic");
+}
+modelbutton.flat arrow{
+    padding: 0px 3px 0px 0px;
+}
+
+modelbutton.flat:disabled,
+modelbutton.flat *:disabled {
     text-shadow: none;
     background: none;
 }
+
+.linked button.image-button.model,
+.linked button.image-button.model:focus,
+.linked button.image-button.model:first-child,
+.linked button.image-button.model:focus:first-child,
+.linked button.image-button.model:last-child,
+.linked button.image-button.model:focus:last-child {
+    background-color: transparent;
+    background-image: none;
+    border-color: transparent;
+    border-image: none;
+    border-style: none;
+    box-shadow: none;
+    border-radius: 6px;
+}
+
+/* middle button*/
+.linked button.image-button.model,
+.linked button.image-button.model:hover,
+.linked button.image-button.model:hover:active,
+.linked button.image-button.model:checked:hover,
+.linked button.image-button.model:checked:hover:active {
+    border-right-width: 0px;
+    border-left-width:  0px;
+    border-radius: 0;
+}
+
+.linked button.image-button.model,
+.linked button.image-button.model:focus {
+    box-shadow: inset  0px  1px shade (@theme_bg_color, 0.6),
+                        inset  0px -1px shade (@theme_bg_color, 0.6);
+}
+
+.linked button.image-button.model:checked,
+.linked button.image-button.model:hover,
+.linked button.image-button.model:hover:active,
+.linked button.image-button.model:checked:hover,
+.linked button.image-button.model:checked:hover:active {
+    box-shadow: inset 0 1px shade (@selected_bg_color, 1.16),
+                        inset 0 -1px shade (@selected_bg_color, 0.96);
+}
+
+/* left button*/
+.linked button.image-button.model:first-child,
+.linked button.image-button.model:hover:first-child,
+.linked button.image-button.model:hover:active:first-child,
+.linked button.image-button.model:checked:hover:first-child,
+.linked button.image-button.model:checked:hover:active:first-child {
+    border-right-width: 0px;
+    border-radius: 6px 0 0 6px;
+}
+
+.linked button.image-button.model:first-child,
+.linked button.image-button.model:focus:first-child {
+    box-shadow: inset  0px  1px shade (@theme_bg_color, 0.6),
+                        inset  1px  0px shade (@theme_bg_color, 0.6),
+                        inset -1px  0px shade (@theme_bg_color, 0.6),
+                        inset  0px -1px shade (@theme_bg_color, 0.6);
+}
+
+/* right button*/
+.linked button.image-button.model:last-child,
+.linked button.image-button.model:hover:last-child,
+.linked button.image-button.model:hover:active:last-child,
+.linked button.image-button.model:checked:hover:last-child,
+.linked button.image-button.model:checked:hover:active:last-child {
+    border-left-width:  0px;
+    border-radius: 0 6px 6px 0;
+}
+
+.linked button.image-button.model:last-child,
+.linked button.image-button.model:focus:last-child {
+    box-shadow: inset  0px  1px shade (@theme_bg_color, 0.6),
+                        inset  1px  0px shade (@theme_bg_color, 0.6),
+                        inset -1px  0px shade (@theme_bg_color, 0.6),
+                        inset  0px -1px shade (@theme_bg_color, 0.6);
+}
+
+.linked button.image-button.model:checked:first-child,
+.linked button.image-button.model:hover:first-child,
+.linked button.image-button.model:hover:active:first-child,
+.linked button.image-button.model:checked:hover:first-child,
+.linked button.image-button.model:checked:hover:active:first-child,
+.linked button.image-button.model:checked:last-child,
+.linked button.image-button.model:hover:last-child,
+.linked button.image-button.model:hover:active:last-child,
+.linked button.image-button.model:checked:hover:last-child,
+.linked button.image-button.model:checked:hover:active:last-child {
+    box-shadow: inset 1px 0 shade (@selected_bg_color, 1.02),
+                        inset -1px 0 shade (@selected_bg_color, 1.02),
+                        inset 0 1px shade (@selected_bg_color, 1.16),
+                        inset 0 -1px shade (@selected_bg_color, 0.96);
+}
+
+
+.linked button.image-button.model:checked,
+.linked button.image-button.model:hover,
+.linked button.image-button.model:hover:active,
+.linked button.image-button.model:checked:hover,
+.linked button.image-button.model:checked:hover:active {
+    color: @selected_fg_color;
+    text-shadow: 0 -1px shade (@selected_bg_color, 0.7);
+    background-image: -gtk-gradient (linear, left top, left bottom,
+                                     from (shade (@selected_bg_color, 1.1)),
+                                     to (shade (@selected_bg_color, 0.9)));
+    border-image: -gtk-gradient (linear, left top, left bottom,
+                                 from (shade (@selected_bg_color, 0.7)),
+                                 to (shade (@selected_bg_color, 0.7))) 1;
+}
+
+/* override theme_bg color */
+popover button.default.text-button.suggested-action:disabled {
+    background-image: -gtk-gradient (linear,
+                                     left top, left bottom,
+                                     from (shade(@dark_bg_color, 1.0)),
+                                     to   (shade(@dark_bg_color, 1.0)));
+}
+
+popover button.default.text-button.suggested-action {
+    background-image: -gtk-gradient (linear,
+                                     left top, left bottom,
+                                     from (shade(@dark_bg_color, 2.03)),
+                                     to   (shade(@dark_bg_color, 1.17)));
+    background-color: shade (@dark_bg_color, 1.2);
+    color: @dark_fg_color;
+    text-shadow: none;
+    border-width: 0px;
+    border-style: none;
+    border-radius: 7px;
+    border-image: none;
+    box-shadow: inset  0px  1px shade (@theme_bg_color, 0.6),
+                        inset  1px  0px shade (@theme_bg_color, 0.6),
+                        inset -1px  0px shade (@theme_bg_color, 0.6),
+                        inset  0px -1px shade (@theme_bg_color, 0.6);
+}
+
+popover button.default.text-button.suggested-action:hover {
+    color: shade (@theme_selected_bg_color, 1.3);
+    box-shadow: inset 1px 0 shade (@selected_bg_color, 1.02),
+                        inset -1px 0 shade (@selected_bg_color, 1.02),
+                        inset 0 1px shade (@selected_bg_color, 1.16),
+                        inset 0 -1px shade (@selected_bg_color, 0.96);
+}
+
 
 /* Floating bars */
 .floating-bar {

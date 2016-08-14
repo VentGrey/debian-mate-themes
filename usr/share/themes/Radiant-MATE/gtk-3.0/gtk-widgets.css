@@ -3729,54 +3729,81 @@ progressbar .osd {
 /************
  * popover  *
  ************/
-popover {
-    background-clip: border-box;
 
+popover.background {
+    background-clip: border-box;
     border-radius: 5px;
     border: 1px solid darker(@bg_color);
-
     box-shadow: 0 2px 3px @shadow_color;
     margin: 10px;
     padding: 2px;
 }
 
-popover:backdrop {
+popover.background:backdrop {
     box-shadow: none;
 }
 
-/* Popover menuitems are actually buttons. The following rules reset most of
- * the button styles for them.
- */
-popover menuitem,
-popover menuitem:checked,
-popover menuitem:hover,
-popover menuitem:active,
-popover menuitem:disabled,
-popover menuitem:backdrop {
+popover separator {
+    background-color: shade (@theme_bg_color, 0.85);
+    border: 0;
+}
+
+modelbutton.flat,
+modelbutton.flat:checked,
+modelbutton.flat:hover,
+modelbutton.flat:active,
+modelbutton.flat:disabled,
+modelbutton.flat:backdrop {
     border-image: none;
     border: none;
     text-shadow: none;
     border-radius: 3px;
+    padding: 0px 0px 0px 4px;
 }
 
-popover menuitem:backdrop:hover {
+modelbutton.flat:backdrop:hover {
     border: none;
     border-image: none;
     background: transparent;
     color: @fg_color;
 }
 
-popover menuitem:checked,
-popover menuitem check,
-popover menuitem check:checked,
-popover menuitem radio,
-popover menuitem radio:checked {
-    background-image: none;
-    border: none;
+modelbutton.flat:hover,
+modelbutton.flat:backdrop:hover {
+    background-image: -gtk-gradient (linear, left top, left bottom,
+                                     from (shade (@selected_bg_color, 1.1)),
+                                     to (shade (@selected_bg_color, 0.9)));
+    border-image: -gtk-gradient (linear, left top, left bottom,
+                                 from (shade (@selected_bg_color, 0.7)),
+                                 to (shade (@selected_bg_color, 0.7))) 1;
+    color: @selected_fg_color;
+    text-shadow: 0 -1px shade (@selected_bg_color, 0.7);
 }
 
-popover menuitem:disabled,
-popover menuitem *:disabled {
+modelbutton.flat check,
+modelbutton.flat check:hover,
+modelbutton.flat check:checked,
+modelbutton.flat radio,
+modelbutton.flat radio:hover,
+modelbutton.flat radio:checked {
+    background-image: none;
+    border: none;
+    padding: 0px 3px 0px 0px;
+}
+
+modelbutton.flat arrow.left {
+    -gtk-icon-source: -gtk-icontheme("pan-start-symbolic");
+}
+
+modelbutton.flat arrow.right {
+    -gtk-icon-source: -gtk-icontheme("pan-end-symbolic");
+}
+modelbutton.flat arrow{
+    padding: 0px 3px 0px 0px;
+}
+
+modelbutton.flat:disabled,
+modelbutton.flat *:disabled {
     text-shadow: none;
     background: none;
 }
