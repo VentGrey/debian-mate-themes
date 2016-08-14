@@ -2883,6 +2883,11 @@ headerbar .subtitle {
     background-image: linear-gradient(to top, #ece9e6, #e8e4e1);
 }
 
+/* don't use regular close button from icon themes */
+.titlebar button.titlebutton.close image {
+    -gtk-icon-style: symbolic;
+}
+
 /***************************************
  * Window Decorations and window-frame *
  ***************************************/
