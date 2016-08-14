@@ -2694,6 +2694,7 @@ stack box.vertical.linked spinbutton.horizontal entry:backdrop  {
 /***********
  * spinner *
  ***********/
+
 @keyframes spin {
     to { -gtk-icon-transform: rotate(1turn); }
 }
@@ -2706,7 +2707,7 @@ spinner {
 }
 
 spinner:checked {
-    animation: spinner 1s infinite linear;
+    animation: spin 1s linear infinite;
     opacity: 1;
 }
 
