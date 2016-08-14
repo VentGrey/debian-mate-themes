@@ -1592,13 +1592,19 @@ combobox arrow {
     min-width: 16px;
 }
 
-/******************
- * pane separator *
- ******************/
+/*******************
+ * Paned separator *
+ *******************/
+
+/* the small line between sidebar and view */
 .sidebar paned > separator,
 paned > separator {
-    background-color: transparent;
-    border-color: shade (@bg_color, 0.84);
+    min-width: 3px;
+    min-height: 3px;
+    -gtk-icon-source: none;
+    border-style: none;
+    background-color: @theme_bg_color;
+    background-size: 1px 1px;
 }
 
 /****************
