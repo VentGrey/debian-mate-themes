@@ -282,8 +282,8 @@ MatePanelAppletFrameDBus {
  * Mate-terminal *
  *****************/
 
-TerminalWindow.mate-terminal TerminalScreen,
-TerminalWindow.mate-terminal entry {
+/* FIXME, probably a bug in mate-terminal or vte */
+window.background.mate-terminal vte-terminal {
     -TerminalScreen-background-darkness: 0.95;
     background-color: #373633;
     color: @dark_fg_color;
