@@ -6,3 +6,29 @@
     background-color: shade (@bg_color, 0.95);
 }
 
+/***********
+ * Lightdm *
+ ***********/
+
+#login_window.background.lightdm-gtk-greeter {
+	border-radius: 5px;
+}
+
+#login_window.background.lightdm-gtk-greeter,
+#login_window.background.lightdm-gtk-greeter box.vertical {
+	border-radius: 5px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+}
+
+#login_window.background.lightdm-gtk-greeter frame {
+	border-style: none;
+}
+
+#login_window.background.lightdm-gtk-greeter #prompt_entry,
+#login_window.background.lightdm-gtk-greeter button.combo,
+#login_window.background.lightdm-gtk-greeter button.text-button,
+#login_window.background.lightdm-gtk-greeter button.text-button.default {
+	padding: 8px 4px;
+}
