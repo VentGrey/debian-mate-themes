@@ -3051,6 +3051,7 @@ headerbar :disabled {
 }
 
 .primary-toolbar button,
+.primary-toolbar button.flat,
 headerbar button,
 .primary-toolbar button.flat:hover {
     background: transparent;
