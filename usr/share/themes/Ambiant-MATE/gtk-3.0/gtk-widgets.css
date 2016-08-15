@@ -1211,6 +1211,19 @@ menuitem > box > image + label {
     padding-left: 6px;
 }
 
+menu separator,
+.menu separator,
+menuitem separator {
+    min-height: 1px;
+    background-color: shade(@dark_fg_color, 0.5);
+    border-style: none;
+}
+
+/* fix for broken firefox */
+menu separator {
+    color: shade(@dark_fg_color, 0.5);
+}
+
 /************
  * notebook *
  ************/
