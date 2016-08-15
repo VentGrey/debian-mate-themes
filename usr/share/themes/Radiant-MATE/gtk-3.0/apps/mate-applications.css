@@ -96,6 +96,12 @@
  * Mate-Panel *
  **************/
 
+/* set normal menubar menuitem */
+.mate-panel-menu-bar menubar,
+.mate-panel-menu-bar menubar > menuitem {
+    background-color: transparent;
+}
+
 PanelWidget > PanelSeparator {
     border-width: 0;
     background-color: transparent;
