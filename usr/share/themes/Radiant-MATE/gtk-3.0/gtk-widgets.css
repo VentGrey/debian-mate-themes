@@ -1261,6 +1261,32 @@ menu separator {
     color: shade(@bg_color, 0.9);
 }
 
+menuitem > arrow {
+    min-height: 16px;
+    min-width: 16px;
+    margin-left: 10px;
+    color: @dark_fg_color;
+}
+
+menu > menuitem > arrow:dir(ltr),
+.menu > menuitem > arrow:dir(ltr) {
+	-gtk-icon-source: -gtk-icontheme("pan-end-symbolic");
+}
+
+menu > menuitem > arrow:dir(rtl),
+.menu > menuitem > arrow:dir(rtl) {
+        -gtk-icon-source: -gtk-icontheme("pan-end-symbolic-rtl");
+}
+
+menu > arrow.top,
+.menu > arrow.top {
+      -gtk-icon-source: -gtk-icontheme("pan-up-symbolic");
+}
+
+menu > arrow.bottom,
+.menu > arrow.bottom {
+      -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
+}
 
 /************
  * notebook *
