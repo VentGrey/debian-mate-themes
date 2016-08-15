@@ -96,6 +96,12 @@
  * Mate-Panel *
  **************/
 
+PanelWidget > PanelSeparator {
+    border-width: 0;
+    background-color: transparent;
+    color: shade (@theme_bg_color, 0.85);
+}
+
 /* volume applet */
 .mate-panel-applet-slider,
 .mate-panel-applet-slider.background {
