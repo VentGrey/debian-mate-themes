@@ -142,6 +142,16 @@ headerbar combobox button.combo:last-child {
     border-left-width: 0;
 }
 
+.primary-toolbar combobox entry.combo:only-child,
+.primary-toolbar combobox button.combo:only-child,
+toolbar menubar combobox entry.combo:only-child,
+toolbar menubar combobox button.combo:only-child,
+headerbar combobox entry.combo:only-child,
+headerbar combobox button.combo:only-child {
+    border-image-width: 10px 12px 10px 12px;
+    border-radius: 8px;
+}
+
 notebook header.top tab:checked {
     border-image: url("assets/notebook-tab-top.png") 8 10 1 10 / 8px 10px 1px 10px stretch;
 }

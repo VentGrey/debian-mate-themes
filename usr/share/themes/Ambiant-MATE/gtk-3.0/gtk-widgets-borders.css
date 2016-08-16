@@ -106,19 +106,19 @@ toolbar menubar combobox button.combo,
 toolbar menubar combobox button.combo:focus:disabled,
 headerbar combobox button.combo,
 headerbar combobox button.combo:focus:disabled {
-    border-image: url("assets/combobox-button-toolbar.png") 10 12 10 1 / 10px 12px 10px 1px stretch;
+    border-image: url("assets/combobox-button-toolbar.png") 10 12 10 12 / 10px 12px 10px 12px stretch;
 }
 
 .primary-toolbar combobox button.combo:focus,
 toolbar menubar combobox button.combo:focus,
 headerbar combobox button.combo:focus {
-    border-image: url("assets/combobox-button-toolbar-focused.png") 10 12 10 1 / 10px 12px 10px 1px stretch;
+    border-image: url("assets/combobox-button-toolbar-focused.png") 10 12 10 12 / 10px 12px 10px 12px stretch;
 }
 
 .primary-toolbar combobox button.combo:focus:active:focus,
 toolbar menubar combobox button.combo:focus:active:focus,
 headerbar combobox button.combo:focus:active:focus {
-    border-image: url("assets/combobox-button-toolbar-pressed-focused.png") 10 12 10 1 / 10px 12px 10px 1px stretch;
+    border-image: url("assets/combobox-button-toolbar-pressed-focused.png") 10 12 10 12 / 10px 12px 10px 12px stretch;
 }
 
 .primary-toolbar combobox entry.combo:first-child,
@@ -141,6 +141,16 @@ headerbar combobox button.combo:last-child {
     border-image-width: 10px 12px 10px 1px;
     border-radius: 0 8px 8px 0;
     border-left-width: 0;
+}
+
+.primary-toolbar combobox entry.combo:only-child,
+.primary-toolbar combobox button.combo:only-child,
+toolbar menubar combobox entry.combo:only-child,
+toolbar menubar combobox button.combo:only-child,
+headerbar combobox entry.combo:only-child,
+headerbar combobox button.combo:only-child {
+    border-image-width: 10px 12px 10px 12px;
+    border-radius: 8px;
 }
 
 notebook header.top tab:checked {
