@@ -41,3 +41,9 @@
 	padding: 8px 4px;
 }
 
+/* the weird panel */
+.lightdm-gtk-greeter separator {
+    border-style: none;
+    border-width: 0px;
+}
+
