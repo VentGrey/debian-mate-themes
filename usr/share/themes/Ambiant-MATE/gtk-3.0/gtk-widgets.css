@@ -1583,10 +1583,11 @@ notebook button.flat.small-button:hover:active {
     background-image: none;
     background-color: transparent;
     border-radius: 3px;
-    border-style: solid;
+    border-style: none;
     border-color: transparent;
-    border-width: 1px;
+    border-width: 0px;
     -gtk-icon-shadow: none;
+    padding: 0px;
 }
 
 notebook .prelight-page button.flat.small-button,
