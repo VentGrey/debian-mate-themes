@@ -2945,7 +2945,7 @@ decoration.ssd {
 
 tooltip.csd decoration {
     border-radius: 5px;
-    box-shadow: none;
+    box-shadow: 0 1px 5px @wm_shadow;
 }
 
 messagedialog.csd decoration {
@@ -3252,7 +3252,7 @@ tooltip,
 .tooltip {
 	border-radius: 2px;
 	border-width: 1px;
-    border-color: alpha (#ffffff, 0.2);
+	border-color: shade(@dark_bg_color, 1.8);
 	border-style: solid;
 }
 
@@ -3283,7 +3283,8 @@ tooltip.background.ssd decoration,
 .tooltip.background.ssd decoration,
 tooltip.background.solid-csd decoration,
 .tooltip.background.solid-csd decoration {
-	background-color: transparent;
+	background-color: shade(@dark_bg_color, 1.8);
+	border-radius: 2px;
 }
 
 /************
