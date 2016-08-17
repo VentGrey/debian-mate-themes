@@ -952,9 +952,9 @@ iconview .cell {
 
 toolbar menu,
 combobox menu,
-GtkTreeMenu.menu,
+treemenu menu,
 toolbar headerbar menu,
-GtkMenuToolButton.menu,
+toolbutton menu,
 .primary-toolbar button menu,
 headerbar button menu,
 menu,
@@ -1130,12 +1130,12 @@ toolbar menu menuitem:disabled,
 toolbar menu menuitem *:disabled,
 combobox menu menuitem:disabled,
 combobox menu menuitem *:disabled,
-GtkTreeMenu.menu menuitem:disabled,
-GtkTreeMenu.menu menuitem *:disabled,
+treemenu menu menuitem:disabled,
+treemenu menu menuitem *:disabled,
 headerbar toolbar menu menuitem:disabled,
 headerbar toolbar menu menuitem *:disabled,
-GtkMenuToolButton.menu menuitem:disabled,
-GtkMenuToolButton.menu menuitem *:disabled,
+toolbutton menu menuitem:disabled,
+toolbutton menu menuitem *:disabled,
 .primary-toolbar button menu menuitem:disabled,
 .primary-toolbar button menu menuitem *:disabled,
 headerbar button menu menuitem:disabled,
@@ -2456,9 +2456,9 @@ menuitem separator {
     color: @dark_bg_color;
 }
 
-GtkTreeMenu menuitem separator,
+treemenu menuitem separator,
 toolbar headerbar menuitem separator,
-GtkMenuToolButton menuitem separator,
+toolbutton menuitem separator,
 .primary-toolbar button menuitem separator,
 headerbar button menuitem separator,
 menuitem separator {
@@ -3120,10 +3120,10 @@ headerbar button:checked:disabled {
                                      to (shade (@dark_bg_color, 1.02)));
 }
 
-.primary-toolbar GtkSeparatorToolItem,
+.primary-toolbar toolitem separator,
 .primary-toolbar separator,
 .primary-toolbar separator:disabled,
-headerbar GtkSeparatorToolItem,
+headerbar toolitem separator,
 headerbar separator,
 headerbar separator:disabled {
     border-color: alpha (shade (@dark_bg_color, 0.94), 0.35);
