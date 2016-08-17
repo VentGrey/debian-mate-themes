@@ -3278,23 +3278,43 @@ toolbar.inline-toolbar toolbutton button:backdrop:disabled:only-child {
 /***********
  * tooltip *
  ***********/
+
 tooltip,
-.tooltip,
-tooltip.background,
-.tooltip.background {
-    background-image: none;
+.tooltip {
+	border-radius: 2px;
+	border-width: 1px;
     border-color: alpha (#ffffff, 0.2);
-    border-radius: 0px;
-    border-style: solid;
-    border-width: 2px;
-    background-color: @tooltip_bg_color;
-    color: @tooltip_fg_color;
-    text-shadow: none;
+	border-style: solid;
 }
 
-tooltip *,
-.tooltip * {
-    background-color: transparent;
+tooltip.background,
+.tooltip.background {
+    background-color: @tooltip_bg_color;
+    background-clip: padding-box;
+}
+
+tooltip label,
+.tooltip label {
+    color: @tooltip_fg_color;
+    text-shadow: 1px 1px alpha (#000000, 0.8);
+	padding: 2px;
+}
+
+tooltip decoration,
+.tooltip decoration,
+tooltip.csd decoration,
+.tooltip.csd decoration,
+tooltip.ssd decoration,
+.tooltip.ssd decoration,
+tooltip.solid-csd decoration,
+.tooltip.solid-csd decoration,
+tooltip.background.csd decoration,
+.tooltip.background.csd decoration,
+tooltip.background.ssd decoration,
+.tooltip.background.ssd decoration,
+tooltip.background.solid-csd decoration,
+.tooltip.background.solid-csd decoration {
+	background-color: transparent;
 }
 
 /************
