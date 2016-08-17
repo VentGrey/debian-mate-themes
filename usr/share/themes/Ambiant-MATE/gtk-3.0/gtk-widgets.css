@@ -2481,39 +2481,66 @@ combobox menuitem separator {
     background-color: shade (@bg_color, 0.98);
 }
 
-placessidebar .view,
+placessidebar.sidebar .view,
 stacksidebar.sidebar viewport {
     background-color: shade (@bg_color, 0.98);
     color: @fg_color;
     text-shadow: 0 1px shade (shade (@bg_color, 0.95), 1.04);
 }
 
-placessidebar:backdrop,
+placessidebar.sidebar:backdrop,
 stacksidebar.sidebar viewport:backdrop {
     color: mix (@fg_color, shade (@bg_color, 0.95), 0.2);
     text-shadow: 0 1px shade (shade (@bg_color, 0.95), 1.02);
 }
 
-placessidebar row:selected,
+placessidebar.sidebar row.activatable.sidebar-row:selected,
 stacksidebar.sidebar viewport row:selected {
     color: @selected_fg_color;
     text-shadow: 0 1px shade (@selected_bg_color, 0.7);
 }
 
-placessidebar row:selected:backdrop,
+placessidebar.sidebar row.activatable.sidebar-row:selected:backdrop,
 stacksidebar.sidebar viewport row:selected:backdrop {
     background-image: -gtk-gradient (linear, left top, left bottom,
                                      from (shade (shade (@bg_color, 0.95), 0.94)),
                                      to (shade (shade (@bg_color, 0.95), 0.86)));
     border-top-color: shade (shade (@bg_color, 0.95), 0.88);
-
     color: @fg_color;
     text-shadow: 0 1px shade (shade (@bg_color, 0.95), 0.96);
 }
 
-placessidebar .sidebar-icon {
-    padding-left: 10px;
-    padding-right: 10px;
+placessidebar.sidebar.frame row.activatable.sidebar-row revealer.sidebar-revealer image.sidebar-icon {
+    padding: 4px 8px 4px 6px;
+}
+
+placessidebar.sidebar.frame row.activatable.sidebar-row revealer.sidebar-revealer label.sidebar-label {
+    padding: 4px 0px 4px 1px;
+}
+
+placessidebar.sidebar.frame row.activatable.sidebar-row revealer.sidebar-revealer button.image-button.sidebar-button {
+    background-color: transparent;
+    background-image: none;
+    border-image:none;
+    box-shadow: none;
+    padding: 4px 12px 4px 0px;
+}
+
+/***************
+ * filechooser *
+ ***************/
+
+filechooser placessidebar.frame.sidebar {
+    border-style: solid;
+    border-width: 0px 1px 1px 1px;
+    border-color: @borders;
+}
+
+filechooser revealer #pathbarbox {
+    background-color: @theme_bg_color;
+    border-style: solid;
+    border-width: 0px 0px 1px 0px;
+    border-color: @borders;
 }
 
 /**************
