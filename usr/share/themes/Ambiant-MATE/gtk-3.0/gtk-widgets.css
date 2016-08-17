@@ -1215,14 +1215,14 @@ menu separator,
 .menu separator,
 menuitem separator {
     min-height: 1px;
-    background-color: shade(@dark_fg_color, 0.4);
+    background-color: shade(@fg_color, 0.7);
     border-style: none;
 }
 
 /* fix for broken firefox */
 menu separator,
 menu .separator {
-    color: shade(@dark_fg_color, 0.4);
+    color: shade(@fg_color, 0.7);
 }
 
 menuitem > arrow {
