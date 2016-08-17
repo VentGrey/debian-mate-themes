@@ -1257,7 +1257,8 @@ menuitem separator {
 }
 
 /* fix for broken firefox */
-menu separator {
+menu separator,
+menu .separator {
     color: shade(@bg_color, 0.9);
 }
 
@@ -2485,12 +2486,6 @@ button separator {
     border-color: shade (@button_insensitive_bg_color, 0.96);
     border-bottom-color: alpha (shade (@bg_color, 1.26), 0.3);
     border-right-color: alpha (shade (@bg_color, 1.26), 0.3);
-}
-
-menuitem separator {
-/*    -GtkMenuItem-horizontal-padding: 0; deprecated */
-    border: none;
-    color: @dark_bg_color;
 }
 
 treemenu menuitem separator,
