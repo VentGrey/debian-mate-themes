@@ -1,6 +1,3 @@
-/* Hide the white corners.  Calendar sets a background colour for the whole window. */
-GcalWindow { background-color: transparent; }
-
 /* Make the calendar focus ring appear around the selected day */
 .calendar-view  {
     outline-style: dashed;

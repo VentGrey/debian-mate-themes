@@ -605,7 +605,7 @@ treeview header button:nth-child(last) {
     background-color: @backdrop_selected_bg_color;
 }
 
-GdMainIconView.content-view {
+.content-view {
     -GdMainIconView-icon-size: 40;
 }
 
