@@ -1579,7 +1579,6 @@ notebook button.flat,
 notebook button.flat.small-button,
 notebook button.flat:hover:active,
 notebook button.flat.small-button:hover:active {
-    color: mix (@theme_fg_color, @theme_bg_color, 0.85);
     border-image: none;
     background-image: none;
     background-color: transparent;
