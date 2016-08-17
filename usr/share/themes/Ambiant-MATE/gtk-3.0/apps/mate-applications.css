@@ -31,16 +31,6 @@
     border-width: 1px 1px 0px 1px;
 }
 
-#caja-tab-close-button {
-    border-image: none;
-    background-image: none;
-    background-color: transparent;
-    border-style: none;
-    border-width: 0px;
-    -gtk-icon-shadow: none;
-    padding: 0px;
-}
-
 .caja-canvas-item {
     border-radius: 3px;
 }
@@ -302,15 +292,4 @@ window.background.mate-terminal vte-terminal {
     padding: 5px 3px 5px 6px;
     border-width: 1px 1px 0px 1px;
 }
-#caja-tab-close-button.flat,
-.pluma-window notebook button.flat {
-    border-image: none;
-    background-image: none;
-    background-color: transparent;
-    border-style: none;
-    border-width: 0px;
-    -gtk-icon-shadow: none;
-    padding: 0px;
-}
-
 
