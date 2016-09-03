@@ -877,6 +877,9 @@ treeview.view rubberband,
 .content-view rubberband,
 rubberband {
     background-color: alpha (@selected_bg_color, 0.35);
+    background-image: linear-gradient(to bottom,
+                                      alpha (@theme_selected_bg_color, 0.35),
+                                      alpha (@theme_selected_bg_color, 0.35));
     border-color: @selected_bg_color;
     border-radius: 0;
     border-style: solid;
