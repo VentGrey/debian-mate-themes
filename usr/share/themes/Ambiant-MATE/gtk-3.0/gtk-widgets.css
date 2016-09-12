@@ -50,7 +50,7 @@
     -gtk-icon-style: regular; /* disable symbolic icons */
 }
 
-.background {
+.background:not(widget) {
     color: @fg_color;
     background-color: @bg_color;
 }
