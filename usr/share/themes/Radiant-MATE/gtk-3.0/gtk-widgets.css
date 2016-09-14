@@ -1388,7 +1388,7 @@ notebook header tab {
 }
 
 notebook header tab label {
-    color: mix (@theme_fg_color, @theme_bg_color, 0.40);
+    color: @theme_fg_color;
     font-weight: normal;
 }
 
