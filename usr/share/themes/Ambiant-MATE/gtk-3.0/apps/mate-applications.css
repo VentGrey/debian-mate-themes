@@ -293,6 +293,11 @@ window.background.mate-terminal vte-terminal {
     border-width: 1px 1px 0px 1px;
 }
 
+/* pluma line numbers */
+.pluma-window textview {
+    background-color: shade (@bg_color, 0.95);
+}
+
 /*************
  * Mate-Menu *
  *************/
