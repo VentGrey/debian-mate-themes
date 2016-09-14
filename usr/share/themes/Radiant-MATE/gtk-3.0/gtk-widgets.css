@@ -3380,17 +3380,12 @@ list row.activatable:selected {
  * OSD *
  *******/
 
+.osd,
 .background.osd {
-    color: @osd_fg;
-    text-shadow: none;
-    border-style: solid;
-    border-width: 1px;
-    border-color: shade (@theme_selected_bg_color, 0.8);
-    border-radius: 0px;
-    background-image: linear-gradient(to left,
-                                      alpha(shade(@theme_selected_bg_color, 1.2), 0.7),
-                                      alpha(shade(@theme_selected_bg_color, 0.95), 0.7));
-    background-color: alpha(shade(@theme_selected_bg_color, 1.0), 0.4);
+	color: @osd_fg;
+	background-image: none;
+	background-color: @osd_bg;
+	border-radius:20px;
 }
 
 overlay.osd {
@@ -3624,6 +3619,7 @@ toolbar.osd separator {
     border-width: 0;
 }
 
+.osd .progressbar,
 .osd progressbar {
     background-color: @osd_fg;
 }
@@ -3685,6 +3681,7 @@ progressbar.horizontal .osd {
     min-height: 3px;
 }
 
+.osd .trough,
 .osd progressbar trough,
 progressbar .osd trough {
     padding: 0;
@@ -3692,16 +3689,23 @@ progressbar .osd trough {
     border-style: none;
     border-width: 0;
     background-image: none;
-    background-color: transparent;
-    border-radius: 0;
+    background-color: shade (@theme_fg_color, 0.6);
+    border-radius: 2px;
 }
 
+.osd .progressbar,
 .osd progressbar,
 progressbar .osd {
-    border-style: none;
-    background-color: @theme_selected_bg_color;
-    background-image: none;
-    border-radius: 0;
+	padding: 0;
+	-progressbar-xspacing: 0;
+	-progressbar-yspacing: 3px;
+	-progressbar-min-horizontal-bar-height: 3px;
+	border-style: none;
+	background-color: shade(@osd_progressbar_background_b, 1.3);
+	background-image: linear-gradient(to bottom,
+	                                  @osd_progressbar_background_a,
+	                                  @osd_progressbar_background_b);
+	border-radius: 2px;
 }
 
 .osd view {
