@@ -156,13 +156,13 @@ MatePanelAppletFrameDBus {
 
 /* set normal menubar menu menuitem */
 .mate-panel-menu-bar menubar > menuitem > .popup.csd > menu > menuitem {
-    padding: 0px 5px 0px 5px;
+    padding: 3px 5px 3px 5px;
     border-width: 0px;
 }
 
 /* set Mate menu menuitem */
 .mate-panel-menu-bar menu menuitem {
-    padding: 0px 5px 0px 5px;
+    padding: 3px 5px 3px 5px;
     border-width: 0px;
 }
 
