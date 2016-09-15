@@ -50,3 +50,16 @@
     color: @theme_fg_color;
 }
 
+/************
+ * Ubiquity *
+ ************/
+
+#live_installer.background #wizard #page_mode,
+#live_installer.background #wizard #page_mode #page_section #steps {
+    background-color: @theme_bg_color;
+}
+
+#live_installer.background #wizard #progress_eventbox #progress_section #progress_mode {
+    background-color: @dark_bg_color;
+}
+
