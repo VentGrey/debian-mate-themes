@@ -13,7 +13,8 @@
 .lightdm-gtk-greeter,
 #login_window.background,
 #login_window.background.lightdm-gtk-greeter {
-	border-radius: 5px;
+    border-radius: 5px;
+    background-color: @theme_bg_color;
 }
 
 .lightdm-gtk-greeter,
