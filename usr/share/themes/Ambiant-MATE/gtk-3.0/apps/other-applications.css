@@ -49,3 +49,10 @@
     border-width: 0px;
 }
 
+/************
+ * Ubiquity *
+ ************/
+
+#live_installer.background #wizard #progress_eventbox #progress_section #progress_mode {
+    background-color: @dark_bg_color;
+}
