@@ -3314,6 +3314,7 @@ tooltip.background,
 .tooltip.background {
     background-color: @tooltip_bg_color;
     background-clip: padding-box;
+    color: @tooltip_fg_color;
 }
 
 tooltip label,
