@@ -67,6 +67,12 @@
 
 @define-color shadow_color alpha(black, 0.5);
 
+/*************
+ * Mate-Menu *
+ *************/
+
+@define-color menu_bg_color #EEE9E4;
+
 /*******
  * OSD *
  *******/
