@@ -3181,6 +3181,13 @@ headerbar button:hover {
     border-image: none;
 }
 
+/* hack for yelp, https://github.com/flexiondotorg/ubuntu-mate-themes/issues/38 */
+/* imo a bug in yelp button, seems that 'border-image: none;' from previous setting
+   does not work */
+headerbar.primary-toolbar.toolbar button:hover {
+    border-image-slice: 10 12 10 12;
+}
+
 .primary-toolbar:not(.libreoffice-toolbar) button:active,
 headerbar button:active {
     background-image: -gtk-gradient (linear, left top, left bottom,
