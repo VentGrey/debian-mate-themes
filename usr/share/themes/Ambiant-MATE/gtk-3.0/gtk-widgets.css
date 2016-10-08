@@ -4186,6 +4186,15 @@ calendar.highlight {
 	border-width: 0px;
 }
 
+/***************
+ * weird hacks *
+ ***************/
+
+/* time admin */
+button notebook {
+    background-color: transparent;
+}
+
 /*****************************************************************************
  * states [please keep this section at the end of the file (CSS precedence)] *
  *****************************************************************************/
