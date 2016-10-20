@@ -60,6 +60,12 @@
     box-shadow: inset -1px 0 shade (@bg_color, 0.94);
 }
 
+/* Fix for applications that have issues finding a default monospace font */
+/* https://github.com/mate-desktop/mate-themes/issues/145 */
+.monospace {
+  font-family: Monospace;
+}
+
 /**********
  * button *
  **********/
