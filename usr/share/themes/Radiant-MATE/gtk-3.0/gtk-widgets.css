@@ -1098,7 +1098,8 @@ menu button,
 }
 
 .context-menu {
-    font: regular medium;
+    font-size: medium;
+    font-weight: normal;
 }
 
 /***********
