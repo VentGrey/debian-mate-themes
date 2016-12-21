@@ -1298,15 +1298,11 @@ menu > arrow.bottom,
 
 notebook {
     padding: 0;
-    background-clip: border-box;
     border-style: none;
-    background-color: shade (@theme_bg_color, 1.1);
 }
 
 notebook.frame {
     padding: 0;
-    background-color: shade (@theme_bg_color, 1.1);
-    background-clip: border-box;
     border-style: solid;
     border-color: shade (@bg_color, 0.82);
     border-width: 1px;
