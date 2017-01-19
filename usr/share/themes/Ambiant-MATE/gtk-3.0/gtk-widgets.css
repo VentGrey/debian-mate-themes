@@ -850,22 +850,6 @@ frame > border.flat,
     border: none;
 }
 
-/* Style the Search and Location entry boxes for Firefox 49 */
-frame {
-    border-width: 1px;
-    border-style: solid;
-    border-color: shade (@bg_color, 0.82);
-}
-
-/* Override the Firefox 49 frame styling where is absolutely shouldn't be applied */
-box > frame, /* mate-tweak */
-statusbar > frame, /* caja, etc. */
-statusbar > widget > frame, /* pluma */
-GvcMixerDialog frame { /* Mate Mixer dialog */
-    border-width: 0px;
-    border-style: none;
-}
-
 /***********************
  * iconview & textview *
  ***********************/
