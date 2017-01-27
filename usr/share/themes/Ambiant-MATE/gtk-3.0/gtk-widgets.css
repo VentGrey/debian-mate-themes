@@ -3213,9 +3213,11 @@ headerbar button:checked {
                                      url("assets/backdrop-button-toolbar@2.png"));
 }
 
+/*
 headerbar button:hover {
     border-image: none;
 }
+*/
 
 /* hack for yelp, https://github.com/flexiondotorg/ubuntu-mate-themes/issues/38 */
 /* imo a bug in yelp button, seems that 'border-image: none;' from previous setting
