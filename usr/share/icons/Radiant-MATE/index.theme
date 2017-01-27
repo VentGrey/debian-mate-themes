@@ -67,12 +67,14 @@ Type=Fixed
 
 [actions/64]
 Size=64
+MaxSize=512
 Context=Actions
 Type=Scalable
 
 [actions@2/64]
 Scale=2
 Size=64
+MaxSize=512
 Context=Actions
 Type=Scalable
 
@@ -298,12 +300,14 @@ Type=Fixed
 
 [categories/48]
 Size=48
+MaxSize=512
 Context=Categories
 Type=Scalable
 
 [categories@2/48]
 Scale=2
 Size=48
+MaxSize=512
 Context=Categories
 Type=Scalable
 
@@ -615,12 +619,14 @@ Type=Fixed
 
 [places/48]
 Size=48
+MaxSize=512
 Context=Places
 Type=Scalable
 
 [places@2/48]
 Scale=2
 Size=48
+MaxSize=512
 Context=Places
 Type=Scalable
 
@@ -712,23 +718,27 @@ Type=Fixed
 
 [status/48]
 Size=48
+MaxSize=512
 Context=Status
 Type=Scalable
 
 [status@2/48]
 Scale=2
 Size=48
+MaxSize=512
 Context=Status
 Type=Scalable
 
 [status/64]
 Size=64
+MaxSize=512
 Context=Status
 Type=Scalable
 
 [status@2/64]
 Scale=2
 Size=64
+MaxSize=512
 Context=Status
 Type=Scalable
 
@@ -807,11 +817,13 @@ Type=Fixed
 
 [stock/48]
 Size=48
+MaxSize=512
 Context=Stock
 Type=Scalable
 
 [stock@2/48]
 Scale=2
 Size=48
+MaxSize=512
 Context=Stock
 Type=Scalable
