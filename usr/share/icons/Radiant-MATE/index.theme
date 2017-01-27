@@ -807,8 +807,8 @@ Type=Fixed
 
 [stock/48]
 Size=48
-Context=stock
-Type=Fixed
+Context=Stock
+Type=Scalable
 
 [stock@2/48]
 Scale=2
