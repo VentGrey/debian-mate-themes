@@ -1125,7 +1125,8 @@ menu > menuitem {
 
 popover menuitem:checked:hover,
 menuitem:hover,
-menu menuitem:hover {
+menu menuitem:hover,
+.menu menuitem:hover {
     border-radius: 0;
     background-image: -gtk-gradient (linear, left top, left bottom,
                                      from (shade (@selected_bg_color, 1.1)),
@@ -3178,7 +3179,7 @@ headerbar button:checked {
 headerbar button:active:focus,
 headerbar button:checked:focus {
     border-image-source: -gtk-scaled(url("assets/button-toolbar-active-focused.png"),
-                                     url("assets/button-toolbar-active-focused.png"));
+                                     url("assets/button-toolbar-active-focused@2.png"));
 }
 
 .primary-toolbar:not(.libreoffice-toolbar) button:backdrop,
@@ -3218,6 +3219,7 @@ headerbar button:hover {
 /* hack for yelp, https://github.com/flexiondotorg/ubuntu-mate-themes/issues/38 */
 /* imo a bug in yelp button, seems that 'border-image: none;' from previous setting
    does not work */
+
 headerbar.primary-toolbar.toolbar button:hover {
     border-image-slice: 10 12 10 12;
 }

@@ -3222,7 +3222,7 @@ headerbar button:backdrop {
 headerbar button:active:backdrop,
 headerbar button:checked:backdrop {
     border-image-source: -gtk-scaled(url("assets/radiance-backdrop-button-toolbar-active.png"),
-                                     url("assets/radiance-backdrop-button-toolbar-active.png"));
+                                     url("assets/radiance-backdrop-button-toolbar-active@2.png"));
 }
 
 .primary-toolbar:not(.libreoffice-toolbar) button:hover,
