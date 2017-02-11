@@ -288,7 +288,7 @@ MatePanelAppletFrameDBus {
  * Mate-terminal *
  *****************/
 
-/* FIXME, probably a bug in mate-terminal or vte */
+/* vte use hardcoded colors as upstream, ubuntu is patched */
 window.background.mate-terminal vte-terminal {
     -TerminalScreen-background-darkness: 0.95;
     background-color: #373633;
