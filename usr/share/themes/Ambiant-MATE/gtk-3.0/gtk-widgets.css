@@ -15,6 +15,11 @@
     background-origin: border-box;
     background-clip: padding-box;
     -gtk-icon-style: regular; /* disable symbolic icons */
+    outline-color: alpha(currentColor, 0.3);
+    outline-style: dashed;
+    outline-offset: -3px;
+    outline-width: 1px;
+    -gtk-outline-radius: 2px;
 }
 
 .background:not(widget) {
@@ -1636,6 +1641,35 @@ notebook tab.reorderable-page:checked:hover {
     border-radius: 4px 4px 0 0;
     box-shadow: none;
     border-style: solid;
+}
+
+/* outlines */
+notebook header.top tab:checked {
+    -gtk-outline-top-left-radius: 4px;
+    -gtk-outline-top-right-radius: 4px;
+    -gtk-outline-bottom-left-radius: 0px;
+    -gtk-outline-bottom-right-radius: 0px;
+}
+
+notebook header.bottom tab:checked {
+    -gtk-outline-top-left-radius: 0px;
+    -gtk-outline-top-right-radius: 0px;
+    -gtk-outline-bottom-left-radius: 4px;
+    -gtk-outline-bottom-right-radius: 4px;
+}
+
+notebook header.left tab:checked {
+    -gtk-outline-top-left-radius: 4px;
+    -gtk-outline-top-right-radius: 0px;
+    -gtk-outline-bottom-left-radius: 0px;
+    -gtk-outline-bottom-right-radius: 4px;
+}
+
+notebook header.right tab:checked {
+    -gtk-outline-top-left-radius: 0px;
+    -gtk-outline-top-right-radius: 4px;
+    -gtk-outline-bottom-left-radius: 4px;
+    -gtk-outline-bottom-right-radius: 0px;
 }
 
 /* close button styling */
