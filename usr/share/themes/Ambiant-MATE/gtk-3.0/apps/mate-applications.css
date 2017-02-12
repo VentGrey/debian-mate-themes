@@ -160,6 +160,7 @@ window.background, /* selector where outlines are writen on GtkTrayIcon */
 }
 
 PanelApplet.wnck-applet .wnck-pager {
+    outline-style: solid;
     outline-offset: -1px;
     outline-color: shade (@theme_selected_bg_color, 1.3);
 }
