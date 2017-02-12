@@ -931,6 +931,11 @@ iconview .cell:selected:focus {
                 inset 0 -1px shade (@selected_bg_color, 1.0);
 }
 
+iconview.view.cell:selected:focus {
+    border-color: alpha(@text_color, 0.6);
+    border-style: dashed;
+}
+
 .view.rubberband,
 .rubberband,
 flowbox rubberband,
