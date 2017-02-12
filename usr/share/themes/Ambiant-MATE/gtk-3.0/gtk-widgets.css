@@ -257,6 +257,13 @@ button.destructive-action {
     text-shadow: 0 1px shade(#9d4242, 1.15);
 }
 
+/* eg. mate-appearance-properties */
+button.link.flat.text-button:focus {
+    outline-style: dashed;
+    outline-offset: 0px;
+    outline-color: shade (@theme_selected_bg_color, 1.3);
+}
+
 /******************
  * Linked Widgets *
  *****************/
