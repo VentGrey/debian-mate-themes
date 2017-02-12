@@ -463,10 +463,19 @@ messagedialog .linked.dialog-action-area button:only-child {
     border-width: 1px;
 }
 
-messagedialog .linked.dialog-action-area button.default,
+messagedialog .linked.dialog-action-area button.default {
+    border-color: @focus_color_dialog;
+    border-style: solid;
+}
+
+messagedialog .linked.dialog-action-area button:focus,
 messagedialog .linked.dialog-action-area button.default:focus {
     border-color: @focus_color_dialog;
     border-style: solid;
+    box-shadow: inset  0px  1px @focus_color_dialog,
+                inset  1px  0px @focus_color_dialog,
+                inset -1px  0px @focus_color_dialog,
+                inset  0px -1px @focus_color_dialog;
 }
 
 messagedialog .linked.dialog-action-area button:hover {
