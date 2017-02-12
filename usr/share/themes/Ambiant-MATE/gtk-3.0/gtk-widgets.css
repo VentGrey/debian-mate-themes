@@ -3515,6 +3515,11 @@ treeview entry {
     background-image: none;
 }
 
+treeview,
+treeview.view {
+	outline-color: alpha(currentColor, 0.6);
+}
+
 /************
  * viewport *
  ************/
