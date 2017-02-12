@@ -103,6 +103,7 @@ button {
     border-image-width: 10px 12px 10px 12px;
     border-image-slice: 10 12 10 12;
     border-image-repeat: stretch;
+    outline-style: none;
 }
 
 button.flat {
