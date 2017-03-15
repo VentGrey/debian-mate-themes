@@ -4248,6 +4248,7 @@ button notebook {
 /*****************************************************************************
  * states [please keep this section at the end of the file (CSS precedence)] *
  *****************************************************************************/
+.dim-label,
 *:disabled {
     color: shade (@bg_color, 0.6);
     text-shadow: 0 1px alpha (shade (@bg_color, 1.25), 0.5);
