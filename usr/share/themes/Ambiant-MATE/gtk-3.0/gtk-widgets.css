@@ -848,16 +848,18 @@ notebook.frame {
     border: none;
 }
 
-/* Corrects border on unfocused search/location bars in Firefox 51 */
+/* XXX: this is a copy of the above; adding notebook.frame stack there didn't
+ * work */
 frame border, notebook.frame > stack {
-    border-style: none;
+    border-radius: 3px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: shade (@bg_color, 0.82);
     border-image: none;
     background: none;
 }
 
-frame > border,
-frame > border.flat,
-.frame.flat {
+.frame.flat, frame border.flat {
     border: none;
 }
 
