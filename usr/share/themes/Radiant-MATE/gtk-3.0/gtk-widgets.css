@@ -3084,7 +3084,6 @@ headerbar .subtitle {
 }
 
 .titlebar button.titlebutton:hover,
-/* backdrop:hover....what a nonsense :) */
 .titlebar button.titlebutton:backdrop:hover {
     background-image: linear-gradient(to top, #e2e1df, #f8f6f3 50%, #fcfbf9);
 }
