@@ -56,7 +56,6 @@ assistant .sidebar {
         box-shadow: inset -1px 0 shade (@bg_color, 0.94);
 }
 
-
 /**********
  * button *
  **********/
@@ -103,6 +102,7 @@ button {
     border-image-width: 10px 12px 10px 12px;
     border-image-slice: 10 12 10 12;
     border-image-repeat: stretch;
+    outline-style: none;
 }
 
 button.flat {
@@ -3274,15 +3274,20 @@ headerbar button:checked {
     background-image: -gtk-gradient (linear, left top, left bottom,
                                      from (shade (@dark_bg_color, 1.2)),
                                      to (shade (@dark_bg_color, 1.1)));
+    border-image-source: -gtk-scaled(url("assets/backdrop-button-toolbar.png"),
+                                     url("assets/backdrop-button-toolbar@2.png"));
 }
 
+/*
 headerbar button:hover {
     border-image: none;
 }
+*/
 
 /* hack for yelp, https://github.com/flexiondotorg/ubuntu-mate-themes/issues/38 */
 /* imo a bug in yelp button, seems that 'border-image: none;' from previous setting
    does not work */
+
 headerbar.primary-toolbar.toolbar button:hover {
     border-image-slice: 10 12 10 12;
 }
@@ -3307,10 +3312,13 @@ headerbar button:disabled {
     background-image: -gtk-gradient (linear, left top, left bottom,
                                      from (shade (@dark_bg_color, 1.01)),
                                      to (shade (@dark_bg_color, 0.99)));
+    border-image-source: -gtk-scaled(url("assets/button-toolbar.png"),
+                                     url("assets/button-toolbar@2.png"));
 }
 
 .primary-toolbar:not(.libreoffice-toolbar) button.flat:disabled {
     background-image: none;
+    border-image-source: inherit;
 }
 
 .primary-toolbar:not(.libreoffice-toolbar) button:checked:disabled,
@@ -3318,6 +3326,8 @@ headerbar button:checked:disabled {
     background-image: -gtk-gradient (linear, left top, left bottom,
                                      from (shade (@dark_bg_color, 0.94)),
                                      to (shade (@dark_bg_color, 1.02)));
+    border-image-source: -gtk-scaled(url("assets/button-toolbar.png"),
+                                     url("assets/button-toolbar@2.png"));
 }
 
 .primary-toolbar:not(.libreoffice-toolbar) toolitem separator,
