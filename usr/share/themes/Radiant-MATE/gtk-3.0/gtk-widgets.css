@@ -860,32 +860,20 @@ expander arrow:checked {
 /*********
  * frame *
  *********/
-.frame {
-    border-radius: 3px;
-    border-width: 1px;
-    border-style: solid;
-    border-color: shade (@bg_color, 0.82);
-    border-image: none;
-    background: none;
+.frame,
+frame > border { /* firefox location entry */
+  border-radius: 3px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: shade (@bg_color, 0.82);
+  border-image: none;
+  background: none;
 }
 
-notebook.frame {
-    border: none;
-}
-
-/* XXX: this is a copy of the above; adding notebook.frame stack there didn't
- * work */
-frame border, notebook.frame > stack {
-    border-radius: 3px;
-    border-width: 1px;
-    border-style: solid;
-    border-color: shade (@bg_color, 0.82);
-    border-image: none;
-    background: none;
-}
-
-.frame.flat, frame border.flat {
-    border: none;
+.frame.flat,
+frame > border.flat,
+overlay > frame > border {
+  border: none;
 }
 
 /***********************
