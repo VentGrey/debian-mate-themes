@@ -22,7 +22,7 @@
     -gtk-outline-radius: 2px;
 }
 
-.background:not(widget) {
+.background {
     color: @fg_color;
     background-color: @bg_color;
 }
