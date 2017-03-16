@@ -844,27 +844,25 @@ expander arrow:checked {
     background: none;
 }
 
-frame > border,
-frame > border.flat,
-.frame.flat {
+notebook.frame {
     border: none;
 }
 
-/* Style the Search and Location entry boxes for Firefox 49 */
-frame {
+/* XXX: this is a copy of the above; adding notebook.frame stack there didn't
+ * work */
+frame border, notebook.frame > stack {
+    border-radius: 3px;
     border-width: 1px;
     border-style: solid;
     border-color: shade (@bg_color, 0.82);
+    border-image: none;
+    background: none;
 }
 
-/* Override the Firefox 49 frame styling where is absolutely shouldn't be applied */
-box > frame, /* mate-tweak */
-statusbar > frame, /* caja, etc. */
-statusbar > widget > frame, /* pluma */
-GvcMixerDialog frame { /* Mate Mixer dialog */
-    border-width: 0px;
-    border-style: none;
+.frame.flat, frame border.flat {
+    border: none;
 }
+
 
 /***********************
  * iconview & textview *
@@ -1141,7 +1139,8 @@ menu > menuitem {
 
 popover menuitem:checked:hover,
 menuitem:hover,
-menu menuitem:hover {
+menu menuitem:hover,
+.menu menuitem:hover {
     border-radius: 0;
     background-image: -gtk-gradient (linear, left top, left bottom,
                                      from (shade (@selected_bg_color, 1.1)),
@@ -3010,7 +3009,6 @@ headerbar .subtitle {
 }
 
 .titlebar button.titlebutton:hover,
-/* backdrop:hover....what a nonsense :) */
 .titlebar button.titlebutton:backdrop:hover {
     background-image: linear-gradient(to top, #969696, #bdbdbd 50%, #cacaca);
 }
@@ -3194,7 +3192,7 @@ headerbar button:checked {
 headerbar button:active:focus,
 headerbar button:checked:focus {
     border-image-source: -gtk-scaled(url("assets/button-toolbar-active-focused.png"),
-                                     url("assets/button-toolbar-active-focused.png"));
+                                     url("assets/button-toolbar-active-focused@2.png"));
 }
 
 .primary-toolbar:not(.libreoffice-toolbar) button:backdrop,
@@ -4219,7 +4217,7 @@ calendar {
 }
 
 calendar:indeterminate {
-    color: alpha( @theme_fg_color, 0.4);
+    color: alpha(@theme_fg_color, 0.4);
 }
 
 calendar.highlight {
@@ -4242,6 +4240,7 @@ button notebook {
 /*****************************************************************************
  * states [please keep this section at the end of the file (CSS precedence)] *
  *****************************************************************************/
+.dim-label,
 *:disabled {
     color: shade (@fg_color, 0.70);
     text-shadow: 0 1px alpha (shade (@fg_color, 1.25), 0.5);
