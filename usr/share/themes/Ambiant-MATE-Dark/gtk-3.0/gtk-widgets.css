@@ -4303,6 +4303,11 @@ button notebook {
     background-color: transparent;
 }
 
+/* override for headerbars to fix menulibre */
+entry.search {
+    text-shadow: none;
+}
+
 /*****************************************************************************
  * states [please keep this section at the end of the file (CSS precedence)] *
  *****************************************************************************/
