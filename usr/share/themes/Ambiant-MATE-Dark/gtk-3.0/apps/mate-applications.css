@@ -1,0 +1,496 @@
+/********
+ * Caja *
+ ********/
+
+/* caja sidebar */
+.caja-navigation-window .caja-side-pane FMTreeView.frame .view,
+.caja-navigation-window .caja-side-pane FMTreeView.frame .view .row,
+.caja-navigation-window .caja-side-pane CajaNotesViewer.frame GtkTextView,
+.caja-navigation-window .caja-side-pane CajaPlacesSidebar .view,
+.caja-navigation-window .caja-side-pane CajaHistorySidebar .view,
+.caja-navigation-window .caja-side-pane CajaInformationPanel,
+.caja-navigation-window .caja-side-pane CajaEmblemSidebar {
+    background-color: shade (@bg_color, 0.98);
+}
+
+.caja-navigation-window .caja-side-pane CajaInformationPanel > GtkBox,
+.caja-navigation-window .caja-side-pane CajaEmblemSidebar > GtkScrolledWindow {
+    border-color: shade (@bg_color, 0.82);
+    border-style: solid;
+    border-width: 1px;
+}
+
+/* notebook */
+.caja-notebook .header {
+    border-width: 1px 1px 0px 1px;
+    border-radius: 3px 3px 0px 0px;
+}
+
+.caja-notebook tab.top {
+    padding: 6px 4px 6px 6px;
+    border-width: 1px 1px 0px 1px;
+}
+
+.caja-canvas-item {
+    border-radius: 3px;
+}
+
+/* desktop mode */
+.caja-desktop.caja-canvas-item {
+    color: #ffffff;
+    text-shadow: 1px 1px alpha (#000000, 0.8);
+}
+
+.caja-desktop.caja-canvas-item:selected,
+.caja-desktop.caja-canvas-item:active,
+.caja-desktop.caja-canvas-item:hover {
+    text-shadow: none;
+}
+
+/* EelEditableLabel (icon labels) */
+.caja-desktop.view entry,
+.caja-desktop.view entry:focus,
+.caja-desktop.view entry:backdrop,
+.caja-navigation-window .view entry,
+.caja-navigation-window .view entry:active,
+.caja-navigation-window .view entry:focus,
+.caja-navigation-window .view entry:backdrop {
+    border-image: none;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #000000;
+    border-radius: 3px;
+    color: #000000;
+    text-shadow: none;
+    background-image: -gtk-gradient(linear,
+                                    left top, left bottom,
+                                    from       (shade(rgba(255,255,255,1), 0.86)),
+                                    color-stop (0.15, shade(rgba(255,255,255,1), 0.96)),
+                                    color-stop (0.50, shade(rgba(255,255,255,1), 0.98)),
+                                    to         (shade(rgba(255,255,255,1), 1.00)));
+}
+
+.caja-desktop.view entry:selected,
+.caja-desktop.view entry:focus:selected,
+.caja-desktop.view entry:backdrop:selected
+.caja-navigation-window .view entry:active,
+.caja-navigation-window .view entry:selected,
+.caja-navigation-window .view entry:focus:selected,
+.caja-navigation-window .view entry:backdrop:selected {
+    background-color: @theme_selected_bg_color;
+    color: @theme_selected_fg_color;
+    text-shadow: none;
+}
+
+/**************
+ * Mate-Panel *
+ **************/
+
+/* the panel bar itself */
+#PanelPlug,
+.mate-panel-menu-bar,
+PanelToplevel.background {
+    background-color: @dark_bg_color;
+    background-image: none;
+    /* normal panel */
+    color: @dark_fg_color;
+    /* transparent panel, light desktop background*/
+    /* color: @fg_color; */
+    text-shadow: none;
+}
+
+/* workaround to avoid unwanted black frames behind menus if switching compositor on/off */
+.mate-panel-menu-bar .window-frame.csd.popup {
+    box-shadow: none;
+}
+
+/* hide buttons */
+PanelToplevel > widget > button {
+    border-image: none;
+    background-image: none;
+    background: transparent;
+    border-style: none;
+    border-radius: 0px;
+    padding: 0px;
+    box-shadow: none;
+    color: @dark_fg_color;
+}
+
+PanelToplevel > widget > button:hover,
+PanelToplevel > widget > button:hover:active {
+    border-radius: 0px;
+    background-image: -gtk-gradient (linear, left top, left bottom,
+                                     from (shade (@dark_bg_color, 1.2)),
+                                     to (shade (@dark_bg_color, 1.1)));
+}
+
+#PanelApplet {
+    border-width: 0;
+}
+
+PanelWidget > PanelSeparator {
+    border-width: 0;
+    background-color: transparent;
+    color: shade (@dark_bg_color, 1.8);
+}
+
+/* the grid left from wnckpager and wncktasklist */
+MatePanelAppletFrameDBus {
+    background-image: -gtk-scaled(url("assets/panel-grid.svg"));
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: left;
+}
+
+/* this makes text readable with all kind of wallpapers if using a transparent panel */
+#PanelApplet label,
+.mate-panel-menu-bar menubar > menuitem {
+    color: @dark_fg_color;
+    text-shadow: 1px 1px alpha (#000000, 0.8);
+}
+
+/* main menu */
+/* set normal menubar menuitem */
+.mate-panel-menu-bar menubar > menuitem {
+    background-image: none;
+}
+
+/* set selected menubar menuitem */
+.mate-panel-menu-bar menubar > menuitem:hover {
+    background-color: transparent;
+    background-clip: border-box;
+    background-image: -gtk-gradient (linear, left top, left bottom,
+                                     from (shade (@dark_bg_color, 1.38)),
+                                     to (shade (@dark_bg_color, 1.11)));
+}
+
+/* set normal menubar menu menuitem */
+.mate-panel-menu-bar menubar > menuitem > .popup.csd > menu > menuitem {
+    padding: 3px 5px 3px 5px;
+    border-width: 0px;
+}
+
+/* set Mate menu menuitem */
+.mate-panel-menu-bar menu menuitem {
+    padding: 3px 5px 3px 5px;
+    border-width: 0px;
+}
+
+/* all applets */
+.mate-panel-menu-bar #PanelApplet button,
+.mate-panel-menu-bar #PanelApplet button.flat,
+.mate-panel-menu-bar #PanelApplet button.toggle,
+.mate-panel-menu-bar #PanelApplet button.flat.toggle {
+    background-image: none;
+    background-color: transparent;
+    /* normal panel */
+    color: @dark_fg_color;
+    /* transparent panel light desktop background*/
+    /* color: @fg_color; */
+    padding: 2px;
+    border-radius: 3px;
+    border-image: none;
+    text-shadow: 0 -1px shade (@dark_bg_color, 0.6);
+}
+
+.mate-panel-menu-bar #PanelApplet button:hover:active,
+.mate-panel-menu-bar #PanelApplet button.flat:hover:active,
+.mate-panel-menu-bar #PanelApplet button.toggle:hover:active,
+.mate-panel-menu-bar #PanelApplet button.flat.toggle:hover:active
+.mate-panel-menu-bar #PanelApplet button.flat:backdrop,
+.mate-panel-menu-bar #PanelApplet button:backdrop {
+    background-image: -gtk-gradient (linear, left top, left bottom,
+                                     from (shade (@dark_bg_color, 0.85)),
+                                     to (shade (@dark_bg_color, 1.0)));
+    border-color: shade (@dark_bg_color, 0.9);
+    border-radius: 3px;
+    border-image: none;
+    color: @dark_fg_color;
+}
+
+.mate-panel-menu-bar #PanelApplet button:hover,
+.mate-panel-menu-bar #PanelApplet button.flat:hover,
+.mate-panel-menu-bar #PanelApplet button.toggle:hover,
+.mate-panel-menu-bar #PanelApplet button.flat.toggle:hover {
+    background-image: -gtk-gradient (linear, left top, left bottom,
+                                     from (shade (@dark_bg_color, 1.7)),
+                                     to (shade (@dark_bg_color, 1.25)));
+    border-color: alpha (shade (@dark_bg_color, 1.0), 0.6);
+    border-left-color: alpha (shade (@dark_bg_color, 1.5), 0.4);
+    border-radius: 3px;
+    border-image: none;
+    color: @dark_fg_color;
+}
+
+.mate-panel-menu-bar #PanelApplet button:checked,
+.mate-panel-menu-bar #PanelApplet button.flat:checked,
+.mate-panel-menu-bar #PanelApplet button.toggle:checked,
+.mate-panel-menu-bar #PanelApplet button.flat.toggle:checked {
+    background-image: -gtk-gradient (linear, left top, left bottom,
+                                     from (shade (@dark_bg_color, 0.75)),
+                                     to (shade (@dark_bg_color, 0.9)));
+    color: @dark_fg_color;
+    border-radius: 3px;
+    border-image: none;
+}
+
+/* Classic icon style */
+.mate-panel-menu-bar {
+    -PanelMenuBar-icon-visible: true;
+}
+
+/* volume applet */
+.mate-panel-applet-slider,
+.mate-panel-applet-slider.background {
+    background: transparent;
+}
+
+.mate-panel-applet-slider frame,
+.mate-panel-applet-slider.background frame {
+    background-color: @dark_bg_color;
+    border-image: none;
+    border-style: none;
+    border-radius:2px;
+    padding: 0px;
+    margin: 0px;
+}
+
+.mate-panel-applet-slider frame frame,
+.mate-panel-applet-slider.background frame frame {
+    background-color:transparent;
+    padding: 3px;
+}
+
+/* brightness applet */
+.mate-panel-applet-slider frame button,
+.mate-panel-applet-slider.background frame button {
+    padding: 4px 5px 4px 0px;
+    background-image: none;
+    background-color: transparent;
+    border-style: none;
+    border-image: none;
+    color: @dark_fg_color;
+    margin: 0px;
+}
+
+/* clock window */
+#MatePanelPopupWindow {
+	border-radius: 3px;
+}
+
+/* mate-indicator-applet */
+/* needed for a transparent panel */
+#fast-user-switch-applet > #fast-user-switch-menubar {
+    background-color: transparent;
+}
+
+/*****************
+ * Mate-terminal *
+ *****************/
+
+/* FIXME, probably a bug in mate-terminal or vte */
+window.background.mate-terminal vte-terminal {
+    -TerminalScreen-background-darkness: 0.95;
+    background-color: #373633;
+    color: @dark_fg_color;
+}
+
+/*********
+ * Pluma *
+ *********/
+
+.pluma-window .notebook .header {
+    border-width: 1px 1px 0px 1px;
+    border-radius: 0px;
+}
+
+.pluma-window .notebook tab.top {
+    padding: 5px 3px 5px 6px;
+    border-width: 1px 1px 0px 1px;
+}
+
+/* pluma line numbers */
+.pluma-window textview {
+    background-color: shade (@bg_color, 0.95);
+}
+
+/*************
+ * Mate-Menu *
+ *************/
+
+#mate-menu.background {
+    background-image: none;
+    background-color: shade (@dark_bg_color, 1.00);
+    border-color: shade(@dark_fg_color, 0.3);
+    border-width: 1px;
+    border-style: solid;
+    border-radius:2px;
+}
+
+#mate-menu.background notebook,
+#mate-menu.background viewport,
+#mate-menu.background viewport grid,
+#mate-menu.background > widget > box > widget > box,
+#mate-menu.background > widget > box > widget > box > box > widget {
+    background-image: none;
+    background-color: shade (@dark_bg_color, 1.00);
+}
+
+#mate-menu.background viewport,
+#mate-menu.background notebook {
+    border-radius: 0px;
+    border-width: 0px;
+    border-style: none;
+}
+
+#mate-menu.background scrolledwindow {
+    border-color: transparent;
+    border-width: 0px;
+    border-style: none;
+    border-radius: 0px;
+}
+
+#mate-menu.background label,
+#mate-menu.background button,
+#mate-menu.background button.flat {
+    text-shadow: 0 -1px shade (@selected_bg_color, 0.7);
+    color: @dark_fg_color;
+}
+
+#mate-menu.background button:hover label,
+#mate-menu.background button:hover,
+#mate-menu.background button.flat:hover {
+    color: @selected_fg_color;
+    text-shadow: 0 -1px shade (@selected_bg_color, 0.7);
+}
+
+#mate-menu.background button,
+#mate-menu.background button.flat {
+    background-color: transparent;
+    background-image: none;
+    border-radius: 6px;
+    border-image: none;
+    border-style: solid;
+    border-width: 1px;
+    border-color: shade (@dark_bg_color, 1.00);
+    padding: 4px;
+}
+
+#mate-menu.background button:hover,
+#mate-menu.background button.flat:hover {
+    background-image: -gtk-gradient (linear, left top, left bottom,
+                                     from (shade (@selected_bg_color, 1.1)),
+                                     to (shade (@selected_bg_color, 0.9)));
+    border-image-width: 0px;
+    box-shadow: inset 1px 0 shade (@selected_bg_color, 1.02),
+                inset -1px 0 shade (@selected_bg_color, 1.02),
+                inset 0 1px shade (@selected_bg_color, 1.16),
+                inset 0 -1px shade (@selected_bg_color, 0.96);
+}
+
+#mate-menu.background separator,
+#mate-menu.background widget notebook viewport grid widget separator {
+    min-height: 0px;
+    background-color: transparent;
+    border-color: transparent;
+    border-style: none;
+    border-width: 0px 0px 0px 0px;
+}
+
+#mate-menu.background scrollbar {
+    background-image: none;
+    border-style: solid;
+    border-color: shade(@dark_fg_color, 0.3);
+}
+
+#mate-menu.background scrollbar.vertical trough {
+    background-image: none;
+    border-color: shade(@dark_fg_color, 0.3);
+}
+
+#mate-menu.background scrollbar.vertical slider {
+    background-image: -gtk-gradient (linear, left top, left bottom,
+                                     from (shade (@dark_bg_color, 1.75)),
+                                     to (shade (@dark_bg_color, 1.3)));
+    border-color: shade(@dark_fg_color, 0.3);
+}
+
+#mate-menu.background scrollbar.vertical slider:hover,
+#mate-menu.background scrollbar.vertical slider:hover:active {
+    background-image: -gtk-gradient (linear, left top, left bottom,
+                                     from (shade (@dark_bg_color, 1.3)),
+                                     to (shade (@dark_bg_color, 1.75)));
+    border-color: shade(@dark_fg_color, 0.3);
+}
+
+#mate-menu.background scrollbar.vertical.fine-tune slider:hover:active,
+#mate-menu.background scrollbar.vertical.fine-tune .slider:hover:active {
+    background-image: url("assets/slider_fine_vertical.svg"),
+                      linear-gradient(to left,
+                                      shade(@dark_bg_color, 1.75),
+                                      shade(@dark_bg_color, 1.525) 55%,
+                                      shade(@dark_bg_color, 1.3));
+    background-repeat: no-repeat;
+    background-position: center;
+    border-color: shade(@dark_fg_color, 0.3);
+}
+
+#mate-menu.background scrollbar.vertical button {
+    border-radius: 0px;
+    background-image: none;
+    box-shadow: none;
+}
+
+#mate-menu.background scrollbar.vertical button:disabled {
+    background-color: transparent;
+    color: shade (@insensitive_fg_color, 0.6);
+}
+
+#mate-menu.background entry {
+    background-color: transparent;
+    background-image: -gtk-gradient(linear,
+                                    left top, left bottom,
+                                    from       (shade(@dark_bg_color, 1.16)),
+                                    color-stop (0.15, shade(@dark_bg_color, 1.26)),
+                                    color-stop (0.50, shade(@dark_bg_color, 1.28)),
+                                    to         (shade(@dark_bg_color, 1.30)));
+    color: shade (@dark_fg_color, 1.0);
+    border-image: none;
+}
+
+#mate-menu.background entry,
+#mate-menu.background entry:focus {
+    box-shadow: inset  0px  1px shade(@dark_fg_color, 0.3),
+                inset  1px  0px shade(@dark_fg_color, 0.3),
+                inset -1px  0px shade(@dark_fg_color, 0.3),
+                inset  0px -1px shade(@dark_fg_color, 0.3);
+    /* color of the cursor */
+	caret-color: shade (@dark_fg_color, 1.0);
+}
+
+#mate-menu.background entry selection,
+#mate-menu.background entry selection:focus {
+    background-color: shade(@dark_fg_color, 0.4);
+    color: shade (@dark_fg_color, 1.2);
+}
+
+/* mate-screensaver lock dialog */
+
+.lock-dialog {
+    border-radius: 5px;
+    border-style: none;
+    border-width: 0px;
+    /* not sure if box-shadow works here */
+    box-shadow: 0 0 0 1px @wm_border, 0 2px 8px 3px @wm_shadow;
+}
+
+.lock-dialog frame {
+    border-radius: 5px;
+    border-style: none;
+    border-width: 0px;
+}
+
+.lock-dialog notebook {
+    background-color: shade (@theme_bg_color, 1.0);
+}
+
