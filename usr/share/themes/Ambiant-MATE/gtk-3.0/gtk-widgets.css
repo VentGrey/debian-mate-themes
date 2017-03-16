@@ -1345,6 +1345,7 @@ notebook.frame {
     padding: 0;
     border-style: solid;
     border-color: shade (@bg_color, 0.82);
+    background-color: shade (@notebook_bg_color, 1.00);
     border-width: 1px;
     border-radius:  4px;
 }
@@ -1359,7 +1360,7 @@ window.background.solid-csd > box.vertical > notebook:not(.frame) {
 }
 
 printdialog > box.view.vertical.dialog-vbox > box.vertical > notebook {
-    background-color: shade (@theme_bg_color, 1.1);
+    background-color: shade (@notebook_bg_color, 1.00);
     border-radius: 0px;
     border-style: solid;
     border-color: @borders;
@@ -1369,7 +1370,7 @@ printdialog > box.view.vertical.dialog-vbox > box.vertical > notebook {
 dialog.background.csd > box.vertical.dialog-vbox > notebook, /* meld preferences */
 dialog.background.ssd > box.vertical.dialog-vbox > notebook,
 dialog.background.solid-csd > box.vertical.dialog-vbox > notebook {
-    background-color: shade (@theme_bg_color, 1.1);
+    background-color: shade (@notebook_bg_color, 1.00);
 }
 
 notebook :hover {
@@ -1386,6 +1387,10 @@ notebook header {
 notebook header.top {
     border-width: 0px 0px 1px 0px;
     border-radius: 4px 4px 0px 0px;
+    background-image: linear-gradient(to bottom,
+                                      shade(@theme_bg_color, 0.86),
+                                      shade(@theme_bg_color, 1.00));
+    box-shadow: inset  0px -1px alpha(shade(@bg_color, 0.82), 0.90);
 }
 
 printdialog notebook header.top,
@@ -1398,16 +1403,28 @@ dialog.background.solid-csd > box.vertical.dialog-vbox > notebook > header.top {
 notebook header.bottom {
     border-width: 1px 0px 0px 0px;
     border-radius: 0px 0px 4px 4px;
+    background-image: linear-gradient(to top,
+                                      shade(@theme_bg_color, 0.86),
+                                      shade(@theme_bg_color, 1.00));
+    box-shadow: inset  0px  1px alpha(shade(@bg_color, 0.82), 0.90);
 }
 
 notebook header.left {
     border-width: 0px 1px 0px 0px;
     border-radius: 4px 0px 0px 4px;
+    background-image: linear-gradient(to right,
+                                      shade(@theme_bg_color, 0.86),
+                                      shade(@theme_bg_color, 1.00));
+    box-shadow: inset -1px  0px alpha(shade(@bg_color, 0.82), 0.90);
 }
 
 notebook header.right {
     border-width: 0px 0px 0px 1px;
     border-radius: 0px 4px 4px 0px;
+    background-image: linear-gradient(to left,
+                                      shade(@theme_bg_color, 0.86),
+                                      shade(@theme_bg_color, 1.00));
+    box-shadow: inset  1px  0px alpha(shade(@bg_color, 0.82), 0.90);
 }
 
 notebook viewport {
@@ -1416,11 +1433,14 @@ notebook viewport {
 }
 
 notebook header tab {
-    border-color: transparent;
+    border-color: @border_color;
+    border-style: solid;
     border-width: 1px;
-    background-image: none;
-    background-color: shade (@bg_color, 1.02);
-    padding: 4px 6px;
+    background-color: transparent;
+    background-image: linear-gradient(to bottom,
+                      @notebook_tab_gradient_a,
+                      @notebook_tab_gradient_d);
+    padding: 6px;
 }
 
 notebook header tab label {
@@ -1462,12 +1482,11 @@ window.background > notebook > header tab,
 paned.horizontal > notebook > header tab,
 paned.horizontal > box.vertical > notebook > header tab,
 paned.horizontal > paned.vertical > notebook > header tab {
-    padding: 4px 6px;
+    padding: 6px;
     margin: 0px -0px 0px -1px;
     border-width: 0px 1px 0 1px;
     border-style: solid;
     border-radius: 4px 4px 0 0;
-    border-color: shade (@bg_color, 0.82);
 }
 
 .gedit-bottom-panel-paned > grid > notebook > header tab:checked,
@@ -1481,12 +1500,11 @@ paned.horizontal > box.vertical > notebook > header.top tab:checked:hover,
 paned.horizontal > paned.vertical > notebook > header.top tab:checked,
 paned.horizontal > paned.vertical > notebook > header.top tab:checked:hover {
     background-image: linear-gradient(to bottom,
-                                      shade(@theme_bg_color, 1.18),
-                                      shade(@theme_bg_color, 1.1));
+                                      shade(@notebook_bg_color, 1.18),
+                                      shade(@notebook_bg_color, 1.00));
     border-radius: 4px 4px 0 0;
     border-width: 0px 1px 0 1px;
     border-style: solid;
-    border-color: shade (@bg_color, 0.82);
     box-shadow: none;
 }
 
@@ -1496,24 +1514,12 @@ paned.horizontal > paned.vertical > notebook > header button.flat {
     padding: 1px;
 }
 
-/* other notebooks */
-stack frame > paned.horizontal > notebook {
-    border-width: 0px;
+/* closable-page */
+paned.horizontal > notebook {
+    border-width: 1px 1px 1px 1px;
     border-style: solid;
     border-color: shade (@bg_color, 0.82);
     border-radius: 4px 4px 0px 0px;
-}
-
-stack frame > paned.horizontal > notebook:first-child {
-    border-width: 0px 1px 0px 0px;
-}
-
-stack frame > paned.horizontal > notebook:last-child {
-    border-width: 0px 0px 0px 1px;
-}
-
-stack frame > paned.horizontal > notebook:only-child {
-    border-width: 0px 1px 0px 1px;
 }
 
 paned.horizontal > notebook > header {
@@ -1531,6 +1537,10 @@ paned.horizontal > notebook > header button.flat.small-button {
     padding: 1px;
 }
 
+paned.horizontal > notebook > stack > box {
+    background-color: shade (@notebook_bg_color, 1.00);
+}
+
 /* tabs in dialog windows */
 /* horizontal tabs */
 window.background > box.vertical > notebook > header.top tab, /* pavu-control */
@@ -1546,7 +1556,6 @@ notebook.frame > header.bottom tab {
     margin: 0px 0px 0px -1px;
     border-width: 0px 1px 1px 1px;
     border-style: solid;
-    border-color: transparent;
 }
 
 window.background > box.vertical > notebook > header.top tab, /* pavu-control */
@@ -1558,7 +1567,7 @@ dialog.background.ssd > box.vertical.dialog-vbox > notebook > header.top tab,
 dialog.background.solid-csd > box.vertical.dialog-vbox > notebook > header.top tab,
 printdialog notebook > header.top tab,
 notebook.frame > header.top tab {
-    padding: 4px 6px;
+    padding: 6px;
     border-radius: 4px 4px 0px 0px;
 }
 
@@ -1577,37 +1586,34 @@ printdialog notebook > header.top tab:checked:hover,
 notebook.frame > header.top tab:checked,
 notebook.frame > header.top tab:checked:hover {
     background-image: linear-gradient(to bottom,
-                                      shade(@theme_bg_color, 1.18),
-                                      shade(@theme_bg_color, 1.1));
+                                      shade(@notebook_bg_color, 1.18),
+                                      shade(@notebook_bg_color, 1.00));
     border-radius: 4px 4px 0px 0px;
     border-width: 0px 1px 0px 1px;
     border-style: solid;
-    border-color: shade (@bg_color, 0.82);
 }
 
 notebook.frame > header.bottom tab {
-    padding: 4px 6px;
+    padding: 6px;
 }
 
 notebook.frame > header.bottom tab:checked,
 notebook.frame > header.bottom tab:checked:hover {
     background-image: linear-gradient(to top,
-                                      shade(@theme_bg_color, 1.18),
-                                      shade(@theme_bg_color, 1.1));
+                                      shade(@notebook_bg_color, 1.18),
+                                      shade(@notebook_bg_color, 1.00));
     border-radius: 0px 0px 4px 4px;
     border-style: solid;
     border-width: 0px 1px 0px 1px;
-    border-color: shade (@bg_color, 0.82);
 }
 
 /* vertical tabs */
 notebook.frame > header.left tab,
 notebook.frame > header.right tab {
-    padding: 4px 6px;
+    padding: 6px;
     margin: -1px 0px 0px 0px;
     border-width: 1px 0px 1px 0px;
     border-style: solid;
-    border-color: transparent;
 }
 
 notebook.frame > header.left tab {
@@ -1618,11 +1624,10 @@ notebook.frame > header.left tab {
 notebook.frame > header.left tab:checked,
 notebook.frame > header.left tab:checked:hover {
     background-image: linear-gradient(to right,
-                                      shade(@theme_bg_color, 1.18),
-                                      shade(@theme_bg_color, 1.1));
+                                      shade(@notebook_bg_color, 1.18),
+                                      shade(@notebook_bg_color, 1.00));
     border-style: solid;
     border-width: 1px 0px 1px 0px;
-    border-color: shade (@bg_color, 0.82);
     border-radius: 4px 0px 0px 4px;
 }
 
@@ -1633,19 +1638,18 @@ notebook.frame > header.right tab {
 notebook.frame > header.right tab:checked,
 notebook.frame > header.right tab:checked:hover {
     background-image: linear-gradient(to left,
-                                      shade(@theme_bg_color, 1.18),
-                                      shade(@theme_bg_color, 1.1));
+                                      shade(@notebook_bg_color, 1.18),
+                                      shade(@notebook_bg_color, 1.00));
     border-style: solid;
     border-width: 1px 0px 1px 0px;
-    border-color: shade (@bg_color, 0.82);
     border-radius: 0px 4px 4px 0px;
 }
 
 notebook tab.reorderable-page:checked,
 notebook tab.reorderable-page:checked:hover {
     background-image: linear-gradient(to bottom,
-                                      shade(@theme_bg_color, 1.18),
-                                      shade(@theme_bg_color, 1.1));
+                                      shade(@notebook_bg_color, 1.18),
+                                      shade(@notebook_bg_color, 1.00));
     border-radius: 4px 4px 0 0;
     box-shadow: none;
     border-style: solid;
