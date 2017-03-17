@@ -1381,8 +1381,26 @@ window.background > box.vertical > notebook:not(.frame),
 window.background.csd > box.vertical > notebook:not(.frame),
 window.background.ssd > box.vertical > notebook:not(.frame),
 window.background.solid-csd > box.vertical > notebook:not(.frame) {
-    background-color: shade (@theme_bg_color, 1.1);
+    background-color: shade (@notebook_bg_color, 1.00);
     border-radius: 4px 4px 0px 0px;
+}
+
+window.background > box.vertical > notebook:not(.frame) > stack > box,
+window.background.csd > box.vertical > notebook:not(.frame) > stack > box,
+window.background.ssd > box.vertical > notebook:not(.frame) > stack > box,
+window.background.solid-csd > box.vertical > notebook:not(.frame) > stack > box {
+    border-style: solid;
+    border-width: 0px 1px 1px 1px;
+    border-color: shade (@bg_color, 0.82);
+}
+
+window.background > box.vertical > notebook:not(.frame) > header.top,
+window.background.csd > box.vertical > notebook:not(.frame) > header.top,
+window.background.ssd > box.vertical > notebook:not(.frame) > header.top,
+window.background.solid-csd > box.vertical > notebook:not(.frame) > header.top {
+    border-style: solid;
+    border-width: 1px 1px 0px 1px;
+    border-color: shade (@bg_color, 0.82);
 }
 
 printdialog > box.view.vertical.dialog-vbox > box.vertical > notebook {
