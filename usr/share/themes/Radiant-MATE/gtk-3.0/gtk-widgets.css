@@ -3326,6 +3326,13 @@ headerbar button:disabled {
                                      url("assets/button-toolbar@2.png"));
 }
 
+/* override previous setting to fix menulibre headerbar button */
+headerbar.titlebar button:disabled {
+    border-image: none;
+    border-color: transparent;
+    background-color: transparent;
+}
+
 .primary-toolbar:not(.libreoffice-toolbar) button.flat:disabled {
     background-image: none;
     border-image-source: inherit;
