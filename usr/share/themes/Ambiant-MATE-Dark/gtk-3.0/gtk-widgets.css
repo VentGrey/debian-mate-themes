@@ -3084,6 +3084,16 @@ headerbar .subtitle {
     -gtk-icon-style: symbolic;
 }
 
+/* avoid using half backed implementation of regular icons in headerbar */
+/* fixes https://github.com/flexiondotorg/ubuntu-mate-themes/issues/51 */
+.titlebar button.titlebutton.toggle.popup,
+headerbar button.titlebutton.toggle.popup {
+    border-width: 0px;
+    border-image: none;
+    background-image: none;
+    background-color: transparent;
+}
+
 /***************************************
  * Window Decorations and window-frame *
  ***************************************/
