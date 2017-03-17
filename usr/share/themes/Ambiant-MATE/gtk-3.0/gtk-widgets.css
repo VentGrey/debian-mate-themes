@@ -3117,6 +3117,11 @@ headerbar button.titlebutton.toggle.popup:checked {
     padding: 5px 6px;
 }
 
+headerbar.titlebar entry,
+headerbar.titlebar button:not(.titlebutton) {
+    padding: 5px 6px;
+}
+
 /***************************************
  * Window Decorations and window-frame *
  ***************************************/
