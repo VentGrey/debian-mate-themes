@@ -3084,14 +3084,37 @@ headerbar .subtitle {
     -gtk-icon-style: symbolic;
 }
 
-/* avoid using half backed implementation of regular icons in headerbar */
+/* fixed half backed implementation of regular icons in headerbar */
 /* fixes https://github.com/flexiondotorg/ubuntu-mate-themes/issues/51 */
 .titlebar button.titlebutton.toggle.popup,
 headerbar button.titlebutton.toggle.popup {
-    border-width: 0px;
-    border-image: none;
-    background-image: none;
-    background-color: transparent;
+    background: transparent;
+    color: @dark_fg_color;
+    border-width: 1px;
+    border-image-width: 10px 12px 10px 12px;
+    border-image-slice: 10 12 10 12;
+    border-image-repeat: stretch;
+    border-image-source: -gtk-scaled(url("assets/button-toolbar.png"),
+                                     url("assets/button-toolbar@2.png"));
+    padding: 5px 6px;
+}
+
+.titlebar button.titlebutton.toggle.popup:hover,
+headerbar button.titlebutton.toggle.popup:hover,
+.titlebar button.titlebutton.toggle.popup:checked,
+headerbar button.titlebutton.toggle.popup:checked {
+    background: transparent;
+    color: @dark_fg_color;
+    border-width: 1px;
+    border-image-width: 10px 12px 10px 12px;
+    border-image-slice: 10 12 10 12;
+    border-image-repeat: stretch;
+    border-image-source: -gtk-scaled(url("assets/backdrop-button-toolbar.png"),
+                                     url("assets/backdrop-button-toolbar@2.png"));
+    background-image: -gtk-gradient (linear, left top, left bottom,
+                                     from (shade (@dark_bg_color, 1.2)),
+                                     to (shade (@dark_bg_color, 1.1)));
+    padding: 5px 6px;
 }
 
 /***************************************
