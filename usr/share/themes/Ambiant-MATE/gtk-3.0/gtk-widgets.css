@@ -1703,10 +1703,8 @@ notebook header.right tab:checked {
 }
 
 /* close button styling */
-notebook button.flat,
-notebook button.flat.small-button,
-notebook button.flat:hover:active,
-notebook button.flat.small-button:hover:active {
+notebook > header > tabs > tab > box > button.flat,
+notebook > header > tabs > tab > box > button.flat.small-button {
     border-image: none;
     background-image: none;
     background-color: transparent;
@@ -1718,25 +1716,15 @@ notebook button.flat.small-button:hover:active {
     padding: 0px;
 }
 
-notebook .prelight-page button.flat.small-button,
-notebook .active-page button.flat.small-button {
-    color: mix(@theme_fg_color, @theme_base_color, 0.6);
-    -gtk-icon-shadow: 0 1px @button_text_shadow;
+notebook > header > tabs > tab > box > button.flat:hover,
+notebook > header > tabs > tab > box > button.flat.small-button:hover {
+    -gtk-icon-effect: highlight;
 }
 
-notebook button.flat:hover,
-notebook button.flat.small-button:hover {
-    color: @theme_fg_color;
-    border-color: transparent;
-    border-image: none;
-    background-image: none;
-    background-color: transparent;
-}
-
-notebook button.flat:checked,
-notebook button.flat:hover:checked,
-notebook button.flat.small-button:checked,
-notebook button.flat.small-button:hover:active {
+notebook > header > tabs > tab > box > button.flat:checked,
+notebook > header > tabs > tab > box > button.flat:hover:active,
+notebook > header > tabs > tab > box > button.flat.small-button:checked,
+notebook > header > tabs > tab > box > button.flat.small-button:hover:active {
     color:  @button_active_text;
     background-color: alpha(black, 0.08);
     box-shadow: inset 0 1px alpha(black, 0.05);
@@ -1745,6 +1733,12 @@ notebook button.flat.small-button:hover:active {
                         alpha(black, 0.13)
                         alpha(black, 0.13)
                         alpha(black, 0.13);
+}
+
+notebook > header > tabs > tab.prelight-page button.flat.small-button,
+notebook > header > tabs > tab.active-page button.flat.small-button {
+    color: mix(@theme_fg_color, @theme_base_color, 0.6);
+    -gtk-icon-shadow: 0 1px @button_text_shadow;
 }
 
 notebook header.top tabs arrow.up,
