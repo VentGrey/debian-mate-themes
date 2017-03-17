@@ -1374,7 +1374,6 @@ dialog.background.solid-csd > box.vertical.dialog-vbox > notebook {
 
 notebook :hover {
     -gtk-icon-effect: highlight;
-    color: @theme_fg_color;
 }
 
 notebook header {
