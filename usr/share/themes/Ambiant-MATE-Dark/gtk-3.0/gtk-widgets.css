@@ -1409,11 +1409,6 @@ notebook header.right {
     border-radius: 0px 4px 4px 0px;
 }
 
-notebook viewport {
-    background-color: @theme_base_color;
-    border-width: 0px;
-}
-
 notebook header tab {
     border-color: transparent;
     border-width: 1px;

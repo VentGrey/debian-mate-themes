@@ -1444,11 +1444,6 @@ notebook header.right {
     box-shadow: inset  1px  0px alpha(shade(@bg_color, 0.82), 0.90);
 }
 
-notebook viewport {
-    background-color: @theme_base_color;
-    border-width: 0px;
-}
-
 notebook header tab {
     border-color: @border_color;
     border-style: solid;
