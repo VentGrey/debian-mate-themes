@@ -2500,7 +2500,7 @@ scrollbar.horizontal.fine-tune slider:hover:active,
 scrollbar.horizontal.fine-tune .slider:hover:active {
     background-image: linear-gradient(to right,
                                       shade(@scrollbar_slider_hover_bg_color, 1.00),
-                                      shade(@scrollbar_slider_bg_color, 0.94;
+                                      shade(@scrollbar_slider_bg_color, 0.94));
     border-color: shade(@scrollbar_slider_bg_color, 0.95);
 }
 /*******************
