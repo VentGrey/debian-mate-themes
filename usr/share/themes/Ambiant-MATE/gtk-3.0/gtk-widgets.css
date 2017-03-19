@@ -2934,6 +2934,7 @@ statusbar {
  **********/
 
 switch {
+    padding: 0px;
     border-radius: 6px;
     padding: 1px 0px 2px 0px;
     background-image: -gtk-gradient (linear, left top, left bottom,
@@ -2944,7 +2945,6 @@ switch {
 }
 
 switch:checked {
-    padding: 1px 0px 2px 0px;
     background-image: -gtk-gradient (linear, left top, left bottom,
                                      from (shade (@selected_bg_color, 0.93)),
                                      to (shade (@selected_bg_color, 0.99)));
@@ -2968,8 +2968,13 @@ switch:disabled {
     text-shadow: 0 1px alpha (shade (@bg_color, 1.25), 0.5);
 }
 
+switch:disabled {
+    text-shadow: none;
+}
+
+
 switch slider {
-    padding: 2px;
+    padding: 1px;
     border-radius: 6px;
     border-style: solid;
     background-image: -gtk-gradient (linear, left top, left bottom,
@@ -3249,6 +3254,10 @@ headerbar:backdrop {
 toolbar.primary-toolbar:not(.libreoffice-toolbar) :disabled,
 headerbar :disabled {
     text-shadow: 0 -1px shade (@dark_bg_color, 0.7);
+}
+
+headerbar switch:disabled {
+    text-shadow: none;
 }
 
 .primary-toolbar:not(.libreoffice-toolbar) button,
