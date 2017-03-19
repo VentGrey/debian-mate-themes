@@ -3342,9 +3342,8 @@ headerbar button:disabled {
 }
 
 /* override previous setting to fix menulibre headerbar button */
+headerbar button:disabled,
 headerbar.titlebar button:disabled {
-    border-image: none;
-    border-color: transparent;
     background-color: transparent;
 }
 
