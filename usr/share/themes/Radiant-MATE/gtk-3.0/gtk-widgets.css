@@ -3198,7 +3198,7 @@ decoration.ssd {
 .solid-csd decoration {
     border-radius: 0;
     background-color: @fg_color;
-    border: 1px solid darker(@fg_color);
+    border: 1px solid shade(@bg_color, 0.85);
     box-shadow: none;
     margin: 0px;
 }
