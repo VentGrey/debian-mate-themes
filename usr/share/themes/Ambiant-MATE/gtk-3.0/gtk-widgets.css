@@ -2346,19 +2346,19 @@ scrollbar.horizontal {
 
 /* broken firefox ignore background of trough */
 scrollbar.vertical {
-    background-image: linear-gradient(to bottom,
+    background-image: linear-gradient(to right,
                                       @scrollbar_trough,
                                       shade (@scrollbar_trough, 1.08));
 }
 
 scrollbar.horizontal {
-    background-image: -gtk-gradient (linear, left top, right top,
-                                     from (shade (@theme_bg_color, 0.98)),
-                                     to (shade (@theme_bg_color, 1.06)));
+    background-image: linear-gradient(to bottom,
+                                      @scrollbar_trough,
+                                      shade (@scrollbar_trough, 1.08));
 }
 
 scrollbar trough {
-    border-style: solid;
+    border-style: none;
     border-color: shade (@theme_bg_color, 0.94);
     border-radius: 0;
     border-image: none;
@@ -2369,7 +2369,6 @@ scrollbar trough.vertical {
     background-image: linear-gradient(to right,
                                       @scrollbar_trough,
                                       shade (@scrollbar_trough, 1.08));
-    border-width: 1px 0px;
 }
 
 scrollbar trough.horizontal {
@@ -2377,7 +2376,6 @@ scrollbar trough.horizontal {
     background-image: linear-gradient(to bottom,
                                       @scrollbar_trough,
                                       shade (@scrollbar_trough, 1.08));
-    border-width: 0px 1px;
 }
 
 /* Buttons */
@@ -2415,24 +2413,32 @@ scrollbar .button:hover:active {
     background-color: alpha(shade(@scrollbar_trough, 0.8), 0.5);
 }
 
+scrollbar.vertical button.up,
+scrollbar.vertical .button.up,
 scrollbar.vertical button.up:hover,
 scrollbar.vertical .button.up:hover {
-    box-shadow: inset 0 -1px mix(@scrollbar_slider, @scrollbar_trough, 0.8);
+    box-shadow: inset 0 -1px shade(mix(@scrollbar_slider, @scrollbar_trough, 0.6), 0.87);
 }
 
+scrollbar.vertical button.down,
+scrollbar.vertical .button.down,
 scrollbar.vertical button.down:hover,
 scrollbar.vertical .button.down:hover {
-    box-shadow: inset 0 1px mix(@scrollbar_slider, @scrollbar_trough, 0.8);
+    box-shadow: inset 0 1px shade(mix(@scrollbar_slider, @scrollbar_trough, 0.6), 0.93);
 }
 
+scrollbar.horizontal button.up,
+scrollbar.horizontal .button.down,
 scrollbar.horizontal button.up:hover,
 scrollbar.horizontal .button.down:hover {
-    box-shadow: inset -1px 0 mix(@scrollbar_slider, @scrollbar_trough, 0.8);
+    box-shadow: inset -1px 0 shade(mix(@scrollbar_slider, @scrollbar_trough, 0.6), 0.87);
 }
 
+scrollbar.horizontal button.down,
+scrollbar.horizontal .button.down,
 scrollbar.horizontal button.down:hover,
 scrollbar.horizontal .button.down:hover {
-    box-shadow: inset 1px 0 mix(@scrollbar_slider, @scrollbar_trough, 0.8);
+    box-shadow: inset 1px 0 shade(mix(@scrollbar_slider, @scrollbar_trough, 0.6), 0.93);
 }
 
 scrollbar button,
@@ -2503,6 +2509,7 @@ scrollbar.horizontal.fine-tune .slider:hover:active {
                                       shade(@scrollbar_slider_bg_color, 0.94));
     border-color: shade(@scrollbar_slider_bg_color, 0.95);
 }
+
 /*******************
  * scrolled window *
  *******************/
