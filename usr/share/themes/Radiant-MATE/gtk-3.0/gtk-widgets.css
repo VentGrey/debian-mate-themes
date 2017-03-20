@@ -3558,6 +3558,11 @@ treeview.view {
 	outline-color: alpha(currentColor, 0.6);
 }
 
+/* ie. ubiquity */
+scrolledwindow.frame > treeview.view > check {
+    background-color: transparent;
+}
+
 /************
  * viewport *
  ************/
