@@ -580,18 +580,22 @@ MsdOsdWindow.background.osd.msd-osd-window-solid progressbar progress {
 }
 
 .brisk-menu button.flat:checked {
-    color: @dark_fg_color;
+    border-radius: 0;
     background-image: -gtk-gradient (linear, left top, left bottom,
-                                     from (shade (@dark_bg_color, 1.2)),
-                                     to (shade (@dark_bg_color, 1.1)));
-    border-image-source: -gtk-scaled(url("assets/backdrop-button-toolbar.png"),
-                                     url("assets/backdrop-button-toolbar@2.png"));
-    border-width: 1px;
-    border-image-width: 10px 12px 10px 12px;
-    border-image-slice: 10 12 10 12;
-    border-image-repeat: stretch;
-    border-radius: 8px;
-    border-style: solid;
+                                     from (shade (@selected_bg_color, 1.2)),
+                                     to (shade (@selected_bg_color, 1.1)));
+    border-image: -gtk-gradient (linear, left top, left bottom,
+                                 from (shade (@selected_bg_color, 0.8)),
+                                 to (shade (@selected_bg_color, 0.9))) 1;
+
+    border-image-width: 1px;
+    box-shadow: inset 1px 0 shade (@selected_bg_color, 1.02),
+                inset -1px 0 shade (@selected_bg_color, 1.02),
+                inset 0 1px shade (@selected_bg_color, 1.16),
+                inset 0 -1px shade (@selected_bg_color, 0.96);
+
+    color: @selected_fg_color;
+    text-shadow: 0 -1px shade (@selected_bg_color, 0.7);
 }
 
 .brisk-menu button.flat:hover {
@@ -616,8 +620,8 @@ MsdOsdWindow.background.osd.msd-osd-window-solid progressbar progress {
     border-width: 1px;
     border-style: solid;
     border-color: shade (@dark_bg_color, 1.02);
-    border-bottom-color: shade (@dark_bg_color, 0.6);
-    border-right-color: shade (@dark_bg_color, 0.6);
+    border-bottom-color: shade (@dark_bg_color, 0.8);
+    border-right-color: shade (@dark_bg_color, 0.8);
 }
 
 .brisk-menu scrolledwindow {
