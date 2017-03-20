@@ -678,3 +678,7 @@ MsdOsdWindow.background.osd.msd-osd-window-solid progressbar progress {
     color: shade (@dark_fg_color, 1.2);
 }
 
+.brisk-menu label,
+.brisk-menu label.dim-label {
+    text-shadow: none;
+}
