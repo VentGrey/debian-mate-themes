@@ -579,7 +579,6 @@ MsdOsdWindow.background.osd.msd-osd-window-solid progressbar progress {
     padding: 5px;
 }
 
-.brisk-menu button.flat:hover,
 .brisk-menu button.flat:checked {
     color: @dark_fg_color;
     background-image: -gtk-gradient (linear, left top, left bottom,
@@ -593,6 +592,24 @@ MsdOsdWindow.background.osd.msd-osd-window-solid progressbar progress {
     border-image-repeat: stretch;
     border-radius: 8px;
     border-style: solid;
+}
+
+.brisk-menu button.flat:hover {
+    border-radius: 0;
+    background-image: -gtk-gradient (linear, left top, left bottom,
+                                     from (shade (@selected_bg_color, 1.1)),
+                                     to (shade (@selected_bg_color, 0.9)));
+    border-image: -gtk-gradient (linear, left top, left bottom,
+                                 from (shade (@selected_bg_color, 0.7)),
+                                 to (shade (@selected_bg_color, 0.7))) 1;
+    border-image-width: 1px;
+    box-shadow: inset 1px 0 shade (@selected_bg_color, 1.02),
+                inset -1px 0 shade (@selected_bg_color, 1.02),
+                inset 0 1px shade (@selected_bg_color, 1.16),
+                inset 0 -1px shade (@selected_bg_color, 0.96);
+
+    color: @selected_fg_color;
+    text-shadow: 0 -1px shade (@selected_bg_color, 0.7);
 }
 
 .brisk-menu separator {
