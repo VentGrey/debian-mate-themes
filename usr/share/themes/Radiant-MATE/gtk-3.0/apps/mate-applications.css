@@ -287,15 +287,16 @@ window.background.mate-terminal vte-terminal {
 /* mate-screensaver lock dialog */
 
 .lock-dialog {
-    border-radius: 5px;
-    border-style: none;
-    border-width: 0px;
+    border-radius: 0px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: @borders;
     /* not sure if box-shadow works here */
     box-shadow: 0 0 0 1px @wm_border, 0 2px 8px 3px @wm_shadow;
 }
 
 .lock-dialog frame {
-    border-radius: 5px;
+    border-radius: 0px;
     border-style: none;
     border-width: 0px;
 }
