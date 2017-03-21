@@ -2063,6 +2063,9 @@ levelbar.vertical {
 
 levelbar trough {
     padding: 2px;
+    background-image: -gtk-gradient (linear, left top, left bottom,
+                                     from (shade (@base_color, 0.96)),
+                                     to (@base_color));
 }
 
 levelbar block.filled {
