@@ -24,7 +24,7 @@ entry {
 }
 
 entry {
-    border-image: -gtk-scaled(url("assets/entry.png"),url("assets/entry@2.png")) 10 12 10 12 / 10px 12px 10px 12px stretch;
+    border-image: -gtk-scaled(url("assets/entry-toolbar.png"),url("assets/entry-toolbar@2.png")) 10 12 10 12 / 10px 12px 10px 12px stretch;
 }
 
 entry:backdrop {
@@ -32,11 +32,12 @@ entry:backdrop {
 }
 
 entry:focus {
-    border-image: -gtk-scaled(url("assets/entry-focused.png"),url("assets/entry-focused@2.png")) 10 12 10 12 / 10px 12px 10px 12px stretch;
+    border-image: -gtk-scaled(url("assets/entry-toolbar-focused.png"),url("assets/entry-focused@2.png")) 10 12 10 12 / 10px 12px 10px 12px stretch;
 }
 
 entry:disabled {
-    border-image: -gtk-scaled(url("assets/entry-disabled.png"),url("assets/entry-disabled@2.png")) 10 12 10 12 / 10px 12px 10px 12px stretch;
+    border-image-source: -gtk-scaled(url("assets/button-toolbar.png"),
+                                     url("assets/button-toolbar@2.png"));
 }
 
 entry:disabled:backdrop {
@@ -188,12 +189,9 @@ trough {
     border-image: -gtk-scaled(url("assets/progressbar-horizontal-trough.png"),url("assets/progressbar-horizontal-trough@2.png")) 6 7 6 7 / 6px 7px 6px 7px stretch;
 }
 
-switch {
-    border-image: -gtk-scaled(url("assets/switch-trough-off.png"),url("assets/switch-trough-off@2.png")) 10 12 10 12 / 10px 12px 10px 12px stretch;
-}
-
+switch,
 switch:active {
-    border-image: -gtk-scaled(url("assets/switch-trough-on.png"),url("assets/switch-trough-on@2.png")) 10 12 10 12 / 10px 12px 10px 12px stretch;
+    border-image: -gtk-scaled(url("assets/entry-toolbar.png"),url("assets/entry-toolbar@2.png")) 10 12 10 12 / 10px 12px 10px 12px stretch;
 }
 
 .primary-toolbar:not(.libreoffice-toolbar) switch,
@@ -213,27 +211,18 @@ switch:backdrop,
 switch:active:backdrop,
 switch:disabled,
 switch:active:disabled {
-    border-image: -gtk-scaled(url("assets/switch-trough-disabled.png"),url("assets/switch-trough-disabled@2.png")) 10 12 10 12 / 10px 12px 10px 12px stretch;
+    border-image-source: -gtk-scaled(url("assets/button-toolbar.png"),
+                                     url("assets/button-toolbar@2.png"));
 }
 
-switch slider {
-    border-image: -gtk-scaled(url("assets/switch-button-off.png"),url("assets/switch-button-off@2.png")) 9 11 9 11 / 9px 11px 9px 11px stretch;
-}
-
-switch slider:active {
-    border-image: -gtk-scaled(url("assets/switch-button-on.png"),url("assets/switch-button-on@2.png")) 9 11 9 11 / 9px 11px 9px 11px stretch;
-}
-
-/* XXX temporary */
+switch slider,
+switch slider:active,
 switch slider:backdrop,
-switch slider:disabled {
-    border-image: -gtk-scaled(url("assets/switch-button-off-disabled.png"),url("assets/switch-button-off-disabled@2.png")) 9 11 9 11 / 9px 11px 9px 11px stretch;
-}
-
-/* XXX temporary */
+switch slider:disabled,
 switch slider:active:backdrop,
 switch slider:active:disabled {
-    border-image: -gtk-scaled(url("assets/switch-button-on-disabled.png"),url("assets/switch-button-on-disabled@2.png")) 9 11 9 11 / 9px 11px 9px 11px stretch;
+    border-image: -gtk-scaled(url("assets/button-toolbar.png"),
+                              url("assets/button-toolbar@2.png")) 9 11 9 11 / 9px 11px 9px 11px stretch;
 }
 
 scale trough {
