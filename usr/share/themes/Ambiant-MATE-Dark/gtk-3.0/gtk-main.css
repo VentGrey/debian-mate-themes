@@ -5,8 +5,8 @@
 @define-color text_color #EBEBEB;
 @define-color selected_bg_color #87A752;
 @define-color selected_fg_color #EBEBEB;
-@define-color tooltip_bg_color #4E4C46;
-@define-color tooltip_fg_color #EBEBEB;
+@define-color tooltip_bg_color #1e1e1e;
+@define-color tooltip_fg_color #ebebeb;
 
 @define-color theme_fg_color @fg_color;
 @define-color theme_bg_color @bg_color;
