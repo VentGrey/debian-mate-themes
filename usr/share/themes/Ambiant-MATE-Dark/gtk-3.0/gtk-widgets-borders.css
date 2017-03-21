@@ -170,7 +170,7 @@ trough highlight {
 
 progressbar trough,
 trough {
-    border-image: -gtk-scaled(url("assets/progressbar-horizontal-trough.png"),url("assets/progressbar-horizontal-trough@2.png")) 6 7 6 7 / 6px 7px 6px 7px stretch;
+    border-image: -gtk-scaled(url("assets/entry-toolbar.png"),url("assets/entry-toolbar@2.png")) 6 7 6 7 / 6px 7px 6px 7px stretch;
 }
 
 switch,
