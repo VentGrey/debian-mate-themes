@@ -2159,16 +2159,16 @@ scale.vertical trough {
 scale trough,
 scale.horizontal trough {
     background-image: -gtk-gradient (linear, left top, left bottom,
-                                     from (#d1d1d1),
-                                     to (#e8e8e8));
+                                     from (shade (@base_color, 0.96)),
+                                     to (@base_color));
     border-style: solid;
     border-width: 1px;
 }
 
 scale.vertical trough {
     background-image: -gtk-gradient (linear, left top, right top,
-                                     from (#d1d1d1),
-                                     to (#e8e8e8));
+                                     from (shade (@base_color, 0.96)),
+                                     to (@base_color));
 }
 
 scale trough:disabled,
@@ -2199,7 +2199,7 @@ scale.vertical contents trough highlight {
 scale contents trough highlight:disabled,
 scale.horizontal contents trough highlight:disabled,
 scale.vertical contents trough highlight:disabled {
-    background-color: #b5b5b5;
+    background-color: transparent;
     background-image: none;
     border-color: transparent;
 }
@@ -4333,7 +4333,7 @@ entry.search {
 .dim-label,
 *:disabled {
     color: shade (@fg_color, 0.70);
-    text-shadow: 0 1px alpha (shade (@fg_color, 1.25), 0.5);
+/*    text-shadow: 0 1px alpha (shade (@fg_color, 1.25), 0.5);*/
     -gtk-icon-effect: dim;
 }
 
