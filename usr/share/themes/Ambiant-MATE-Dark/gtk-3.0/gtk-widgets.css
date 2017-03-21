@@ -4327,7 +4327,6 @@ entry.search {
 .dim-label,
 *:disabled {
     color: shade (@fg_color, 0.70);
-    text-shadow: 0 1px alpha (shade (@fg_color, 1.25), 0.5);
     -gtk-icon-effect: dim;
 }
 
