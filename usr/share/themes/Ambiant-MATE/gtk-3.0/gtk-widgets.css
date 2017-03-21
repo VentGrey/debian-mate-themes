@@ -1433,7 +1433,7 @@ notebook header.right {
 }
 
 notebook header tab {
-    border-color: @border_color;
+    border-color: shade (@bg_color, 0.82);
     border-style: solid;
     border-width: 1px;
     background-color: transparent;
