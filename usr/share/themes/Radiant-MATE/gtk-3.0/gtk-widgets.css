@@ -2102,6 +2102,14 @@ levelbar trough {
                                      to (#e8e8e8));
 }
 
+levelbar.horizontal block {
+    min-height: 3px;
+}
+
+levelbar.vertical block {
+    min-width: 3px;
+}
+
 levelbar block.filled {
     border-width: 1px;
     border-style: solid;

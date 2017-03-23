@@ -2078,6 +2078,14 @@ levelbar trough {
                                      to (@base_color));
 }
 
+levelbar.horizontal block {
+    min-height: 3px;
+}
+
+levelbar.vertical block {
+    min-width: 3px;
+}
+
 levelbar block.filled {
     border-width: 1px;
     border-style: solid;
