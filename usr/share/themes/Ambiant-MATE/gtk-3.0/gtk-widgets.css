@@ -1767,6 +1767,16 @@ notebook header tabs arrow:disabled {
     color: #c7c7c7;
 }
 
+notebook header tab:checked label {
+    color: @theme_fg_color;
+    font-weight: normal;
+}
+
+notebook header tab label {
+    color: shade (@theme_fg_color, 1.60);
+    font-weight: normal;
+}
+
 /**************
  * ComboBoxes *
  **************/
