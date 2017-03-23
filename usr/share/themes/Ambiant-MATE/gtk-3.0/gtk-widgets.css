@@ -1290,7 +1290,7 @@ menuitem separator {
 /* fix for broken firefox */
 menu separator,
 menu .separator {
-    color: shade(@fg_color, 0.7);
+    color: shade(@dark_bg_color, 0.9);
 }
 
 menuitem > arrow {
