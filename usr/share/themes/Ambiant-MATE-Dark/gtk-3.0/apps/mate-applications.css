@@ -318,7 +318,7 @@ PanelApplet.wnck-applet .wnck-pager {
 /* vte use hardcoded colors as upstream, ubuntu is patched */
 window.background.mate-terminal vte-terminal {
     -TerminalScreen-background-darkness: 0.95;
-    background-color: #373633;
+    background-color: shade (#373633, 1.25);
     color: @dark_fg_color;
 }
 
