@@ -170,7 +170,6 @@ style "button" {
 	fg[INSENSITIVE] = "#9c9c9c"
 
 	engine "murrine" {
-		#contrast = 1.0
 		textstyle = 1
 		border_shades = {1.01, 0.8}
 		reliefstyle = 0
@@ -178,8 +177,6 @@ style "button" {
 		glowstyle = 5
 		glow_shade = 1.02
 		lightborder_shade = 1.32
-#		lightborderstyle = 0
-		#text_shade = 1.04
 	}
 }
 
@@ -235,8 +232,6 @@ style "scale" = "button" {
 		handlestyle = 2
 		trough_border_shades = {0.9, 1.4}
 		glow_shade = 1.0
-#		reliefstyle = 2
-#		shadow_shades = { 1.0, 0.9 }
 	}
 }
 
@@ -405,10 +400,8 @@ style "progressbar" {
 
 	bg[ACTIVE] = shade (0.94, @bg_color)
 	fg[PRELIGHT] = @selected_fg_color
-	#bg[SELECTED] = "#cdcdcd"
 
 	engine "murrine" {
-		#trough_shades = {0.98, 1.02}
 		roundness = 8
 		lightborderstyle = 1
 		lightborder_shade = 1.26
@@ -499,11 +492,15 @@ style "calendar" {
 }
 
 style "calendar_menu_item" = "calendar" {
-#	base[NORMAL] = "#c5bfb7"
 }
 
-style "soundfix"
-{
+style "iconview" {
+	engine "murrine" {
+		roundness = 6
+		border_shades = {1.16, 1.0}
+		glow_shade = 1.1
+		glowstyle = 5
+	}
 }
 
 # Wrokaround style for places where the text color is used instead of the fg color.
@@ -554,6 +551,7 @@ class "GtkVScrollbar"	style "murrine-scrollbar"
 class "GtkHScrollbar"	style "murrine-scrollbar"
 class "GtkCalendar" style "calendar"
 class "GtkInfoBar" style "infobar"
+class "GtkIconView" style "iconview"
 
 # General matching follows. The order is choosen so that the right styles override
 # each other. EG. progressbar needs to be more important than the menu match.
@@ -567,6 +565,7 @@ widget_class "*<GtkNotebook>*<GtkLayout>" style "notebook_bg"
 widget_class "*<GtkNotebook>*<GtkLabel>" style "notebook_bg"
 
 widget_class "*<GtkToolbar>*" style "toolbar"
+widget_class "*<GtkHandleBox>"              style "toolbar"
 widget_class "*<GtkScrolledWindow>*" style "scrolledwindow"
 
 widget_class "*<GtkButton>" style "button"
@@ -609,10 +608,6 @@ widget_class "*.<GtkCTree>.<GtkButton>.*<GtkLabel>" style "treeview_header"
 widget_class "*.<GtkList>.<GtkButton>.*<GtkLabel>" style "treeview_header"
 widget_class "*.<GtkCList>.<GtkButton>.*<GtkLabel>" style "treeview_header"
 
-# Overlay scrollbar
-widget_class "*<OsScrollbar>" style "overlay_scrollbar"
-widget_class "*<OsThumb>" style "overlay_scrollbar"
-
 # The window of the tooltip is called "gtk-tooltip"
 ##################################################################
 # FIXME:
@@ -638,8 +633,6 @@ widget "*.gtk-combobox-popup-menu.*" style "menuitem_text_is_fg_color_workaround
 widget_class "*<GtkListItem>*" style "fg_is_text_color_workaround"
 # GtkCList also uses the fg color to draw text on top of the base colors.
 widget_class "*<GtkCList>" style "fg_is_text_color_workaround"
-# Work around for ubuntu's lucid sound indicator
-widget "ido-offscreen-scale" style "soundfix"
 # Thickness for indicator menu items
 widget "*IdoEntryMenuItem*" style "wide"
 
