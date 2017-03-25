@@ -1799,7 +1799,7 @@ notebook header tab:checked label {
 }
 
 notebook header tab label {
-    color: shade (@theme_fg_color, 1.60);
+    color: shade (@theme_fg_color, 1.30);
     font-weight: normal;
 }
 
