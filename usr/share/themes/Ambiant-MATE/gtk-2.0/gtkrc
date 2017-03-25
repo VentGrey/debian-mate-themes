@@ -44,7 +44,7 @@ style "default" {
 	GtkMenuBar::shadow-type = GTK_SHADOW_NONE
 	GtkExpander::expander-size = 11
 	GtkToolbar::internal-padding = 1
-#	GtkToolbar::shadow-type = GTK_SHADOW_NONE
+	GtkToolbar::shadow-type = GTK_SHADOW_NONE
 	GtkTreeView::expander-size = 7
 	GtkTreeView::vertical-separator = 0
 #	GtkTreeView::odd-row-color = shade (0.96, @base_color)
@@ -180,28 +180,6 @@ style "vscale" {
 style "hscale" {
 }
 
-#style "button" {
-#	xthickness = 3
-#	ythickness = 3
-#
-#	bg[NORMAL] = shade (1.07, "#cdcdcd")
-#	bg[PRELIGHT] = shade (1.09, "#cdcdcd")
-#	bg[ACTIVE] = shade (1.0, "#cdcdcd")
-#	bg[INSENSITIVE] = mix (0.25, @bg_color, "#e2e1e1")
-#	fg[INSENSITIVE] = "#9c9c9c"
-#
-#	engine "murrine" {
-#		#contrast = 1.0
-#		border_shades = {1.04, 0.82}
-#		reliefstyle = 5
-#		shadow_shades = {1.02, 1.1}
-#		textstyle = 1
-#		glowstyle = 5
-#		glow_shade = 1.1
-#		#text_shade = 1.04
-#	}
-#}
-
 style "button" {
 
 	xthickness = 3
@@ -331,7 +309,7 @@ style "menubar" = "dark" {
 	}
 }
 
-style "toolbar" = "dark" {
+style "toolbar" {
 	engine "murrine" {
 		textstyle = 1
 		text_shade = 1.32
@@ -339,30 +317,8 @@ style "toolbar" = "dark" {
 	}
 }
 
-style "toolbar-button" = "dark" {
-	xthickness = 4
-	ythickness = 3
-
+style "toolbar-button" = "notebook_button" {
 	engine "murrine" {
-		#contrast = 1.0
-		textstyle = 1
-		border_shades = {1.01, 0.8}
-		reliefstyle = 0
-		shadow_shades = {1.0, 1.1}
-		glowstyle = 5
-		glow_shade = 1.02
-		lightborder_shade = 1.32
-#		lightborderstyle = 0
-		#text_shade = 1.04
-	}
-}
-
-style "toolbar-entry" = "entry" { # text
-	base[NORMAL]			= shade(0.93, @base_color)
-	engine "murrine" {
-		contrast			= 0.6
-		border_shades		= {1.2, 1.0}
-		focus_color 		= shade (1.0, @selected_bg_color)
 	}
 }
 
@@ -372,6 +328,7 @@ style "menu" = "dark" {
 
 	engine "murrine"
 	{
+		reliefstyle = 0
 		roundness = 0
 	}
 }
@@ -653,8 +610,7 @@ widget_class "*<GtkScrolledWindow>*" style "scrolledwindow"
 
 widget_class "*<GtkButton>" style "button"
 widget_class "*<GtkButton>*<GtkLabel>" style "button"
-widget_class "*<GtkToolbar>.*.<GtkButton>*" style "toolbar-button"
-widget_class "*<GtkToolbar>.*.<GtkEntry>*"  style "toolbar-entry"
+widget_class "*<GtkToolbar>.*.<GtkButton>*" style "notebook_button"
 widget_class "*<GtkNotebook>" style "notebook"
 widget_class "*<GtkStatusbar>" style "statusbar"
 widget_class "*<GtkSpinButton>*" style "spinbutton"
