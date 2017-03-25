@@ -44,7 +44,7 @@ style "default" {
 	GtkMenuBar::shadow-type = GTK_SHADOW_NONE
 	GtkExpander::expander-size = 11
 	GtkToolbar::internal-padding = 1
-#	GtkToolbar::shadow-type = GTK_SHADOW_NONE
+	GtkToolbar::shadow-type = GTK_SHADOW_NONE
 	GtkTreeView::expander-size = 7
 	GtkTreeView::vertical-separator = 0
 #	GtkTreeView::odd-row-color = shade (0.96, @base_color)
@@ -179,28 +179,6 @@ style "vscale" {
 
 style "hscale" {
 }
-
-#style "button" {
-#	xthickness = 3
-#	ythickness = 3
-#
-#	bg[NORMAL] = shade (1.07, "#4E4C46")
-#	bg[PRELIGHT] = shade (1.09, "#4E4C46")
-#	bg[ACTIVE] = shade (1.0, "#4E4C46")
-#	bg[INSENSITIVE] = mix (0.25, @bg_color, "#4E4C46")
-#	fg[INSENSITIVE] = "#383733"
-#
-#	engine "murrine" {
-#		#contrast = 1.0
-#		border_shades = {1.04, 0.82}
-#		reliefstyle = 5
-#		shadow_shades = {1.02, 1.1}
-#		textstyle = 1
-#		glowstyle = 5
-#		glow_shade = 1.1
-#		#text_shade = 1.04
-#	}
-#}
 
 style "button" {
 
@@ -358,7 +336,6 @@ style "toolbar-button" = "dark" {
 }
 
 style "toolbar-entry" = "entry" { # text
-	base[NORMAL]			= shade(0.93, @base_color)
 	engine "murrine" {
 		contrast			= 0.6
 		border_shades		= {1.2, 1.0}
@@ -372,6 +349,7 @@ style "menu" = "dark" {
 
 	engine "murrine"
 	{
+		reliefstyle = 0
 		roundness = 0
 	}
 }
