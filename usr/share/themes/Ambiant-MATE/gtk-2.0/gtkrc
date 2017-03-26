@@ -226,20 +226,6 @@ style "murrine-scrollbar" {
 	}
 }
 
-style "overlay_scrollbar" {
-	bg[NORMAL]	= shade (0.99, @selected_bg_color)
-	bg[SELECTED]	= shade (1.03, @selected_bg_color)
-	bg[ACTIVE]	= shade (1.03, @selected_bg_color)
-	bg[PRELIGHT]	= shade (1.03, @selected_bg_color)
-
-	engine "murrine" {
-		roundness	= 0
-		gradient_shades = {1.0, 1.0, 1.0, 1.0}
-		border_shades	= {1.05, 1.05}
-		contrast	= 0.4
-	}
-}
-
 style "scale" = "button" {
 	bg[NORMAL] = @bg_color
 	bg[PRELIGHT] = shade (1.06, @bg_color)
