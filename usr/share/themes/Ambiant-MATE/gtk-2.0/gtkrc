@@ -48,7 +48,7 @@ style "default" {
 	GtkTreeView::expander-size = 7
 	GtkTreeView::vertical-separator = 0
 #	GtkTreeView::odd-row-color = shade (0.96, @base_color)
-	GtkNotebook::tab-overlap = -1
+	GtkNotebook::tab-overlap = 1
 
 	GtkMenu::horizontal-padding = 0
 	GtkMenu::vertical-padding = 3
@@ -266,8 +266,8 @@ style "notebook_bg" {
 # The color is changed by the notebook_bg style, this style
 # changes the x/ythickness
 style "notebook" {
-	xthickness = 2
-	ythickness = 2
+	xthickness = 3
+	ythickness = 3
 	
 	engine "murrine" {
 		roundness = 3
@@ -517,7 +517,7 @@ style "radiocheck" {
             recolorable     		= TRUE
             state 			= INSENSITIVE
             shadow          		= OUT
-            overlay_file    		= "assets/check-unselected.png"
+            overlay_file    		= "assets/check-unselected-insensitive.png"
             overlay_stretch 		= FALSE
         }
 	image {
@@ -549,7 +549,7 @@ style "radiocheck" {
             recolorable     		= TRUE
             state 		        = INSENSITIVE
             shadow          		= IN
-            overlay_file		= "assets/check-unselected.png"
+            overlay_file		= "assets/check-selected-insensitive.png"
             overlay_stretch 		= FALSE
 	}
 
@@ -579,7 +579,7 @@ style "radiocheck" {
             function        		= OPTION
             state 			= INSENSITIVE
             shadow         		= OUT
-            overlay_file    		= "assets/radio-unselected.png"
+            overlay_file    		= "assets/radio-unselected-insensitive.png"
             overlay_stretch 		= FALSE
         }
 	image {
@@ -607,7 +607,7 @@ style "radiocheck" {
             function        		= OPTION
             state 			= INSENSITIVE
             shadow          		= IN
-            overlay_file    		= "assets/radio-unselected.png"
+            overlay_file    		= "assets/radio-selected-insensitive.png"
             overlay_stretch 		= FALSE
         }
     }
