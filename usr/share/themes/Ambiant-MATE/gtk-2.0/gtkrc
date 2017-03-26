@@ -62,8 +62,8 @@ style "default" {
 
 	GtkEntry::progress-border = { 2, 2, 2, 2 }
 
-	GtkProgressBar::min-horizontal-bar-height = 18
-	GtkProgressBar::min-vertical-bar-width = 18
+	GtkProgressBar::min-horizontal-bar-height = 20
+	GtkProgressBar::min-vertical-bar-width = 20
 	
 	GtkImage::x-ayatana-indicator-dynamic = 1
 	GtkMenuBar::window-dragging = 1
@@ -113,7 +113,7 @@ style "default" {
 		progressbarstyle = 0
 		colorize_scrollbar = FALSE
 		prelight_shade		= .95			# shade level for scrollbar's slider, comboboxstyle(1), and prelight state with gradient_colors
-		trough_shades		= {0.98, 1.06}		# draw gradient on trough of GtkScrollbar and GtkProgressbar
+		trough_shades		= {0.96, 1.04}		# draw gradient on trough of GtkScrollbar and GtkProgressbar
 		menubaritemstyle = 1
 		menubarstyle = 1
 		menustyle = 0
@@ -427,12 +427,12 @@ style "progressbar" {
 	fg[PRELIGHT] = @selected_fg_color
 
 	engine "murrine" {
-		roundness = 8
+		roundness = 6
 		lightborderstyle = 1
 		lightborder_shade = 1.26
 		border_shades = {0.95, 0.85}
 		gradient_shades = {1.1, 1.0, 1.0, 0.9}
-		trough_border_shades = {0.9, 1.4}
+		trough_border_shades = {0.8, 0.9}
 	}
 }
 
