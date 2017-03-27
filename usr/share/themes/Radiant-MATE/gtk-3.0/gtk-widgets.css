@@ -4064,7 +4064,7 @@ modelbutton.flat:backdrop {
     border: none;
     text-shadow: none;
     border-radius: 3px;
-    padding: 0px 0px 0px 4px;
+    padding: 5px;
 }
 
 modelbutton.flat:backdrop:hover {
@@ -4094,7 +4094,7 @@ modelbutton.flat radio:hover,
 modelbutton.flat radio:checked {
     background-image: none;
     border: none;
-    padding: 0px 3px 0px 0px;
+    padding: 0px;
 }
 
 modelbutton.flat arrow.left {
@@ -4103,9 +4103,6 @@ modelbutton.flat arrow.left {
 
 modelbutton.flat arrow.right {
     -gtk-icon-source: -gtk-icontheme("pan-end-symbolic");
-}
-modelbutton.flat arrow{
-    padding: 0px 3px 0px 0px;
 }
 
 modelbutton.flat:disabled,
