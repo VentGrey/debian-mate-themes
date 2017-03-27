@@ -90,12 +90,12 @@ button {
                                      color-stop (0.5, @button_bg_color),
                                      to (shade (@button_bg_color, 0.94)));
 
-    color: @fg_color;
+    color: @dark_fg_color;
+    text-shadow: 0 -1px shade (@dark_bg_color, 0.7);
+
     border: 1px solid transparent;
     border-radius: 8px;
     background-color: transparent;
-    color: @dark_fg_color;
-    text-shadow: 0 -1px shade (@dark_bg_color, 0.7);
     border-image-source: -gtk-scaled(url("assets/button-toolbar.png"),
                                      url("assets/button-toolbar@2.png"));
 
