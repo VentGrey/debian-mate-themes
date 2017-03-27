@@ -145,8 +145,8 @@ button:hover:backdrop {
 }
 
 button:hover:focus {
-    border-image-source: -gtk-scaled(url("assets/button-focused-hover.png"),
-                                     url("assets/button-focused-hover@2.png"));
+    border-image-source: -gtk-scaled(url("assets/button-toolbar-focused.png"),
+                                     url("assets/button-toolbar-focused@2.png"));
 }
 
 button:disabled {
