@@ -2911,14 +2911,21 @@ statusbar {
  **********/
 
 switch {
-    padding: 0px;
+    padding: 2px;
     border-radius: 6px;
-    padding: 1px 0px 2px 0px;
     background-image: -gtk-gradient (linear, left top, left bottom,
                                      from (#cecece),
                                      to (#e8e8e8));
     color: @fg_color;
-    text-shadow: 0 1px alpha (shade (@bg_color, 1.25), 0.5);
+}
+
+headerbar switch {
+    padding: 2px;
+    border-radius: 6px;
+    background-image: -gtk-gradient (linear, left top, left bottom,
+                                     from (#4E4C46),
+                                     to (#5B5A56));
+    color: @dark_fg_color;
 }
 
 switch:checked {
@@ -2926,47 +2933,57 @@ switch:checked {
                                      from (shade (@selected_bg_color, 0.93)),
                                      to (shade (@selected_bg_color, 0.99)));
     color: @selected_fg_color;
-    text-shadow: 0 1px shade (@selected_bg_color, 0.7);
 }
 
-switch:focus {
+switch:focus,
+switch:focus slider {
     outline: 2px solid @focus_color;
     outline-offset: -2px;
     -gtk-outline-radius: 6px;
 }
 
-/* XXX temporary */
 switch:backdrop,
 switch:disabled {
     background-image: -gtk-gradient (linear, left top, left bottom,
                                      from (shade (@bg_color, 0.93)),
                                      to (shade (@bg_color, 0.99)));
     color: shade (@bg_color, 0.6);
-    text-shadow: 0 1px alpha (shade (@bg_color, 1.25), 0.5);
 }
 
-switch:disabled {
-    text-shadow: none;
+headerbar switch:backdrop,
+headerbar switch:disabled {
+    background-image: -gtk-gradient (linear, left top, left bottom,
+                                     from (shade (@dark_bg_color, 0.93)),
+                                     to (shade (@dark_bg_color, 0.99)));
+    color: shade (@dark_bg_color, 0.6);
 }
-
 
 switch slider {
-    padding: 1px;
     border-radius: 6px;
     border-style: solid;
+    border-width: 1px;
     background-image: -gtk-gradient (linear, left top, left bottom,
                                      from (shade (@button_bg_color, 1.08)),
                                      color-stop (0.5, @button_bg_color),
                                      to (shade (@button_bg_color, 0.94)));
     color: @fg_color;
-    text-shadow: 0 1px alpha (shade (@button_bg_color, 1.25), 0.4);
 }
 
-switch slider:backdrop {
+headerbar switch slider {
+    border-radius: 6px;
+    border-style: solid;
+    border-width: 1px;
+    background-image: -gtk-gradient (linear, left top, left bottom,
+                                     from (shade (@dark_slider_bg_color, 1.08)),
+                                     color-stop (0.5, @dark_slider_bg_color),
+                                     to (shade (@dark_slider_bg_color, 0.94)));
+    color: @fg_color;
+}
+
+switch:backdrop slider {
     background-image: none;
-    background-color: @bg_color;
+    background-color: @dark_bg_color;
     color: @backdrop_fg_color;
-    text-shadow: 0 1px alpha (shade (@button_bg_color, 1.25), 0.2);
 }
 
 /*************
