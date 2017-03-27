@@ -209,8 +209,8 @@ button:active {
     background-image: -gtk-gradient (linear, left top, left bottom,
                                      from (#4E4C46),
                                      to (#5B5A56));
-    border-image-source: -gtk-scaled(url("assets/button-active-hover.png"),
-                                     url("assets/button-active-hover@2.png"));
+    border-image-source: -gtk-scaled(url("assets/button-toolbar-focused.png"),
+                                     url("assets/button-toolbar-focused@2.png"));
 }
 
 button:active:focus,
