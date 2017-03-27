@@ -32,6 +32,31 @@
     box-shadow: inset -1px 0 shade (@bg_color, 0.94);
 }
 
+.gtkstyle-fallback {
+	background-color: @theme_bg_color;
+	color: @theme_fg_color;
+}
+
+.gtkstyle-fallback:hover {
+	background-color: shade(@theme_bg_color, 1.10);
+	color: @theme_fg_color;
+}
+
+.gtkstyle-fallback:active {
+	background-color: shade(@theme_bg_color, 0.90);
+	color: @theme_fg_color;
+}
+
+.gtkstyle-fallback:disabled {
+	background-color: @insensitive_bg_color;
+	color: @insensitive_fg_color;
+}
+
+.gtkstyle-fallback:selected {
+	background-color: @theme_selected_bg_color;
+	color: @theme_selected_fg_color;
+}
+
 /* Fix for applications that have issues finding a default monospace font */
 /* https://github.com/mate-desktop/mate-themes/issues/145 */
 .monospace {
