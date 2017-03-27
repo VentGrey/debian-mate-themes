@@ -1,4 +1,4 @@
-<style-scheme id="Ambiant-MATE-Dark" _name="Ambiant-Dark" version="1.0">
+<style-scheme id="Ambiant-MATE-Dark" _name="Ambiant-MATE-Dark" version="1.0">
 <author>Christian Dannie Storgaard (Cybolic)</author>
 <_description>A dark theme to match Ambiant-MATE-Dark</_description>
 <style name="line-numbers" foreground="#DFDBD2" background="#3C3B37" bold="True"/>
