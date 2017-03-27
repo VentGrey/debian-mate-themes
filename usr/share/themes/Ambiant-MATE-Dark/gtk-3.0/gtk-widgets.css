@@ -139,8 +139,8 @@ button.flat {
 button:backdrop {
     background-image: none;
     background-color: @bg_color;
-    border-image-source: -gtk-scaled(url("assets/backdrop-button.png"),
-                                     url("assets/backdrop-button@2.png"));
+    border-image-source: -gtk-scaled(url("assets/backdrop-button-toolbar.png"),
+                                     url("assets/backdrop-button-toolbar@2.png"));
 
     color: @backdrop_fg_color;
     text-shadow: 0 1px alpha (shade (@button_bg_color, 1.25), 0.2);
@@ -165,8 +165,8 @@ button:hover {
 
 button:hover:backdrop {
     background-color: shade (@bg_color, 1.04);
-    border-image-source: -gtk-scaled(url("assets/backdrop-button-hover.png"),
-                                     url("assets/backdrop-button-hover@2.png"));
+    border-image-source: -gtk-scaled(url("assets/backdrop-button-toolbar-active.png"),
+                                     url("assets/backdrop-button-toolbar-active@2.png"));
 }
 
 button:hover:focus {
@@ -187,8 +187,8 @@ button:disabled:backdrop {
     background-color: #4E4C46;
 
     text-shadow: 0 1px alpha (shade (@button_bg_color, 1.25), 0.2);
-    border-image-source: -gtk-scaled(url("assets/backdrop-button-disabled.png"),
-                                     url("assets/backdrop-button-disabled@2.png"));
+    border-image-source: -gtk-scaled(url("assets/backdrop-button-toolbar.png"),
+                                     url("assets/backdrop-button-toolbar@2.png"));
 }
 
 button.flat:disabled,
@@ -228,21 +228,21 @@ button:active:disabled {
 }
 
 button:checked:backdrop {
-    border-image-source: -gtk-scaled(url("assets/backdrop-button-active.png"),
-                                     url("assets/backdrop-button-active@2.png"));
+    border-image-source: -gtk-scaled(url("assets/backdrop-button-toolbar-active.png"),
+                                     url("assets/backdrop-button-toolbar-active@2.png"));
 }
 
 button:active:backdrop {
-    border-image-source: -gtk-scaled(url("assets/backdrop-button-active-hover.png"),
-                                     url("assets/backdrop-button-active-hover@2.png"));
+    border-image-source: -gtk-scaled(url("assets/backdrop-button-toolbar-active.png"),
+                                     url("assets/backdrop-button-toolbar-active@2.png"));
 }
 
 button:checked:disabled:backdrop {
     background-image: -gtk-gradient (linear, left top, left bottom,
                                      from (mix (#434343, @bg_color, 0.5)),
                                      to (mix (#434343, @bg_color, 0.5)));
-    border-image-source: -gtk-scaled(url("assets/backdrop-button-active-disabled.png"),
-                                     url("assets/backdrop-button-active-disabled@2.png"));
+    border-image-source: -gtk-scaled(url("assets/backdrop-button-toolbar.png"),
+                                     url("assets/backdrop-button-toolbar@2.png"));
 }
 
 /*

@@ -28,7 +28,7 @@ entry {
 }
 
 entry:backdrop {
-    border-image: -gtk-scaled(url("assets/backdrop-entry.png"),url("assets/backdrop-entry@2.png")) 10 12 10 12 / 10px 12px 10px 12px stretch;
+    border-image: -gtk-scaled(url("assets/entry-toolbar.png"),url("assets/entry-toolbar@2.png")) 10 12 10 12 / 10px 12px 10px 12px stretch;
 }
 
 entry:focus {
@@ -41,7 +41,7 @@ entry:disabled {
 }
 
 entry:disabled:backdrop {
-    border-image: -gtk-scaled(url("assets/backdrop-entry-disabled.png"),url("assets/backdrop-entry-disabled@2.png")) 10 12 10 12 / 10px 12px 10px 12px stretch;
+    border-image: -gtk-scaled(url("assets/entry-toolbar.png"),url("assets/entry-toolbar@2.png")) 10 12 10 12 / 10px 12px 10px 12px stretch;
 }
 
 .primary-toolbar:not(.libreoffice-toolbar) entry,
