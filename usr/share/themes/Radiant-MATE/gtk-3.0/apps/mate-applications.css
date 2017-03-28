@@ -189,6 +189,13 @@ PanelWidget > PanelSeparator {
  * Mate-terminal *
  *****************/
 
+/* override for pavu-control */
+window.background.mate-terminal > box.vertical > notebook > header.top,
+window.background.mate-terminal > box.vertical > notebook > stack > box {
+    border-style: none;
+    border-width: 0px;
+}
+
 /* vte use hardcoded colors as upstream, ubuntu is patched */
 window.background.mate-terminal vte-terminal {
     -TerminalScreen-background-darkness: 0.95;
