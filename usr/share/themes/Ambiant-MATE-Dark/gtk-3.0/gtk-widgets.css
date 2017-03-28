@@ -38,6 +38,13 @@
     box-shadow: inset -1px 0 shade (@bg_color, 0.94);
 }
 
+/* no madness on desktop windows */
+window.background.caja-desktop-window:backdrop,
+window.background.nemo-desktop-window:backdrop,
+window.background.nautilus-desktop:backdrop {
+    box-shadow: none;
+}
+
 .gtkstyle-fallback {
 	background-color: @theme_bg_color;
 	color: @theme_fg_color;
