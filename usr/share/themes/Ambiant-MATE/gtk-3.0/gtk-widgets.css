@@ -22,9 +22,15 @@
     -gtk-outline-radius: 2px;
 }
 
-.background {
+/* exclude widget for mate-menu */
+.background:not(widget) {
     color: @fg_color;
     background-color: @bg_color;
+}
+
+/* override previous setting for rubberband of mate-screenshot */
+.background.rubberband {
+	background-color: transparent;
 }
 
 .background:backdrop {
