@@ -78,7 +78,7 @@
  ************/
 
 @define-color core_color_a #B9C0A9; /* Core color for green widgets in RadiantMATE. */
-@define-color core_color_b shade(@bg_color, 1.02);
+@define-color core_color_b #edeceb; /* Core color for gray widgets in RadiantMATE. */
 
 @define-color notebook_bg_color shade(@core_color_b, 1.02);
 @define-color border_color shade(@core_color_b, 0.67);
