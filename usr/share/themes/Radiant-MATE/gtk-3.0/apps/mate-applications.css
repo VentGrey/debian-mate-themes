@@ -103,6 +103,11 @@
  * Mate-Panel *
  **************/
 
+/* needed for keyboard layout indicator applet */
+.mate-panel-menu-bar {
+    color: @theme_fg_color;
+}
+
 /* outlines */
 window.background, /* selector where outlines are writen on GtkTrayIcon */
 .mate-panel-menu-bar menubar,
