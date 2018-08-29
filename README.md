@@ -1,4 +1,4 @@
-These icons will maintain their original upstram licenses being:
+These icons will maintain their original upstream licenses being:
 
  * GPL v2 for Humanity Icons
  * GPL v3.0 for Ubuntu Mate Icons
