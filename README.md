@@ -7,15 +7,15 @@ These icons will maintain their original upstream licenses being:
 
 A big thanks to the people who is making this possible:
 
-@flexiondotorg (Martin Wimpress)
-@Raveit65
-@danrabbit (Dabien Foré)
+* @flexiondotorg (Martin Wimpress)
+* @Raveit65
+* @danrabbit (Dabien Foré)
 
 - Ravefinity Icons
-Jared sot <ravefinity@gmail.com>
-Jennie Petoumenou
-Jonian Guveli <jonian.guveli@gmail.com>
-K.Vishnoo Charan Reddy<foo.mac.v@gmail.com>
+    * Jared sot <ravefinity@gmail.com>
+    * Jennie Petoumenou
+    * Jonian Guveli <jonian.guveli@gmail.com>
+    * K.Vishnoo Charan Reddy<foo.mac.v@gmail.com>
 
 GNOME icons and Humanity icons are all licensed under the GPL.
 
