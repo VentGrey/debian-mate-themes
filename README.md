@@ -17,8 +17,8 @@ Ambiant Mate, Radiant Mate & Ambiant Mate Dark depend on `gtk 3.22`.
 
 # To Do List
 
-- [] Finish adding base icons
-- [] Recolor orange ubuntu icons
+:heavy_check_mark: Finish adding base icons
+:heavy_check_mark: Recolor orange ubuntu icons
 - [] Add Debian wallpapers
 - [] Add more mimetypes
 
@@ -26,8 +26,26 @@ Ambiant Mate, Radiant Mate & Ambiant Mate Dark depend on `gtk 3.22`.
 These icons will maintain their original upstream licenses being:
 
  * GPL v2 for Humanity Icons
+   * Canonical Ltd.
+   * Daniel Foré
+   
  * GPL v3 for Ubuntu Mate Icons
-
+   * Martin Wimpress.
+   * Jack Mohegan.
+   * Michael Tunnell.
+   
+   Note, these icons include the following licenses:
+   Licenses: 
+   * **CC-BY-SA-3.0**
+   * **CC-BY-SA-4.0**
+   
+   Background licenses:
+   * **CC-BY-SA-4.0**
+   
+   Plymouth licenses:
+   * **GPL-2+**
+   
+   
 **NEW!** Added Humanity Colors from @Ravefinity
 
 A big thanks to the people who is making this possible:
