@@ -1,0 +1,10 @@
+if background_color 60,59,55; then
+  clear
+fi
+
+color_normal=light-gray/black
+
+if [ -e ${prefix}/themes/debian-mate/theme.txt ]; then
+  insmod png
+  theme=${prefix}/themes/debian-mate/theme.txt
+fi
