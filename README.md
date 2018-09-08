@@ -18,8 +18,11 @@ Ambiant Mate, Radiant Mate & Ambiant Mate Dark depend on `gtk 3.22`.
 # To Do List
 
 :heavy_check_mark: Finish adding base icons
+
 :heavy_check_mark: Recolor orange ubuntu icons
+
 - [] Add Debian wallpapers
+
 - [] Add more mimetypes
 
 # Copyright
