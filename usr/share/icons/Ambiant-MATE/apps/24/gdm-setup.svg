@@ -53,11 +53,11 @@
        id="linearGradient2670">
       <stop
          id="stop2672"
-         style="stop-color:#650d5c;stop-opacity:1"
+         style="stop-color:#405C20;stop-opacity:1"
          offset="0" />
       <stop
          id="stop2674"
-         style="stop-color:#8e1281;stop-opacity:1;"
+         style="stop-color:#405C20;stop-opacity:1;"
          offset="1" />
     </linearGradient>
     <linearGradient
@@ -139,11 +139,11 @@
        id="linearGradient3664">
       <stop
          id="stop3666"
-         style="stop-color:#e9c893;stop-opacity:1"
+         style="stop-color:#739D38;stop-opacity:1"
          offset="0" />
       <stop
          id="stop3668"
-         style="stop-color:#e9c893;stop-opacity:0"
+         style="stop-color:#739D38;stop-opacity:0"
          offset="1" />
     </linearGradient>
     <linearGradient
@@ -261,19 +261,19 @@
        id="linearGradient3242-593-605-251-305">
       <stop
          offset="0"
-         style="stop-color:#d78ec1;stop-opacity:1"
+         style="stop-color:#739D38;stop-opacity:1"
          id="stop2749" />
       <stop
          offset="0.26238"
-         style="stop-color:#c564be;stop-opacity:1"
+         style="stop-color:#567629;stop-opacity:1"
          id="stop2751" />
       <stop
          offset="0.66093999"
-         style="stop-color:#9d3ea4;stop-opacity:1"
+         style="stop-color:#405C20;stop-opacity:1"
          id="stop2753" />
       <stop
          offset="1"
-         style="stop-color:#5e2c73;stop-opacity:1"
+         style="stop-color:#1C3210;stop-opacity:1"
          id="stop2755" />
     </linearGradient>
     <linearGradient
@@ -360,7 +360,7 @@
      x="5.5025659"
      y="6.5025654"
      id="rect7303"
-     style="opacity:0.90000000000000002;fill:white;fill-opacity:1;stroke:#780f6d;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+     style="opacity:0.90000000000000002;fill:white;fill-opacity:1;stroke:#1C3210;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
   <path
      d="m 17,9 c 2.37e-4,0.552214 -0.447547,1 -1,1 -0.552455,0 -1.000241,-0.447786 -1,-1 -2.41e-4,-0.552215 0.447545,-1 1,-1 0.552453,0 1.000237,0.447785 1,1 l 0,0 z"
      id="path3713"
