@@ -12,18 +12,18 @@
  </metadata>
  <defs id="defs3736">
   <linearGradient id="linearGradient4456">
-   <stop id="stop4458" style="stop-color:#D9EDB9" offset="0"/>
-   <stop id="stop4460" style="stop-color:#ADC980;stop-opacity:0" offset="1"/>
+   <stop id="stop4458" style="stop-color:#A6B984" offset="0"/>
+   <stop id="stop4460" style="stop-color:#A6B984;stop-opacity:0" offset="1"/>
   </linearGradient>
   <linearGradient id="linearGradient3390-178-986-453-4-5">
-   <stop id="stop3624-8-6" style="stop-color:#688933" offset="0"/>
-   <stop id="stop3626-1-1" style="stop-color:#4A6A17" offset="1"/>
+   <stop id="stop3624-8-6" style="stop-color:#1C3210" offset="0"/>
+   <stop id="stop3626-1-1" style="stop-color:#8BA25C" offset="1"/>
   </linearGradient>
   <linearGradient id="linearGradient3732" y2="182.48" xlink:href="#linearGradient3390-178-986-453-4-5" gradientUnits="userSpaceOnUse" x2="-55.189" gradientTransform="matrix(.92957 0 0 .99594 51.302 -181.74)" y1="190.51" x1="-31.523"/>
   <linearGradient id="linearGradient7012-661-145-733-759-865-745-661-970-94-1-0">
-   <stop id="stop3618-1-9" style="stop-color:#ADC980" offset="0"/>
-   <stop id="stop3270-5-6" style="stop-color:#87A752" offset=".5"/>
-   <stop id="stop3620-9-3" style="stop-color:#688933" offset="1"/>
+   <stop id="stop3618-1-9" style="stop-color:#A6B984" offset="0"/>
+   <stop id="stop3270-5-6" style="stop-color:#8BA25C" offset=".5"/>
+   <stop id="stop3620-9-3" style="stop-color:#6F7F3B" offset="1"/>
   </linearGradient>
   <linearGradient id="linearGradient4322" y2="191.52" xlink:href="#linearGradient7012-661-145-733-759-865-745-661-970-94-1-0" gradientUnits="userSpaceOnUse" x2="-31.523" gradientTransform="matrix(.92957 0 0 .99594 51.302 -181.74)" y1="182.48" x1="-55.189"/>
   <linearGradient id="linearGradient4324" y2="191.52" xlink:href="#linearGradient7012-661-145-733-759-865-745-661-970-94-1-0" gradientUnits="userSpaceOnUse" x2="-31.523" gradientTransform="matrix(.92957 0 0 .99594 51.302 -181.74)" y1="183.48" x1="-55.189"/>
@@ -37,6 +37,6 @@
   <path id="path4279" style="stroke-linejoin:round;stroke-width:4;stroke:url(#linearGradient4324);stroke-linecap:round;enable-background:new;fill:none" d="m19 5-12.5-0.0001"/>
   <path id="path4454" style="opacity:.4;stroke-linejoin:round;enable-background:new;stroke:url(#linearGradient4462);stroke-linecap:round;fill:none" d="m8.9 10.469-2.4-2.469c-0.9858-1.014 0-1.5 1.5-1.5h10.5c3 0 2.5-3 0-3h-10c-1.5 0-3 0-2-1.5l2.3312-2.1937c1.5-2-0.5-2.5-1.5-1.5l-5.3312 5.6937c-0.5 0.5-0.5276 1.3333 0 2l5.4 5.9688c1 1 2.9787 0.02103 1.5-1.5z"/>
   <path id="path4464" style="opacity:.4;stroke-linejoin:round;stroke:url(#linearGradient4462);stroke-linecap:round;enable-background:new;fill:none" d="m6.5 2 2.4-2.3312c1.5-2-0.5-2.5-1.5-1.5l-5.4 5.8312c-0.5 0.5-0.5276 1.3333 0 2l5.4 5.9c1 1 2.7957 0.13265 1.3625-1.4312l-2.2625-2.469"/>
-  <path id="path4466" style="opacity:0.51;stroke-linejoin:round;stroke:#D9EDB9;stroke-linecap:round;enable-background:new;fill:none" d="m7.2625-1.65-5.2625 5.65"/>
+  <path id="path4466" style="opacity:0.51;stroke-linejoin:round;stroke:#A6B984;stroke-linecap:round;enable-background:new;fill:none" d="m7.2625-1.65-5.2625 5.65"/>
  </g>
 </svg>

@@ -3,13 +3,13 @@
 <svg id="svg2" xmlns="http://www.w3.org/2000/svg" height="16" width="16" version="1.0" xmlns:xlink="http://www.w3.org/1999/xlink">
  <defs id="defs4">
   <linearGradient id="linearGradient3635" y2="14.161" gradientUnits="userSpaceOnUse" x2="16.06" gradientTransform="translate(-1.0004)" y1="8.9625" x1="16.102">
-   <stop id="stop3618" style="stop-color:#ADC980" offset="0"/>
-   <stop id="stop3270" style="stop-color:#87A752" offset=".5"/>
-   <stop id="stop3620" style="stop-color:#688933" offset="1"/>
+   <stop id="stop3618" style="stop-color:#A6B984" offset="0"/>
+   <stop id="stop3270" style="stop-color:#8BA25C" offset=".5"/>
+   <stop id="stop3620" style="stop-color:#6F7F3B" offset="1"/>
   </linearGradient>
   <linearGradient id="linearGradient3645" y2="8" gradientUnits="userSpaceOnUse" x2="10.397" y1="16" x1="10.097">
-   <stop id="stop3624" style="stop-color:#688933" offset="0"/>
-   <stop id="stop3626" style="stop-color:#4A6A17" offset="1"/>
+   <stop id="stop3624" style="stop-color:#1C3210" offset="0"/>
+   <stop id="stop3626" style="stop-color:#8BA25C" offset="1"/>
   </linearGradient>
  </defs>
  <g id="layer1" transform="translate(0,-4)">

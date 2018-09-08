@@ -5,13 +5,13 @@
   <linearGradient id="linearGradient4884" y2="224.68" xlink:href="#linearGradient2603-7" gradientUnits="userSpaceOnUse" x2="31.341" y1="235.03" x1="31.341"/>
   <linearGradient id="linearGradient3655" y2="228" xlink:href="#linearGradient2603-7" gradientUnits="userSpaceOnUse" x2="34.5" y1="228" x1="24"/>
   <linearGradient id="linearGradient2603-7">
-   <stop id="stop2605-6" style="stop-color:#688933" offset="0"/>
-   <stop id="stop2607-3" style="stop-color:#4A6A17" offset="1"/>
+   <stop id="stop2605-6" style="stop-color:#1C3210" offset="0"/>
+   <stop id="stop2607-3" style="stop-color:#8BA25C" offset="1"/>
   </linearGradient>
   <linearGradient id="linearGradient3663" y2="226" gradientUnits="userSpaceOnUse" x2="24" y1="226" x1="34">
-   <stop id="stop2612-7" style="stop-color:#ADC980" offset="0"/>
-   <stop id="stop2614-5" style="stop-color:#87A752" offset=".5"/>
-   <stop id="stop2616-9" style="stop-color:#688933" offset="1"/>
+   <stop id="stop2612-7" style="stop-color:#A6B984" offset="0"/>
+   <stop id="stop2614-5" style="stop-color:#8BA25C" offset=".5"/>
+   <stop id="stop2616-9" style="stop-color:#6F7F3B" offset="1"/>
   </linearGradient>
  </defs>
  <g id="layer1">
