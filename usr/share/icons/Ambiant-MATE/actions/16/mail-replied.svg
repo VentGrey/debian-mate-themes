@@ -167,11 +167,11 @@
        id="linearGradient2603">
       <stop
          id="stop2605"
-         style="stop-color:#1C3210;stop-opacity:1"
+         style="stop-color:#688933;stop-opacity:1"
          offset="0" />
       <stop
          id="stop2607"
-         style="stop-color:#8BA25C;stop-opacity:1"
+         style="stop-color:#4A6A17;stop-opacity:1"
          offset="1" />
     </linearGradient>
     <linearGradient
@@ -186,15 +186,15 @@
        id="linearGradient2610">
       <stop
          id="stop2612"
-         style="stop-color:#A6B984;stop-opacity:1"
+         style="stop-color:#ADC980;stop-opacity:1"
          offset="0" />
       <stop
          id="stop2614"
-         style="stop-color:#8BA25C;stop-opacity:1"
+         style="stop-color:#87A752;stop-opacity:1"
          offset="0.5" />
       <stop
          id="stop2616"
-         style="stop-color:#6F7F3B;stop-opacity:1"
+         style="stop-color:#688933;stop-opacity:1"
          offset="1" />
     </linearGradient>
   </defs>

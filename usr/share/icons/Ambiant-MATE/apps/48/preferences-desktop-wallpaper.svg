@@ -56,13 +56,13 @@
    <stop id="stop8593-0" style="stop-color:#cbcbcb" offset="1"/>
   </linearGradient>
   <radialGradient id="radialGradient2963" gradientUnits="userSpaceOnUse" cy="-2.0645" cx="26.617" gradientTransform="matrix(-1.5695e-8 -.77105 1.2053 0 34.206 42.72)" r="23">
-   <stop id="stop2749" style="stop-color:#739D38" offset="0"/>
-   <stop id="stop2751" style="stop-color:#567629" offset=".26238"/>
-   <stop id="stop2753" style="stop-color:#405C20" offset=".66094"/>
+   <stop id="stop2749" style="stop-color:#A6B984" offset="0"/>
+   <stop id="stop2751" style="stop-color:#8BA25C" offset=".26238"/>
+   <stop id="stop2753" style="stop-color:#6F7F3B" offset=".66094"/>
    <stop id="stop2755" style="stop-color:#1C3210" offset="1"/>
   </radialGradient>
   <linearGradient id="linearGradient2965" y2="2.8765" gradientUnits="userSpaceOnUse" x2="10.014" gradientTransform="matrix(.82625 0 0 .65370 4.0507 3.4654)" y1="44.96" x1="10.014">
-   <stop id="stop2759" style="stop-color:#405C20" offset="0"/>
+   <stop id="stop2759" style="stop-color:#6F7F3B" offset="0"/>
    <stop id="stop2761" style="stop-color:#1C3210" offset="1"/>
   </linearGradient>
  </defs>

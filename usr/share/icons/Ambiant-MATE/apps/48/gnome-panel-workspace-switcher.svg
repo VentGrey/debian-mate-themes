@@ -24,9 +24,9 @@
    <stop id="stop3409" style="stop-opacity:0" offset="1"/>
   </linearGradient>
   <linearGradient id="linearGradient2868" y2="26" gradientUnits="userSpaceOnUse" x2="21" gradientTransform="translate(0 3)" y1="2" x1="21">
-   <stop id="stop2749" style="stop-color:#739D38" offset="0"/>
-   <stop id="stop2751" style="stop-color:#567629" offset=".26238"/>
-   <stop id="stop2753" style="stop-color:#405C20" offset=".66094"/>
+   <stop id="stop2749" style="stop-color:#A6B984" offset="0"/>
+   <stop id="stop2751" style="stop-color:#8BA25C" offset=".26238"/>
+   <stop id="stop2753" style="stop-color:#6F7F3B" offset=".66094"/>
    <stop id="stop2755" style="stop-color:#1C3210" offset="1"/>
   </linearGradient>
   <radialGradient id="radialGradient3777" gradientUnits="userSpaceOnUse" cy="17.3" cx="7" gradientTransform="matrix(2.1818 -4.3931e-8 1.9055e-8 1.4545 -8.2727 -7.1636)" r="22">
@@ -51,6 +51,6 @@
  <path id="path2205" style="fill-rule:evenodd;stroke:#eeeeec;stroke-linecap:round;fill:#fff" d="m3.5 25.5h41"/>
  <path id="path2207" style="fill-rule:evenodd;stroke:#eeeeec;stroke-linecap:round;fill:#fff" d="m24.5 6.5v37"/>
  <path id="rect1355" style="opacity:.4;color:black;stroke:#fff;stroke-linecap:square;fill:none" d="m3.5 24.5v-17.5c0-0.277 0.223-0.5 0.5-0.5h19.5"/>
- <rect id="rect1906" style="stroke-linejoin:round;stroke:#1e1e1e;stroke-linecap:round;fill:#739D38" height="7" width="10" y="9.5" x="5.5"/>
+ <rect id="rect1906" style="stroke-linejoin:round;stroke:#1e1e1e;stroke-linecap:round;fill:#A6B984" height="7" width="10" y="9.5" x="5.5"/>
  <rect id="rect2796" style="stroke-linejoin:round;stroke:#1e1e1e;stroke-linecap:round;fill:#fff" height="8" width="12" y="13.5" x="9.5"/>
 </svg>

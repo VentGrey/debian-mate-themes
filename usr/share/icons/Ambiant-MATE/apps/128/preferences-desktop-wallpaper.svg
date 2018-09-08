@@ -12,13 +12,13 @@
    <stop id="stop3744-3" style="stop-color:#fff;stop-opacity:0" offset="1"/>
   </linearGradient>
   <radialGradient id="radialGradient3792" gradientUnits="userSpaceOnUse" cy="-2.0645" cx="26.617" gradientTransform="matrix(-4.2256e-8 -2.0846 3.245 0 91.478 51.13)" r="23">
-   <stop id="stop2749" style="stop-color:#739D38" offset="0"/>
-   <stop id="stop2751" style="stop-color:#567629" offset=".26238"/>
-   <stop id="stop2753" style="stop-color:#405C20" offset=".66094"/>
+   <stop id="stop2749" style="stop-color:#A6B984" offset="0"/>
+   <stop id="stop2751" style="stop-color:#8BA25C" offset=".26238"/>
+   <stop id="stop2753" style="stop-color:#6F7F3B" offset=".66094"/>
    <stop id="stop2755" style="stop-color:#1C3210" offset="1"/>
   </radialGradient>
   <linearGradient id="linearGradient3794" y2="2.8765" gradientUnits="userSpaceOnUse" x2="10.014" gradientTransform="matrix(2.2245 0 0 1.7674 10.292 -55)" y1="44.96" x1="10.014">
-   <stop id="stop2759" style="stop-color:#405C20" offset="0"/>
+   <stop id="stop2759" style="stop-color:#6F7F3B" offset="0"/>
    <stop id="stop2761" style="stop-color:#1C3210" offset="1"/>
   </linearGradient>
   <linearGradient id="linearGradient3797" y2="1.906" gradientUnits="userSpaceOnUse" x2="36.603" gradientTransform="matrix(2.4245 0 0 2.2658 5.5712 -55.146)" y1="35.296" x1="36.603">

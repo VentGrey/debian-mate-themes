@@ -24,9 +24,9 @@
    <stop id="stop3409" style="stop-opacity:0" offset="1"/>
   </linearGradient>
   <linearGradient id="linearGradient2868" y2="26" gradientUnits="userSpaceOnUse" x2="21" gradientTransform="matrix(.66667 0 0 .68421 -.16667 1.7895)" y1="2" x1="21">
-   <stop id="stop2749" style="stop-color:#739D38" offset="0"/>
-   <stop id="stop2751" style="stop-color:#567629" offset=".26238"/>
-   <stop id="stop2753" style="stop-color:#405C20" offset=".66094"/>
+   <stop id="stop2749" style="stop-color:#A6B984" offset="0"/>
+   <stop id="stop2751" style="stop-color:#8BA25C" offset=".26238"/>
+   <stop id="stop2753" style="stop-color:#6F7F3B" offset=".66094"/>
    <stop id="stop2755" style="stop-color:#1C3210" offset="1"/>
   </linearGradient>
   <radialGradient id="radialGradient3777" gradientUnits="userSpaceOnUse" cy="17.3" cx="7" gradientTransform="matrix(1.4715 -2.9288e-8 1.2851e-8 .96970 -5.7653 -4.9424)" r="22">
@@ -45,12 +45,12 @@
  </g>
  <rect id="rect1304" style="color:black;stroke:#969696;stroke-linecap:round;fill:url(#radialGradient3777)" rx="1.5" ry="1.5" height="26" width="29" y="3.5" x="1.5"/>
  <rect id="rect2179" style="opacity:.9;color:black;stroke:url(#radialGradient3787);stroke-linecap:round;fill:none" rx="0.5" ry="0.5" height="24" width="27" y="4.5" x="2.5"/>
- <path id="rect1344" style="color:black;stroke:#405C20;stroke-linecap:round;fill:url(#linearGradient2868)" d="m2.5 3.5h13v13h-14v-11.974c0-0.5683 0.446-1.026 1-1.026z"/>
+ <path id="rect1344" style="color:black;stroke:#6F7F3B;stroke-linecap:round;fill:url(#linearGradient2868)" d="m2.5 3.5h13v13h-14v-11.974c0-0.5683 0.446-1.026 1-1.026z"/>
  <path id="path2209" style="opacity:.1;stroke:#000;stroke-linecap:round;fill:none" d="m15.5 4.5116v24"/>
  <path id="path2211" style="opacity:.1;stroke:#000;stroke-linecap:round;fill:none" d="m2.4886 16.5h27.023"/>
  <path id="path2205" style="fill-rule:evenodd;stroke:#eeeeec;stroke-linecap:round;fill:#fff" d="m2.4886 17.5h27.023"/>
  <path id="path2207" style="fill-rule:evenodd;stroke:#eeeeec;stroke-linecap:round;fill:#fff" d="m16.5 4.5116v24"/>
  <path id="rect1355" style="opacity:.4;color:black;stroke:#fff;stroke-linecap:square;fill:none" d="m2.5 16.5v-11.667c0-0.1843 0.145-0.333 0.325-0.333h12.675"/>
- <rect id="rect1906" style="stroke-linejoin:round;stroke:#1e1e1e;stroke-linecap:round;fill:#739D38" height="4" width="6" y="6.5" x="4.5"/>
+ <rect id="rect1906" style="stroke-linejoin:round;stroke:#1e1e1e;stroke-linecap:round;fill:#A6B984" height="4" width="6" y="6.5" x="4.5"/>
  <rect id="rect2796" style="stroke-linejoin:round;stroke:#1e1e1e;stroke-linecap:round;fill:#fff" height="5" width="7" y="9.5" x="6.5"/>
 </svg>

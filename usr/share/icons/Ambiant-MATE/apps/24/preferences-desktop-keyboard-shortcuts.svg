@@ -14,9 +14,9 @@
   <linearGradient id="linearGradient6368" y2="4.1" xlink:href="#linearGradient2821" gradientUnits="userSpaceOnUse" x2="37.521" gradientTransform="matrix(1 0 0 .83338 -22.002 -1.7505)" y1="11.524" x1="37.521"/>
  </defs>
  <g id="g6370">
-  <rect id="rect1933" style="fill:#567629" rx="2" ry="2" height="11" width="18" y="12" x="2.6077e-8"/>
-  <rect id="rect6286" style="fill:#567629" rx="2" ry="2" height="11" width="12" y="2" x="12"/>
-  <path id="path6593" style="stroke:#567629;fill:none" d="m16.5 17.5h3c0.36892 0 1-0.63108 1-1v-4.4783"/>
+  <rect id="rect1933" style="fill:#8BA25C" rx="2" ry="2" height="11" width="18" y="12" x="2.6077e-8"/>
+  <rect id="rect6286" style="fill:#8BA25C" rx="2" ry="2" height="11" width="12" y="2" x="12"/>
+  <path id="path6593" style="stroke:#8BA25C;fill:none" d="m16.5 17.5h3c0.36892 0 1-0.63108 1-1v-4.4783"/>
   <rect id="rect4555" style="stroke-linejoin:round;stroke-dashoffset:1.2;stroke:#323232;stroke-linecap:square;stroke-width:.99970;fill:#3c3c3c" rx="1" ry="1" height="8.0003" width="15" y="13.5" x="1.4999"/>
   <rect id="rect2930" style="opacity:.3;stroke-linejoin:round;stroke-dashoffset:1.2;stroke:url(#linearGradient5566);stroke-linecap:square;stroke-width:.99989;fill:url(#radialGradient5564)" rx=".5" ry=".5" height="5.0001" width="12" y="14.5" x="3.4999"/>
   <rect id="rect6290" style="stroke-linejoin:round;stroke-dashoffset:1.2;stroke:#323232;stroke-linecap:square;stroke-width:1.0005;fill:#3c3c3c" rx=".99996" ry="1" height="7.9995" width="9.9995" y="3.5002" x="1.5002"/>
