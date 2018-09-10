@@ -6,7 +6,7 @@ Encoding=UTF-8
 
 [X-GNOME-Metatheme]
 GtkTheme=Radiant-MATE-Debian
-MetacityTheme=Radiant-MATE-Debian
+MetacityTheme=Radiant-MATE
 IconTheme=Radiant-MATE-Debian
 CursorTheme=DMZ-White
 ButtonLayout=close,minimize,maximize:
