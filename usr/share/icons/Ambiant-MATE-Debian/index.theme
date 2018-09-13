@@ -1,7 +1,7 @@
 [Icon Theme]
 Name=Ambiant-MATE-Debian
 Comment=Smooth modern theme designed to be intuitive.
-Inherits=gnome,hicolor,mate
+Inherits=gnome,hicolor,mate,adwaita,
 
 Example=directory-x-normal
 
