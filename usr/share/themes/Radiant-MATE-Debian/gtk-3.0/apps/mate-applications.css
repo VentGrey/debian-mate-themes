@@ -3,39 +3,31 @@
  ********/
 
 /* caja sidebar */
-.caja-navigation-window .caja-side-pane FMTreeView.frame .view,
-.caja-navigation-window .caja-side-pane FMTreeView.frame .view .row,
-.caja-navigation-window .caja-side-pane CajaNotesViewer.frame GtkTextView,
-.caja-navigation-window .caja-side-pane CajaPlacesSidebar .view,
-.caja-navigation-window .caja-side-pane CajaHistorySidebar .view,
-.caja-navigation-window .caja-side-pane CajaInformationPanel,
-.caja-navigation-window .caja-side-pane CajaEmblemSidebar {
-    background-color: shade (@bg_color, 0.95);
+/* places, treeview, history, information, emblems and notes */
+.caja-side-pane > notebook treeview.view,
+.caja-side-pane > notebook textview.view text,
+.caja-side-pane > notebook viewport.frame,
+.caja-side-pane > notebook widget .vertical {
+    background-color: shade (@bg_color, 0.98);
+    color: @theme_fg_color;
 }
 
-.caja-navigation-window .caja-side-pane CajaInformationPanel > GtkBox,
-.caja-navigation-window .caja-side-pane CajaEmblemSidebar > GtkScrolledWindow {
+.caja-side-pane > notebook treeview.view:selected,
+.caja-side-pane > notebook treeview.view:selected:hover {
+    background-color: shade (@theme_selected_bg_color, 1.00);
+    color: shade (@theme_selected_fg_color, 1.00);
+}
+
+.caja-side-pane > notebook widget.view > box.vertical,
+.caja-side-pane > notebook box.vertical > scrolledwindow {
     border-color: shade (@bg_color, 0.82);
     border-style: solid;
     border-width: 1px;
 }
 
-/* notebook */
-.caja-notebook .header {
-    border-width: 1px 1px 0px 1px;
-    border-radius: 3px 3px 0px 0px;
-}
-
-.caja-notebook tab.top {
-    padding: 6px 4px 6px 6px;
-    border-width: 1px 1px 0px 1px;
-}
-
-/* avoid double borders with caja views, as this was set for ff locationbar */
-/* event boxes, ie. trash-, search-boxes */
-.caja-notebook box.vertical > frame > border {
-    border-width: 1px 1px 0px 1px;
-    border-radius: 3px 3px 0px 0px;
+/* sidebars treeview rows */
+.caja-side-pane > notebook treeview.view {
+    padding: 2px 0px;
 }
 
 /* background-image is needed for inactiv-pane (list-view). bg color don't work here */
@@ -46,6 +38,11 @@
     background-image: linear-gradient(to bottom,
                                       shade (@theme_selected_bg_color, 1.00),
                                       shade (@theme_selected_bg_color, 1.00));
+}
+
+/* set height of rows in listview */
+.caja-notebook treeview.view {
+    padding: 1px;
 }
 
 .caja-canvas-item {
@@ -108,20 +105,32 @@
     color: @theme_fg_color;
 }
 
+/* the grid left from wnckpager and wncktasklist */
+MatePanelAppletFrameDBus > MatePanelAppletFrameDBus {
+    background-image: -gtk-scaled(url("assets/panel-grid.svg"));
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: left;
+}
+
 /* outlines */
 window.background, /* selector where outlines are writen on GtkTrayIcon */
 .mate-panel-menu-bar menubar,
 .mate-panel-menu-bar button,
 .mate-panel-menu-bar PanelApplet {
-    outline-style: solid;
+    outline-style: dotted;
     outline-offset: -2px;
-    outline-color: shade (@theme_selected_bg_color, 1.3);
+    outline-color: shade (@theme_bg_color, 0.7);
 }
 
 PanelApplet.wnck-applet .wnck-pager {
-    outline-style: solid;
+    outline-style: dotted;
     outline-offset: -1px;
-    outline-color: shade (@theme_selected_bg_color, 1.3);
+    outline-color: shade (@theme_bg_color, 0.7);
+}
+
+.mate-panel-menu-bar PanelApplet wnck-tasklist #tasklist-button.flat.toggle:focus {
+    border-image: none;
 }
 
 /* main menu */
@@ -144,6 +153,46 @@ PanelWidget > PanelSeparator {
     border-width: 0;
     background-color: transparent;
     color: shade (@theme_bg_color, 0.85);
+}
+
+na-tray-applet {
+    -NaTrayApplet-icon-padding: 1px; /*any more and outlines get cut off*/
+}
+
+/* clock-applet */
+.mate-panel-menu-bar #PanelApplet #clock-applet-button.flat.toggle,
+.mate-panel-menu-bar #PanelApplet #clock-applet-button.flat.toggle:hover {
+    background-color: transparent;
+    background-image: none;
+    color: @dark_fg_color;
+    text-shadow: none;
+    padding: 3px 5px 3px 5px;
+    border: 1px solid transparent;
+    border-bottom-width: 0px;
+    border-radius: 4px 4px 0 0;
+}
+
+.mate-panel-menu-bar #PanelApplet #clock-applet-button.flat.toggle:checked,
+.mate-panel-menu-bar #PanelApplet #clock-applet-button.flat.toggle:checked:hover {
+    background-color: transparent;
+    background-clip: border-box;
+    background-image: -gtk-gradient (linear, left top, left bottom,
+                                     from (shade (@dark_bg_color, 1.38)),
+                                     to (shade (@dark_bg_color, 1.11)));
+    box-shadow: inset 0 1px 1px 0 shade (@dark_bg_color, 1.8);
+    color: shade (@dark_fg_color, 1.1);
+    text-shadow: 0 1px shade (@dark_bg_color, 1.1);
+    border-color: #b8ab9c;
+}
+
+/* clock window */
+#MatePanelPopupWindow {
+	border-radius: 3px;
+}
+
+/* Weird, this sets the border color of the clockmap */
+#MatePanelPopupWindow > frame > box > box > box > widget {
+    color: @borders;
 }
 
 /* volume applet */
@@ -198,6 +247,18 @@ PanelWidget > PanelSeparator {
 /* needed for a transparent panel */
 #fast-user-switch-applet > #fast-user-switch-menubar {
     background-color: transparent;
+}
+
+/* system-monitor-applet, kill frame border */
+.multiload-applet > box.horizontal > box.vertical > frame > border {
+    border-color: transparent;
+}
+
+.multiload-applet > box.horizontal > box.vertical > frame {
+    box-shadow: inset  0px  1px shade (@theme_bg_color, 0.9),
+                inset  1px  0px shade (@theme_bg_color, 0.9),
+                inset -1px  0px shade (@theme_bg_color, 0.9),
+                inset  0px -1px shade (@theme_bg_color, 0.9);
 }
 
 /*****************
@@ -428,6 +489,27 @@ MsdOsdWindow.background.osd.msd-osd-window-solid progressbar progress {
 
     color: @selected_fg_color;
     text-shadow: 0 -1px shade (@selected_bg_color, 0.7);
+}
+
+/* classic session button */
+.background.brisk-menu button.flat.session-button {
+    padding: 5px 6px;
+    border-radius: 8px;
+    min-width: 24px;
+}
+
+.background.brisk-menu button.flat.session-button:hover {
+    background-image: -gtk-gradient (linear, left top, left bottom,
+                                     from (shade (@button_bg_color, 1.12)),
+                                     color-stop (0.5, @button_bg_color),
+                                     to (shade (@button_bg_color, 0.96)));
+    border-image-source: -gtk-scaled(url("../assets/button-hover.png"),
+                                     url("../assets/button-hover@2.png"));
+    border-image-width: 10px 12px 10px 12px;
+    border-image-slice: 10 12 10 12;
+    border-image-repeat: stretch;
+    box-shadow: none;
+    color: @dark_fg_color;
 }
 
 .background.brisk-menu separator {
