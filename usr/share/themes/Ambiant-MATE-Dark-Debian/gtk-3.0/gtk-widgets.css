@@ -148,7 +148,7 @@ button.flat {
     background-image: none;
     border-image-source: none;
 }
-
+/*
 button:backdrop {
     background-image: none;
     background-color: @bg_color;
@@ -162,7 +162,7 @@ button:backdrop {
 button.flat:backdrop {
     border-image-source: none;
 }
-
+*/
 button:focus {
     border-image-source: -gtk-scaled(url("assets/button-toolbar-focused.png"),
                                      url("assets/button-toolbar-focused@2.png"));
@@ -175,13 +175,13 @@ button:hover {
     border-image-source: -gtk-scaled(url("assets/backdrop-button-toolbar.png"),
                                      url("assets/backdrop-button-toolbar@2.png"));
 }
-
+/*
 button:hover:backdrop {
     background-color: shade (@bg_color, 1.04);
     border-image-source: -gtk-scaled(url("assets/backdrop-button-toolbar-active.png"),
                                      url("assets/backdrop-button-toolbar-active@2.png"));
 }
-
+*/
 button:hover:focus {
     border-image-source: -gtk-scaled(url("assets/button-toolbar-focused.png"),
                                      url("assets/button-toolbar-focused@2.png"));
@@ -195,7 +195,7 @@ button:disabled {
     border-image-source: -gtk-scaled(url("assets/button-toolbar.png"),
                                      url("assets/button-toolbar@2.png"));
 }
-
+/*
 button:disabled:backdrop {
     background-color: #4E4C46;
 
@@ -203,9 +203,8 @@ button:disabled:backdrop {
     border-image-source: -gtk-scaled(url("assets/backdrop-button-toolbar.png"),
                                      url("assets/backdrop-button-toolbar@2.png"));
 }
-
-button.flat:disabled,
-button.flat:disabled:backdrop {
+*/
+button.flat:disabled {
     background-color: transparent;
     border-image-source: none;
 }
@@ -239,7 +238,7 @@ button:active:disabled {
     border-image-source: -gtk-scaled(url("assets/button-active-disabled.png"),
                                      url("assets/button-active-disabled@2.png"));
 }
-
+/*
 button:checked:backdrop {
     border-image-source: -gtk-scaled(url("assets/backdrop-button-toolbar-active.png"),
                                      url("assets/backdrop-button-toolbar-active@2.png"));
@@ -257,7 +256,7 @@ button:checked:disabled:backdrop {
     border-image-source: -gtk-scaled(url("assets/backdrop-button-toolbar.png"),
                                      url("assets/backdrop-button-toolbar@2.png"));
 }
-
+*/
 /*
 .button.default {
     border-image-source: -gtk-scaled(url("assets/button-default.png"),
@@ -475,40 +474,26 @@ headerbar .linked button:only-child {
     box-shadow: none;
 }
 
-messagedialog .linked.dialog-action-area button {
-    border-image: none;
-    border-width: 1px 0px 1px 0px;
+messagedialog .linked.dialog-action-area > button,
+messagedialog .linked.dialog-action-area > button:first-child,
+messagedialog .linked.dialog-action-area > button:last-child,
+messagedialog .linked.dialog-action-area > button:only-child {
     border-color: shade (@bg_color, 0.82);
     border-style: solid;
-    border-radius: 0px;
-    padding: 5px 0px;
-    box-shadow: inset 1px 0 @inset_light_color, inset -1px 0 @inset_dark_color;
-}
-
-messagedialog .linked.dialog-action-area button:first-child {
-    border-image: none;
-    border-width: 1px 0px 1px 1px;
-    border-radius: 7px 0px 0px 7px;
-    box-shadow: inset -1px 0 @inset_dark_color;
-}
-
-messagedialog .linked.dialog-action-area button:last-child {
-    border-image: none;
-    border-width: 1px 1px 1px 0px;
-    border-radius: 0px 7px 7px 0px;
-    box-shadow: inset 1px 0 @inset_light_color;
-}
-
-messagedialog .linked.dialog-action-area button:only-child {
-    border-image: none;
-    border-radius: 7px;
+    border-radius: 8px;
     border-width: 1px;
+    margin: 8px 4px;
+    box-shadow: none;
+    /* all button border images have the same size and are sliced in the same way */
+    border-image-width: 10px 12px 10px 12px;
+    border-image-slice: 10 12 10 12;
+    border-image-repeat: stretch;
 }
 
-messagedialog .linked.dialog-action-area button.default,
-messagedialog .linked.dialog-action-area button:hover,
-messagedialog .linked.dialog-action-area button:focus,
-messagedialog .linked.dialog-action-area button.default:focus {
+messagedialog .linked.dialog-action-area > button.default,
+messagedialog .linked.dialog-action-area > button:hover,
+messagedialog .linked.dialog-action-area > button:focus,
+messagedialog .linked.dialog-action-area > button.default:focus {
     border-color: @focus_color_dialog;
     border-style: solid;
 }
@@ -531,7 +516,7 @@ row.activatable:selected {
     border-style: solid;
     border-width: 0;
 }
-
+/*
 row:selected:backdrop,
 row.activatable:backdrop {
     background-image: -gtk-gradient (linear, left bottom, left top,
@@ -539,7 +524,7 @@ row.activatable:backdrop {
                                      to (shade (@backdrop_selected_bg_color, 0.94)));
     border-top-color: shade (@backdrop_selected_bg_color, 0.9);
 }
-
+*/
 /*******************
  * check and radio *
  *******************/
@@ -555,6 +540,8 @@ radio:disabled {
 check,
 radio {
 	padding: 0px 6px 0px 0px;
+	min-height: 12px;
+	min-width: 12px;
 }
 
 checkbutton:hover,
@@ -568,7 +555,7 @@ checkbutton:disabled {
 checkbutton.text-button,
 radiobutton.text-button {
 	padding: 1px 2px 4px;
-	outline-offset: 0; 
+	outline-offset: 0;
 }
 
 /*****************
@@ -721,21 +708,33 @@ entry progressbar {
     color: @selected_fg_color;
 }
 
+entry image.left {
+	padding-right: 6px;
+}
+
+entry image.right {
+	padding-left: 6px;
+}
+
 /*********************
  * App Notifications *
  *********************/
 
 .app-notification,
 .app-notification.frame {
-    color: @theme_selected_fg_color;
+    color: @theme_dark_fg_color;
     padding: 10px;
     border: none;
     border-radius: 0 0 4px 4px;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.25);;
     background-image: linear-gradient(to bottom,
                                       rgba(0, 0, 0, 0.2),
                                       transparent 2px);
     background-clip: padding-box;
+}
+
+frame.app-notification > border {
+    border-color: transparent;
 }
 
 .app-notification:backdrop,
@@ -752,17 +751,18 @@ headerbar .app-notification button.titlebutton,
 calendar.header .app-notification button.titlebutton,
 .app-notification.frame button {
     color: @theme_dark_fg_color;
-    border-color: rgba(37, 88, 128, 0.7);
-    background-image: linear-gradient(to bottom,
-                                      rgba(0, 0, 0, 0.7),
-				      rgba(0, 0, 0, 0.7));
+    border-color: rgba(75, 89, 112, 0.7);
+    border-radius: 3px;
+    background-image: none;
+    background-color:rgba(101, 101, 104, 0.7);
     background-clip: padding-box;
     box-shadow: inset 0 1px rgba(255, 255, 255, 0.1);
     text-shadow: none;
     -gtk-icon-shadow: 0 1px black;
     outline-color: rgba(238, 238, 236, 0.3);
-    border-radius: 3px;
     padding: 0 0px 2px 0px;
+    min-height: 20px;
+    min-width: 20px;
 }
 
 .app-notification button.flat,
@@ -781,6 +781,7 @@ headerbar .app-notification.frame button.titlebutton,
 .titlebar .app-notification.frame button.titlebutton,
 .app-notification.frame calendar.header button.titlebutton,
 calendar.header .app-notification.frame button.titlebutton {
+    padding: 4px;
     -gtk-icon-shadow: 0 1px black;
     text-shadow: none;
     border-image-source: none;
@@ -790,18 +791,33 @@ calendar.header .app-notification.frame button.titlebutton {
 
 .app-notification button:hover,
 .app-notification.frame button:hover {
-    color: black;
-    border-color: rgba(0, 0, 0, 0.7);
-    background-image: linear-gradient(to bottom,
-                                      rgba(203, 213, 217, 0.7),
-                                      rgba(203, 213, 217, 0.7));
+    border-image: none;
+    border-style: solid;
+    border-color: shade(@button_border, 1.1);
+    background-image: -gtk-gradient (radial,
+                                     0.5 -2.0, 2.0,
+                                     0.5 -2.0, 3.0,
+                                     from (shade(@button_gradient_color_a, 1.2)),
+                                     color-stop (0.42, shade(@button_gradient_color_a, 0.5)),
+                                     color-stop (0.43, @dark_bg_color),
+                                     to (shade(@button_gradient_color_b, 0.7)));
     background-clip: padding-box;
     box-shadow: inset 0 1px rgba(255, 255, 255, 0.1);
     text-shadow: none;
     -gtk-icon-shadow: 0 1px black;
     outline-color: rgba(238, 238, 236, 0.3);
     border-radius: 3px;
-    padding: 0 0px 2px 0px;
+}
+
+.app-notification button:hover:active,
+.app-notification.frame button:hover:active {
+    color: @theme_dark_fg_color;
+    border-style: solid;
+    border-color: shade(@button_border, 1.1);
+    background-image: linear-gradient(to bottom,
+                                      shade(@button_gradient_color_b, 0.7),
+                                      @dark_bg_color 50%,
+                                      shade(@button_gradient_color_a, 1.0));
 }
 
 .app-notification button:checked,
@@ -949,6 +965,10 @@ iconview .cell:selected:focus {
 iconview.view.cell:selected:focus {
     border-color: alpha(@text_color, 0.6);
     border-style: dashed;
+}
+
+iconview .cell:hover {
+    border-radius: 5px;
 }
 
 .view.rubberband,
@@ -1145,7 +1165,7 @@ menubar menuitem:hover,
 
 menubar > menuitem,
 .menubar > menuitem {
-    padding: 3px 5px 3px 5px;
+    padding: 4px 5px 4px 5px;
     border: 1px solid transparent;
 }
 
@@ -1153,21 +1173,18 @@ menubar > menuitem,
  * menuitem *
  ************/
 
-menuitem,
 menu > menuitem {
-/*    -GtkMenuItem-horizontal-padding: 0; deprecated */
     background: transparent;
     border-radius: 0;
-    padding: 3px 5px 3px 5px;
+    padding: 4px 5px 4px 5px;
     text-shadow: none;
 }
 
 .primary-toolbar:not(.libreoffice-toolbar) menu menuitem {
-/*    -GtkMenuItem-horizontal-padding: 0; deprecated */
     background-image: none;
     background-color: shade (@dark_bg_color, 1.08);
     border-radius: 0;
-    padding: 3px 5px 3px 5px;
+    padding: 4px 5px 4px 5px;
     text-shadow: none;
     color: @dark_fg_color;
 }
@@ -1296,15 +1313,18 @@ menuitem scale trough {
     border-image-width: 1px;
 }
 
-menuitem accelerator {
+menu > menuitem > label > accelerator,
+.menu > menuitem > label > accelerator {
     color: alpha (@dark_fg_color, 0.5);
 }
 
-menuitem accelerator:hover {
+menu > menuitem:hover > label > accelerator,
+.menu > menuitem:hover > label > accelerator {
     color: alpha (@selected_fg_color, 0.8);
 }
 
-menuitem accelerator:disabled {
+menu > menuitem:disabled > label > accelerator,
+.menu > menuitem:disabled > label > accelerator {
     color: alpha (mix (@dark_fg_color, @dark_bg_color, 0.5), 0.5);
     text-shadow: 0 -1px shade (@dark_bg_color, 0.7);
 }
@@ -1332,6 +1352,11 @@ menuitem > arrow {
     min-width: 16px;
     margin-left: 10px;
     color: @dark_fg_color;
+}
+
+menuitem:disabled > arrow {
+	color: mix (@dark_fg_color, shade (@dark_bg_color, 1.08), 0.6);
+   -gtk-icon-shadow: none;
 }
 
 menu > menuitem > arrow:dir(ltr),
@@ -1424,11 +1449,10 @@ notebook header {
 }
 
 notebook header.top {
+    margin: -1px -1px 0px 0px;
     border-width: 0px 0px 1px 0px;
     border-radius: 4px 4px 0px 0px;
-    background-image: linear-gradient(to bottom,
-                                      shade(@theme_bg_color, 0.86),
-                                      shade(@theme_bg_color, 1.00));
+    background-color: @theme_bg_color;
     box-shadow: inset  0px -1px alpha(shade(@bg_color, 0.82), 0.90);
 }
 
@@ -1440,29 +1464,26 @@ dialog.background.solid-csd > box.vertical.dialog-vbox > notebook > header.top {
 }
 
 notebook header.bottom {
+    margin: 0px -1px -1px 0px;
     border-width: 1px 0px 0px 0px;
     border-radius: 0px 0px 4px 4px;
-    background-image: linear-gradient(to top,
-                                      shade(@theme_bg_color, 0.86),
-                                      shade(@theme_bg_color, 1.00));
+    background-color: @theme_bg_color;
     box-shadow: inset  0px  1px alpha(shade(@bg_color, 0.82), 0.90);
 }
 
 notebook header.left {
+    margin: 0px 0px -1px -1px;
     border-width: 0px 1px 0px 0px;
     border-radius: 4px 0px 0px 4px;
-    background-image: linear-gradient(to right,
-                                      shade(@theme_bg_color, 0.86),
-                                      shade(@theme_bg_color, 1.00));
+    background-color: @theme_bg_color;
     box-shadow: inset -1px  0px alpha(shade(@bg_color, 0.82), 0.90);
 }
 
 notebook header.right {
+    margin: 0px -1px -1px 0px;
     border-width: 0px 0px 0px 1px;
     border-radius: 0px 4px 4px 0px;
-    background-image: linear-gradient(to left,
-                                      shade(@theme_bg_color, 0.86),
-                                      shade(@theme_bg_color, 1.00));
+    background-color: @theme_bg_color;
     box-shadow: inset  1px  0px alpha(shade(@bg_color, 0.82), 0.90);
 }
 
@@ -1537,7 +1558,7 @@ paned.horizontal > paned.vertical > notebook > header.top tab:checked:hover {
                                       shade(@notebook_bg_color, 1.18),
                                       shade(@notebook_bg_color, 1.00));
     border-radius: 4px 4px 0 0;
-    border-width: 0px 1px 0 1px;
+    border-width: 1px 1px 0 1px;
     border-style: solid;
     border-color: shade (@dark_bg_color, 0.82);
     box-shadow: none;
@@ -1568,6 +1589,10 @@ paned.horizontal > notebook > header label {
     padding: 4px;
 }
 
+paned.horizontal > notebook > header tab {
+    border-width: 1px 1px 1px 1px;
+}
+
 paned.horizontal > notebook > header button.flat.small-button {
     padding: 1px;
 }
@@ -1589,7 +1614,7 @@ printdialog notebook > header.top tab,
 notebook.frame > header.top tab,
 notebook.frame > header.bottom tab {
     margin: 0px 0px 0px -1px;
-    border-width: 0px 1px 1px 1px;
+    border-width: 1px 1px 1px 1px;
     border-style: solid;
 }
 
@@ -1624,7 +1649,7 @@ notebook.frame > header.top tab:checked:hover {
                                       shade(@notebook_bg_color, 1.18),
                                       shade(@notebook_bg_color, 1.00));
     border-radius: 4px 4px 0px 0px;
-    border-width: 0px 1px 0px 1px;
+    border-width: 1px 1px 0px 1px;
     border-style: solid;
     border-color: shade (@dark_bg_color, 0.82);
 }
@@ -1640,7 +1665,7 @@ notebook.frame > header.bottom tab:checked:hover {
                                       shade(@notebook_bg_color, 1.00));
     border-radius: 0px 0px 4px 4px;
     border-style: solid;
-    border-width: 0px 1px 0px 1px;
+    border-width: 0px 1px 1px 1px;
     border-color: shade (@dark_bg_color, 0.82);
 }
 
@@ -1649,7 +1674,7 @@ notebook.frame > header.left tab,
 notebook.frame > header.right tab {
     padding: 6px;
     margin: -1px 0px 0px 0px;
-    border-width: 1px 0px 1px 0px;
+    border-width: 1px 1px 1px 1px;
     border-style: solid;
 }
 
@@ -1664,7 +1689,7 @@ notebook.frame > header.left tab:checked:hover {
                                       shade(@notebook_bg_color, 1.18),
                                       shade(@notebook_bg_color, 1.00));
     border-style: solid;
-    border-width: 1px 0px 1px 0px;
+    border-width: 1px 0px 1px 1px;
     border-radius: 4px 0px 0px 4px;
     border-color: shade (@dark_bg_color, 0.82);
 }
@@ -1679,7 +1704,7 @@ notebook.frame > header.right tab:checked:hover {
                                       shade(@notebook_bg_color, 1.18),
                                       shade(@notebook_bg_color, 1.00));
     border-style: solid;
-    border-width: 1px 0px 1px 0px;
+    border-width: 1px 1px 1px 0px;
     border-radius: 0px 4px 4px 0px;
     border-color: shade (@dark_bg_color, 0.82);
 }
@@ -1727,15 +1752,13 @@ notebook header.right tab:checked {
 /* close button styling */
 notebook > header > tabs > tab > box > button.flat,
 notebook > header > tabs > tab > box > button.flat.small-button {
-    border-image: none;
-    background-image: none;
-    background-color: transparent;
-    border-radius: 3px;
-    border-style: none;
-    border-color: transparent;
-    border-width: 0px;
-    -gtk-icon-shadow: none;
     padding: 0px;
+    border-radius: 3px;
+}
+
+notebook > header > tabs > tab > box > button.flat > image,
+notebook > header > tabs > tab > box > button.flat.small-button > image {
+    padding: 1px;
 }
 
 notebook > header > tabs > tab > box > button.flat:hover,
@@ -2204,14 +2227,14 @@ scale.horizontal {
 
 scale.horizontal trough {
     min-height: 4px;
-    margin: 8px 0;
+    margin: 8px;
     border-radius: 8px;
 }
 
 scale trough,
 scale.vertical trough {
     min-width: 4px;
-    margin: 0 6px;
+    margin: 8px 6px;
     border-radius: 8px;
 }
 
@@ -3035,6 +3058,11 @@ headerbar {
     box-shadow: inset 0 1px shade (@dark_bg_color, 1.65);
 }
 
+/* fix for ie. gthumb */
+.titlebar > headerbar {
+    border-radius: 7px 7px 0 0;
+}
+
 .titlebar .title,
 headerbar .title {
     font-weight: bold;
@@ -3073,6 +3101,10 @@ headerbar .subtitle {
     padding: 0;
     box-shadow: none;
     background-image: linear-gradient(to top, #5a5955, #75746d 50%, #8e8d88);
+    margin-left: -2px;
+    margin-right: -2px;
+    min-width: 15px;
+    min-height: 15px;
 }
 
 .titlebar button.titlebutton.close {
@@ -3141,6 +3173,11 @@ headerbar button.titlebutton.toggle.popup:checked {
                                      from (shade (@dark_bg_color, 1.2)),
                                      to (shade (@dark_bg_color, 1.1)));
     padding: 5px 6px;
+}
+
+/* workaround for metacity-theme-viewer */
+headerbar.titlebar {
+    min-height: 30px;
 }
 
 headerbar.titlebar entry,
