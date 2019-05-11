@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=Radiant-MATE-Debian
+Comment=Radiant-MATE-Debian theme
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=Radiant-MATE-Debian
+MetacityTheme=Radiant-MATE
+IconTheme=Radiant-MATE-Debian
+CursorTheme=DMZ-White
+ButtonLayout=close,minimize,maximize:

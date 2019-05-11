@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=Ambiant-MATE-Debian
+Comment=Ambiant MATE Debian theme
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=Ambiant-MATE-Debian
+MetacityTheme=Ambiant-MATE
+IconTheme=Ambiant-MATE-Debian
+CursorTheme=DMZ-White
+ButtonLayout=close,minimize,maximize:
