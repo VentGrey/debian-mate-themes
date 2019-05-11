@@ -289,6 +289,16 @@ button.destructive-action {
     text-shadow: 0 1px shade(#9d4242, 1.15);
 }
 
+button.suggested-action {
+    background-image: linear-gradient(to bottom, #6699CC, #5C83AA);
+    border-color: #055200;
+    border-image: none;
+    color: white;
+    -gtk-icon-shadow: 0 1px shade(#9d4242, 1.15);
+    outline-color: rgba(255, 255, 255, 0.3);
+    text-shadow: 0 1px shade(#4F9D42, 1.15);
+}
+
 /* eg. mate-appearance-properties */
 button.link.flat.text-button:focus {
     outline-style: dashed;
@@ -990,6 +1000,40 @@ rubberband {
 iconview .cell {
     background-color: transparent;
 }
+
+/*********
+ * label *
+ *********/
+
+/* for firefox and probably other apps */
+label:selected,
+label selection,
+label selection:focus,
+label selection:hover,
+label:backdrop:selected,
+label selection:backdrop {
+    background-color: alpha (@theme_selected_bg_color, 0.9);
+    color: @theme_selected_fg_color;
+}
+
+label:disabled:selected,
+label selection:disabled,
+label:backdrop:disabled:selected,
+label selection:backdrop:disabled {
+	color: shade (@theme_bg_color, 0.7);
+}
+
+/*
+label:backdrop:selected,
+label selection:backdrop {
+	color: @theme_fg_color;
+}
+
+label:backdrop:disabled:selected,
+label selection:backdrop:disabled {
+	color: @insensitive_fg_color;
+}
+*/
 
 /***********
  * infobar *
