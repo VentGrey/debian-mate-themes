@@ -1,4 +1,4 @@
-gtk-color-scheme = "base_color:#EBEBEB\nfg_color:#EBEBEB\ntooltip_fg_color:#EBEBEB\nselected_bg_color:#87A752\nselected_fg_color:#EBEBEB\ntext_color:#EBEBEB\nbg_color:#4E4C46\ntooltip_bg_color:#1e1e1e\nlink_color:#A7BB85"
+gtk-color-scheme = "base_color:#ffffff\nfg_color:#4c4c4c\ntooltip_fg_color:#ebebeb\nselected_bg_color:#87A752\nselected_fg_color:#FFFFFF\ntext_color:#3C3C3C\nbg_color:#F2F1F0\ntooltip_bg_color:#1e1e1e\nlink_color:#A7BB85"
 
 gtk-icon-sizes = "panel-menu=22,22:gtk-button=16,16"
 
@@ -83,16 +83,16 @@ style "default" {
 	fg[NORMAL]        = @fg_color
 	fg[PRELIGHT]      = @fg_color
 	fg[SELECTED]      = @selected_fg_color
-	fg[INSENSITIVE]   = darker (@fg_color)
+	fg[INSENSITIVE]   = darker (@bg_color)
 	fg[ACTIVE]        = @fg_color
 
 	text[NORMAL]      = @text_color
 	text[PRELIGHT]    = @text_color
 	text[SELECTED]    = @selected_fg_color
-	text[INSENSITIVE] = shade (0.8, @fg_color)
+	text[INSENSITIVE] = shade (0.8, @bg_color)
 	text[ACTIVE]      = darker (@text_color)
 
-	base[NORMAL]      = "#45433D"
+	base[NORMAL]      = @base_color
 	base[PRELIGHT]    = shade (0.98, @bg_color)
 	base[SELECTED]    = @selected_bg_color
 	base[INSENSITIVE] = shade (0.97, @bg_color)
@@ -113,7 +113,7 @@ style "default" {
 		progressbarstyle = 0
 		colorize_scrollbar = FALSE
 		prelight_shade		= .95			# shade level for scrollbar's slider, comboboxstyle(1), and prelight state with gradient_colors
-		trough_shades		= {0.86, 0.90}		# draw gradient on trough of GtkScrollbar and GtkProgressbar
+		trough_shades		= {0.96, 1.04}		# draw gradient on trough of GtkScrollbar and GtkProgressbar
 		menubaritemstyle = 1
 		menubarstyle = 1
 		menustyle = 0
@@ -123,15 +123,15 @@ style "default" {
 		scrollbarstyle = 0
 		stepperstyle = 3
 		toolbarstyle = 2     # 0 = flat, 1 = glassy, 2 = gradient
-#		rgba = TRUE
+		#rgba = TRUE
 	}
 }
 
 style "dark"
 {
-	color["bg_color_dark"] 	= "#4E4C46"
+	color["bg_color_dark"] 	= "#3c3b37"
 	color["fg_color_dark"] 	= "#dfdbd2"
-	color["selected_fg_color_dark"] = "#EBEBEB"
+	color["selected_fg_color_dark"] = "#ffffff"
 
 	base[NORMAL]		= @bg_color_dark
 	base[PRELIGHT]		= shade (1.0, "#4D4C48")
@@ -189,7 +189,7 @@ style "button" {
 	bg[PRELIGHT] = shade (1.06, @bg_color)
 	bg[ACTIVE] = shade (0.96, @bg_color)
 	bg[INSENSITIVE] = @bg_color
-	fg[INSENSITIVE] = "#5B5A56"
+	fg[INSENSITIVE] = "#9c9c9c"
 
 	engine "murrine" {
 		textstyle = 1
@@ -213,10 +213,10 @@ style "spinbutton" = "notebook_button" {
 }
 
 style "murrine-scrollbar" {
-	bg[NORMAL]	= shade (0.79, @bg_color)
-	bg[SELECTED]	= shade (0.83, @bg_color)
-	bg[ACTIVE]	= shade (0.83, @bg_color)
-	bg[PRELIGHT]	= shade (0.83, @bg_color)
+	bg[NORMAL]	= shade (0.99, @selected_bg_color)
+	bg[SELECTED]	= shade (1.03, @selected_bg_color)
+	bg[ACTIVE]	= shade (1.03, @selected_bg_color)
+	bg[PRELIGHT]	= shade (1.03, @selected_bg_color)
 
 	engine "murrine" {
 		roundness	= 0
@@ -290,7 +290,7 @@ style "menubar" = "dark" {
 	}
 }
 
-style "toolbar" = "dark" {
+style "toolbar" {
 	engine "murrine" {
 		textstyle = 1
 		text_shade = 1.32
@@ -298,29 +298,8 @@ style "toolbar" = "dark" {
 	}
 }
 
-style "toolbar-button" = "dark" {
-	xthickness = 4
-	ythickness = 3
-
+style "toolbar-button" = "notebook_button" {
 	engine "murrine" {
-		#contrast = 1.0
-		textstyle = 1
-		border_shades = {1.01, 0.8}
-		reliefstyle = 0
-		shadow_shades = {1.0, 1.1}
-		glowstyle = 5
-		glow_shade = 1.02
-		lightborder_shade = 1.32
-#		lightborderstyle = 0
-		#text_shade = 1.04
-	}
-}
-
-style "toolbar-entry" = "entry" { # text
-	engine "murrine" {
-		contrast		= 0.6
-		border_shades		= {1.2, 1.0}
-		focus_color 		= shade (1.0, @selected_bg_color)
 	}
 }
 
@@ -491,6 +470,135 @@ style "radiocheck"  = "button" {
 	}
 }
 
+style "radiocheck" {
+    engine "pixmap" {
+
+	# Check Buttons
+	image {
+            function        		= CHECK
+            recolorable     		= TRUE
+            state 			= NORMAL
+            shadow          		= OUT
+            overlay_file    		= "assets/check-unselected.png"
+            overlay_stretch 		= FALSE
+        }
+	image {
+            function        		= CHECK
+            recolorable     		= TRUE
+            state 			= PRELIGHT
+            shadow          		= OUT
+            overlay_file    		= "assets/check-unselected.png"
+            overlay_stretch 		= FALSE
+        }
+	image {
+            function        		= CHECK
+            recolorable     		= TRUE
+            state 			= ACTIVE
+            shadow          		= OUT
+            overlay_file    		= "assets/check-unselected.png"
+            overlay_stretch 		= FALSE
+        }
+	image {
+            function        		= CHECK
+            recolorable     		= TRUE
+            state 			= INSENSITIVE
+            shadow          		= OUT
+            overlay_file    		= "assets/check-unselected-insensitive.png"
+            overlay_stretch 		= FALSE
+        }
+	image {
+            function        		= CHECK
+            recolorable     		= TRUE
+            state	 		= NORMAL
+            shadow          		= IN
+            overlay_file    		= "assets/check-selected.png"
+            overlay_stretch	 	= FALSE
+        }
+	image {
+            function        		= CHECK
+            recolorable     		= TRUE
+            state 			= PRELIGHT
+            shadow          		= IN
+            overlay_file    		= "assets/check-selected.png"
+            overlay_stretch 		= FALSE
+        }
+	image {
+            function        		= CHECK
+            recolorable     		= TRUE
+            state 		        = ACTIVE
+            shadow          		= IN
+            overlay_file    		= "assets/check-selected.png"
+            overlay_stretch 		= FALSE
+        }
+	image {
+            function        		= CHECK
+            recolorable     		= TRUE
+            state 		        = INSENSITIVE
+            shadow          		= IN
+            overlay_file		= "assets/check-selected-insensitive.png"
+            overlay_stretch 		= FALSE
+	}
+
+	# Radio Buttons
+	image {
+            function        		= OPTION
+            state 			= NORMAL
+            shadow          		= OUT
+            overlay_file    		= "assets/radio-unselected.png"
+            overlay_stretch 		= FALSE
+        }
+	image {
+            function        		= OPTION
+            state 			= PRELIGHT
+            shadow          		= OUT
+            overlay_file    		= "assets/radio-unselected.png"
+            overlay_stretch 		= FALSE
+        }
+	image {
+            function        		= OPTION
+            state 			= ACTIVE
+            shadow          		= OUT
+            overlay_file    		= "assets/radio-unselected.png"
+            overlay_stretch 		= FALSE
+        }
+	image {
+            function        		= OPTION
+            state 			= INSENSITIVE
+            shadow         		= OUT
+            overlay_file    		= "assets/radio-unselected-insensitive.png"
+            overlay_stretch 		= FALSE
+        }
+	image {
+            function        		= OPTION
+            state 			= NORMAL
+            shadow          		= IN
+            overlay_file    		= "assets/radio-selected.png"
+            overlay_stretch 		= FALSE
+        }
+	image {
+            function        		= OPTION
+            state			= PRELIGHT
+            shadow          		= IN
+            overlay_file    		= "assets/radio-selected.png"
+            overlay_stretch 		= FALSE
+        }
+	image {
+            function        		= OPTION
+            state			= ACTIVE
+            shadow          		= IN
+            overlay_file    		= "assets/radio-selected.png"
+            overlay_stretch	 	= FALSE
+        }
+	image {
+            function        		= OPTION
+            state 			= INSENSITIVE
+            shadow          		= IN
+            overlay_file    		= "assets/radio-selected-insensitive.png"
+            overlay_stretch 		= FALSE
+        }
+    }
+}
+
 style "tooltips" {
 	xthickness = 4
 	ythickness = 4
@@ -604,8 +712,7 @@ widget_class "*<GtkScrolledWindow>*" style "scrolledwindow"
 
 widget_class "*<GtkButton>" style "button"
 widget_class "*<GtkButton>*<GtkLabel>" style "button"
-widget_class "*<GtkToolbar>.*.<GtkButton>*" style "toolbar-button"
-widget_class "*<GtkToolbar>.*.<GtkEntry>*"  style "toolbar-entry"
+widget_class "*<GtkToolbar>.*.<GtkButton>*" style "notebook_button"
 widget_class "*<GtkNotebook>" style "notebook"
 widget_class "*<GtkStatusbar>" style "statusbar"
 widget_class "*<GtkSpinButton>*" style "spinbutton"
