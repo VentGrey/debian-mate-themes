@@ -1,10 +1,10 @@
 /*default color scheme */
-@define-color bg_color #f2f1f0;
-@define-color fg_color #4c4c4c;
-@define-color base_color #ffffff;
-@define-color text_color #3C3C3C;
+@define-color bg_color #4E4C46;
+@define-color fg_color #EBEBEB;
+@define-color base_color #45433D;
+@define-color text_color #EBEBEB;
 @define-color selected_bg_color #87A752;
-@define-color selected_fg_color #ffffff;
+@define-color selected_fg_color #EBEBEB;
 @define-color tooltip_bg_color #1e1e1e;
 @define-color tooltip_fg_color #ebebeb;
 
@@ -14,14 +14,14 @@
 @define-color theme_selected_bg_color @selected_bg_color;
 @define-color theme_selected_fg_color @selected_fg_color;
 @define-color insensitive_bg_color shade(@theme_bg_color, 0.95);
-@define-color insensitive_fg_color shade(@theme_bg_color, 0.6);
+@define-color insensitive_fg_color shade(@theme_fg_color, 0.6);
 @define-color insensitive_base_color @base_color;
 @define-color theme_unfocused_fg_color @backdrop_fg_color;
 @define-color theme_unfocused_bg_color @bg_color;
 @define-color theme_unfocused_base_color @base_color;
 @define-color theme_unfocused_selected_bg_color @selected_bg_color;
 @define-color theme_unfocused_selected_fg_color @selected_fg_color;
-@define-color borders shade(@bg_color, 0.82);
+@define-color borders shade(@bg_color, 0.7);
 @define-color unfocused_borders transparent;
 
 @define-color warning_color @warning_fg_color;
@@ -52,11 +52,7 @@
 @define-color notebook_button_bg_color shade (@bg_color, 1.02);
 @define-color button_insensitive_bg_color mix (@button_bg_color, @bg_color, 0.6);
 @define-color dark_bg_color #3c3b37;
-@define-color dark_bg_slider_color #4E4C46;
 @define-color dark_fg_color #dfdbd2;
-@define-color dark_button_bg_color shade (@dark_bg_color, 1.02);
-@define-color dark_slider_bg_color shade (@dark_bg_slider_color, 1.02);
-
 
 @define-color backdrop_fg_color mix (@bg_color, @fg_color, 0.8);
 @define-color backdrop_text_color mix (@base_color, @text_color, 0.8);
@@ -64,7 +60,7 @@
 /*@define-color backdrop_dark_bg_color mix (@dark_bg_color, @dark_fg_color, 0.75);*/
 @define-color backdrop_selected_bg_color shade (@bg_color, 0.92);
 @define-color backdrop_selected_fg_color @fg_color;
-@define-color backdrop_filling_bg #b0b0b0;
+@define-color backdrop_filling_bg #45433D;
 
 @define-color focus_color alpha (@selected_bg_color, 0.5);
 @define-color focus_bg_color alpha (@selected_bg_color, 0.1);
@@ -77,14 +73,17 @@
 @define-color button_gradient_color_b shade(@dark_bg_color, 1.00);
 @define-color button_border #2a2a2a;
 
+@define-color light_entry_fg_color #000000;
+@define-color light_caret_cursor_color @dark_entry_fg_color;
+
 /************
  * notebook *
  ************/
 
-@define-color core_color_a #B9C0A9; /* Core color for green widgets in AmbiantMATE. */
-@define-color core_color_b #edeceb; /* Core color for gray widgets in AmbiantMATE. */
+@define-color core_color_a #B9C0A9; /* Core color for green widgets in AmbiantMATE-Dark. */
+@define-color core_color_b shade(@bg_color, 0.86);
 
-@define-color notebook_bg_color shade(@core_color_b, 1.02);
+@define-color notebook_bg_color shade(@core_color_b, 0.98);
 @define-color border_color shade(@core_color_b, 0.67);
 @define-color notebook_tab_inner_border_color shade(@core_color_b, 1.04);
 
@@ -160,8 +159,8 @@
 @define-color scrollbar_trough shade(@theme_bg_color, 0.98);
 @define-color scrollbar_slider @theme_bg_color;
 
-@define-color scrollbar_slider_bg_color shade(@theme_selected_bg_color, 0.99);
-@define-color scrollbar_slider_hover_bg_color shade(@theme_selected_bg_color, 1.03);
+@define-color scrollbar_slider_bg_color shade(@theme_bg_color, 0.79);
+@define-color scrollbar_slider_hover_bg_color shade(@theme_bg_color, 0.83);
 
 @define-color progressbar_fill_a shade(@theme_selected_bg_color, 1.07);
 @define-color progressbar_fill_b shade(mix(@theme_selected_bg_color, green, 0.10), 0.91);
@@ -174,10 +173,13 @@
 @define-color progressbar_backdrop_fill_b shade(mix(@backdrop_selected_bg_color, grey, 0.10), 0.91);
 @define-color button_border_backdrop_active shade(@backdrop_selected_bg_color, 0.95);
 
-@define-color inset_light_color alpha(white, 0.45);
-@define-color inset_dark_color alpha(black, 0.07);
+@define-color inset_light_color shade(alpha(white, 0.45), 0.2);
+@define-color inset_dark_color  shade(alpha(black, 0.07), 0.6);
 
 @define-color wm_shadow alpha(black, 0.5);
+
+/* inactive-pane caja */
+@define-color inactive-pane_bg_color #55534E;
 
 @import url("gtk-widgets-borders.css");
 @import url("gtk-widgets-assets.css");
