@@ -1,35 +1,57 @@
 [![](https://sourcerer.io/fame/VentGrey/VentGrey/debian-mate-themes/images/0)](https://sourcerer.io/fame/VentGrey/VentGrey/debian-mate-themes/links/0)[![](https://sourcerer.io/fame/VentGrey/VentGrey/debian-mate-themes/images/1)](https://sourcerer.io/fame/VentGrey/VentGrey/debian-mate-themes/links/1)[![](https://sourcerer.io/fame/VentGrey/VentGrey/debian-mate-themes/images/2)](https://sourcerer.io/fame/VentGrey/VentGrey/debian-mate-themes/links/2)[![](https://sourcerer.io/fame/VentGrey/VentGrey/debian-mate-themes/images/3)](https://sourcerer.io/fame/VentGrey/VentGrey/debian-mate-themes/links/3)[![](https://sourcerer.io/fame/VentGrey/VentGrey/debian-mate-themes/images/4)](https://sourcerer.io/fame/VentGrey/VentGrey/debian-mate-themes/links/4)[![](https://sourcerer.io/fame/VentGrey/VentGrey/debian-mate-themes/images/5)](https://sourcerer.io/fame/VentGrey/VentGrey/debian-mate-themes/links/5)[![](https://sourcerer.io/fame/VentGrey/VentGrey/debian-mate-themes/images/6)](https://sourcerer.io/fame/VentGrey/VentGrey/debian-mate-themes/links/6)[![](https://sourcerer.io/fame/VentGrey/VentGrey/debian-mate-themes/images/7)](https://sourcerer.io/fame/VentGrey/VentGrey/debian-mate-themes/links/7)
 
 ![MATE-IMAGE](OpenDesktop.png)
-# Prelude
+# Disclaimer
 
-I shall not receive any credit for this because work isn't mine, I just
-grabbed the Ubuntu MATE themes & rebranded them to fit Debian 11 Buster
-for personal use.
+I shall not receive any credit for this because work isn't mine, I just grabbed the Ubuntu MATE themes & rebranded them to fit Debian 11 Buster for personal use.
 
-Since Debian 11 does not have the Ubuntu Humanity Icons, I decided to
-package these icons with most of it's dependencies included & I'll 
-also try to include wallpapers & other UM stuff rebranded for Debian
-(As long as the license permits it)
+
+# Introduction
+
+Debian is one of the most polished Gnu/Linux distributions out there, and it runs extremely well with a traditional desktop like MATE. Even though Debian is not known for being a super sketchy out of the box / newbie friendly distribution it doesn't mean that it's users can't have nice user interfaces, themed to their likings. I personally love the look and feel of Ubuntu MATE since I started using it a long time ago and decided I'll port that look and feel for Debian.
+
+Since Debian 11 does not have the Ubuntu Humanity Icons, I decided to package these icons with most of it's dependencies included & I'll  also try to include wallpapers & other Ubuntu MATE stuff rebranded for Debian (As long as the license permits it)
 
 If you want to cooperate you are free to.
 
-# Dependencies
-Ambiant Mate, Radiant Mate & Ambiant Mate Dark depend on `gtk 3.22`.
+# TODO List (Improvements)
+- [ ] Create a `debian/` directory for debian packaging.
+- [ ] Create an installation script / instructions.
+- [ ] Replace remaining Ubuntu Mate branded icons
+    - [ ] Yaru Desktop icon
+    - [ ] `start-here` icon
+- [ ] Add Ubuntu MATE panel layouts
 
-Yaru MATE needs Ambiant + Radiant MATE themes to be installed
+
+# Dependencies
+Most dependencies are already included, like Humanity Icon Theme + Ravefinity addons.
+
+You might want to install the ubuntu fonts from the Debian repositories:
+
+- On Debian 11: `$ sudo apt install fonts-ubuntu fonts-ubuntu-console`
+- On Debian 10: Download from the [Official ubuntu font page](https://design.ubuntu.com/font/)
+
+For a better user experience I recommend you to install these MATE packages:
+
+```bash
+$ sudo apt install ayatana-indicator-application ayatana-indicator-power ayatana-indicator-bluetooth ayatana-indicator-printers ayatana-indicator-common ayatana-indicator-session ayatana-indicator-datetime ayatana-indicator-sound ayatana-indicator-messages ayatana-settings ayatana-indicator-notifications ayatana-webmail mate-applets vala-panel-appmenu
+```
 
 # Copyright
 These icons will maintain their original upstream licenses being:
 
- * GPL v2 for Humanity Icons
-   * Canonical Ltd.
-   * Daniel Foré
+ * CC-BY-SA-3.0 for Ubuntu Mate Icons + Themes
    
- * GPL v3 for Ubuntu Mate Icons
+   * Canonical Ltd.
    * Martin Wimpress.
    * Jack Mohegan.
    * Michael Tunnell.
+   * Daniel Foré.
+   * Carlo Lobrano
+   * Didier Roche
+   * Frederik Feichtmeier
+   * Mads Rosendahl
+   * jaggers
    
    Note, these icons include the following licenses:
    
