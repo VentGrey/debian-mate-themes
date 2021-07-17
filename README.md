@@ -4,10 +4,10 @@
 # Prelude
 
 I shall not receive any credit for this because work isn't mine, I just
-grabbed the Ubuntu MATE themes & rebranded them to fit Debian 9 Stretch
+grabbed the Ubuntu MATE themes & rebranded them to fit Debian 11 Buster
 for personal use.
 
-Since Debian 9 does not have the Ubuntu Humanity Icons, I decided to
+Since Debian 11 does not have the Ubuntu Humanity Icons, I decided to
 package these icons with most of it's dependencies included & I'll 
 also try to include wallpapers & other UM stuff rebranded for Debian
 (As long as the license permits it)
@@ -17,16 +17,7 @@ If you want to cooperate you are free to.
 # Dependencies
 Ambiant Mate, Radiant Mate & Ambiant Mate Dark depend on `gtk 3.22`.
 
-
-# To Do List
-
-:heavy_check_mark: Finish adding base icons
-
-:heavy_check_mark: Recolor orange ubuntu icons
-
-:heavy_check_mark: Add Debian wallpapers
-
-- [] Add more mimetypes
+Yaru MATE needs Ambiant + Radiant MATE themes to be installed
 
 # Copyright
 These icons will maintain their original upstream licenses being:
@@ -56,6 +47,7 @@ These icons will maintain their original upstream licenses being:
    * **GPL-2+**
    
    
+
 **NEW!** Added Humanity Colors from @Ravefinity
 
 A big thanks to the people who is making this possible:
