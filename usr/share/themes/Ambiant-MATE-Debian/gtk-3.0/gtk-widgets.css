@@ -283,26 +283,6 @@ button:checked:disabled:backdrop {
 }
 */
 
-button.destructive-action {
-    background-image: linear-gradient(to bottom, #e03d3d, #ef2929);
-    border-color: #8e0b0b;
-    border-image: none;
-    color: white;
-    -gtk-icon-shadow: 0 1px shade(#9d4242, 1.15);
-    outline-color: rgba(255, 255, 255, 0.3);
-    text-shadow: 0 1px shade(#9d4242, 1.15);
-}
-
-button.suggested-action {
-    background-image: linear-gradient(to bottom, #6699CC, #5C83AA);
-    border-color: #055200;
-    border-image: none;
-    color: white;
-    -gtk-icon-shadow: 0 1px shade(#9d4242, 1.15);
-    outline-color: rgba(255, 255, 255, 0.3);
-    text-shadow: 0 1px shade(#4F9D42, 1.15);
-}
-
 /* eg. mate-appearance-properties */
 button.link.flat.text-button:focus {
     outline-style: dashed;
@@ -555,8 +535,8 @@ radio:disabled {
 check,
 radio {
 	padding: 0px 6px 0px 0px;
-	min-height: 12px;
-	min-width: 12px;
+	min-height: 16px;
+	min-width: 16px;
 }
 
 checkbutton:hover,
@@ -1134,7 +1114,7 @@ menu,
     border-left-color: shade (@dark_bg_color, 0.8);
     border-right-color: shade (@dark_bg_color, 0.8);
     border-top-color: shade (@dark_bg_color, 0.96);
-    padding: 0;
+    padding: 3px 0;
     border-width: 1px;
     border-style: solid;
 
@@ -1225,7 +1205,7 @@ menubar > menuitem,
 menu > menuitem {
     background: transparent;
     border-radius: 0;
-    padding: 4px 5px 4px 5px;
+    padding: 3px 5px 3px 5px;
     text-shadow: none;
 }
 
@@ -1238,6 +1218,7 @@ menu > menuitem {
     color: @dark_fg_color;
 }
 
+.primary-toolbar:not(.libreoffice-toolbar) menu menuitem:hover,
 popover menuitem:checked:hover,
 menuitem:hover,
 menu menuitem:hover,
@@ -1386,8 +1367,9 @@ menu separator,
 .menu separator,
 menuitem separator {
     min-height: 1px;
-    background-color: shade(@fg_color, 0.7);
+    background: shade(@dark_bg_color, 1);
     border-style: none;
+    margin: 3px 0;
 }
 
 /* fix for broken firefox */
@@ -1543,7 +1525,7 @@ notebook header tab {
     background-color: transparent;
     background-image: linear-gradient(to bottom,
                       @notebook_tab_gradient_a,
-                      @notebook_tab_gradient_d);
+                      @notebook_tab_gradient_c);
     padding: 6px;
 }
 
@@ -3347,6 +3329,10 @@ toolbar:backdrop {
     color: @backdrop_fg_color;
 }
 
+toolbar separator {
+    margin: 0 4px;
+}
+
 /*******************
  * primary-toolbar *
  *******************/
@@ -3720,6 +3706,13 @@ treeview entry {
 treeview,
 treeview.view {
 	outline-color: alpha(currentColor, 0.6);
+}
+
+treeview header button {
+	background: linear-gradient(to bottom,
+			shade(@bg_color, 1.04),
+			shade(@bg_color, 1.02));
+	padding: 4px 4px;
 }
 
 /* ie. ubiquity */

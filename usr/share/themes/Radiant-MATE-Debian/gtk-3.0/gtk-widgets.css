@@ -283,26 +283,6 @@ button:checked:disabled:backdrop {
 }
 */
 
-button.destructive-action {
-    background-image: linear-gradient(to bottom, #e03d3d, #ef2929);
-    border-color: #8e0b0b;
-    border-image: none;
-    color: white;
-    -gtk-icon-shadow: 0 1px shade(#9d4242, 1.15);
-    outline-color: rgba(255, 255, 255, 0.3);
-    text-shadow: 0 1px shade(#9d4242, 1.15);
-}
-
-button.suggested-action {
-    background-image: linear-gradient(to bottom, #6699CC, #5C83AA);
-    border-color: #055200;
-    border-image: none;
-    color: white;
-    -gtk-icon-shadow: 0 1px shade(#9d4242, 1.15);
-    outline-color: rgba(255, 255, 255, 0.3);
-    text-shadow: 0 1px shade(#4F9D42, 1.15);
-}
-
 /* eg. mate-appearance-properties */
 button.link.flat.text-button:focus {
     outline-style: dashed;
@@ -560,8 +540,8 @@ radio:disabled {
 check,
 radio {
 	padding: 0px 6px 0px 0px;
-	min-height: 12px;
-	min-width: 12px;
+	min-height: 16px;
+	min-width: 16px;
 }
 
 checkbutton:hover,
@@ -1140,7 +1120,7 @@ menu,
     border-left-color: shade (@dark_bg_color, 0.8);
     border-right-color: shade (@dark_bg_color, 0.8);
     border-top-color: shade (@dark_bg_color, 0.96);
-    padding: 0;
+    padding: 3px 0;
     border-width: 1px;
     border-style: solid;
 
@@ -1249,7 +1229,7 @@ menubar > menuitem,
 menu > menuitem {
     background: transparent;
     border-radius: 0;
-    padding: 4px 5px 4px 5px;
+    padding: 3px 5px 3px 5px;
     text-shadow: none;
 }
 
@@ -1262,6 +1242,7 @@ combobox menuitem *:hover {
     color: @selected_fg_color;
 }
 
+.primary-toolbar:not(.libreoffice-toolbar) menu menuitem:hover,
 popover menuitem:checked:hover,
 menuitem:hover,
 menu menuitem:hover,
@@ -1406,8 +1387,9 @@ menu separator,
 .menu separator,
 menuitem separator {
     min-height: 1px;
-    background-color: shade(@bg_color, 0.9);
+    background: shade(@bg_color, 0.9);
     border-style: none;
+    margin: 3px 0;
 }
 
 /* fix for broken firefox */
@@ -1563,7 +1545,7 @@ notebook header tab {
     background-color: transparent;
     background-image: linear-gradient(to bottom,
                       @notebook_tab_gradient_a,
-                      @notebook_tab_gradient_d);
+                      @notebook_tab_gradient_c);
     padding: 6px;
 }
 
@@ -3336,6 +3318,10 @@ toolbar:backdrop {
     color: @backdrop_fg_color;
 }
 
+toolbar separator {
+    margin: 0 4px;
+}
+
 /*******************
  * primary-toolbar *
  *******************/
@@ -3689,6 +3675,13 @@ treeview entry {
 treeview,
 treeview.view {
 	outline-color: alpha(currentColor, 0.6);
+}
+
+treeview header button {
+	background: linear-gradient(to bottom,
+			shade(@bg_color, 1.04),
+			shade(@bg_color, 1.02));
+	padding: 4px 4px;
 }
 
 /* ie. ubiquity */
@@ -4205,7 +4198,9 @@ modelbutton.flat:backdrop:hover {
 }
 
 modelbutton.flat:hover,
-modelbutton.flat:backdrop:hover {
+modelbutton.flat:backdrop:hover,
+.linked button.image-button.model:hover,
+.linked button.image-button.model:backdrop:hover {
     background-image: -gtk-gradient (linear, left top, left bottom,
                                      from (shade (@selected_bg_color, 1.1)),
                                      to (shade (@selected_bg_color, 0.9)));
@@ -4248,8 +4243,8 @@ modelbutton.flat *:disabled {
 .linked button.image-button.model:last-child,
 .linked button.image-button.model:focus:last-child {
     border-color: transparent;
-    box-shadow: none;
     border-radius: 6px;
+    border-image: none;
 }
 
 /* middle button*/
@@ -4259,8 +4254,21 @@ modelbutton.flat *:disabled {
 .linked button.image-button.model:hover:active,
 .linked button.image-button.model:checked:hover,
 .linked button.image-button.model:checked:hover:active {
-    border-left-width: 0px;
     border-radius: 0;
+    border-width: 1px 1px 1px 0px;
+    box-shadow: inset 0 1px shade (@theme_bg_color, 0.75),
+                inset 0 -1px shade (@theme_bg_color, 0.75),
+                inset -1px 0 shade (@theme_bg_color, 0.75);
+}
+
+.linked button.image-button.model:checked,
+.linked button.image-button.model:hover,
+.linked button.image-button.model:hover:active,
+.linked button.image-button.model:checked:hover,
+.linked button.image-button.model:checked:hover:active {
+    box-shadow: inset 0 1px shade (@selected_bg_color, 1.08),
+                inset 0 -1px shade (@selected_bg_color, 1.0),
+                inset -1px 0 shade (@selected_bg_color, 1.05);
 }
 
 /* left button*/
@@ -4271,16 +4279,22 @@ modelbutton.flat *:disabled {
 .linked button.image-button.model:checked:hover:first-child,
 .linked button.image-button.model:checked:hover:active:first-child {
     border-radius: 6px 0 0 6px;
-    box-shadow: inset -1px  0px shade (@theme_bg_color, 0.75);
+    border-width: 1px;
+    box-shadow: inset 0 1px shade (@theme_bg_color, 0.75), /*top*/
+                inset 0 -1px shade (@theme_bg_color, 0.75), /*bottom*/
+                inset -1px 0 shade (@theme_bg_color, 0.75), /*right*/
+                inset 1px 0 shade (@theme_bg_color, 0.75); /* left */
 }
 
-.linked button.image-button.model:focus:first-child,
 .linked button.image-button.model:checked:first-child,
 .linked button.image-button.model:hover:first-child,
 .linked button.image-button.model:hover:active:first-child,
 .linked button.image-button.model:checked:hover:first-child,
 .linked button.image-button.model:checked:hover:active:first-child {
-    box-shadow: inset -1px 0 shade (@selected_bg_color, 1.02);
+    box-shadow: inset 0 1px shade (@selected_bg_color, 1.08),
+                inset 0 -1px shade (@selected_bg_color, 1.0),
+                inset -1px 0 shade (@selected_bg_color, 1.05),
+                inset 1px 0 shade (@selected_bg_color, 1.05);
 }
 
 /* right button*/
@@ -4290,8 +4304,21 @@ modelbutton.flat *:disabled {
 .linked button.image-button.model:hover:active:last-child,
 .linked button.image-button.model:checked:hover:last-child,
 .linked button.image-button.model:checked:hover:active:last-child {
-    border-left-width:  0px;
     border-radius: 0 6px 6px 0;
+    border-width: 1px 1px 1px 0px;
+    box-shadow: inset 0 1px shade (@theme_bg_color, 0.75),
+                inset 0 -1px shade (@theme_bg_color, 0.75),
+                inset -1px 0 shade (@theme_bg_color, 0.75);
+}
+
+.linked button.image-button.model:checked:last-child,
+.linked button.image-button.model:hover:last-child,
+.linked button.image-button.model:hover:active:last-child,
+.linked button.image-button.model:checked:hover:last-child,
+.linked button.image-button.model:checked:hover:active:last-child {
+    box-shadow: inset 0 1px shade (@selected_bg_color, 1.08),
+                inset 0 -1px shade (@selected_bg_color, 1.0),
+                inset -1px 0 shade (@selected_bg_color, 1.05);
 }
 
 /* Floating bars */
