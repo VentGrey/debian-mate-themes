@@ -19,7 +19,7 @@ If you want to cooperate you are free to.
 - [ ] Create an installation script / instructions.
 - [ ] Replace remaining Ubuntu Mate branded icons
     - [ ] Yaru Desktop icon
-    - [ ] `start-here` icon
+    - [x] `start-here` icon
 - [ ] Add Ubuntu MATE panel layouts
 
 
@@ -83,6 +83,12 @@ A big thanks to the people who is making this possible:
     * Jennie Petoumenou
     * Jonian Guveli <jonian.guveli@gmail.com>
     * K.Vishnoo Charan Reddy<foo.mac.v@gmail.com>
+
+- CC BY-SA/GPL3 © 2018-2020 [Yaru Icons](https://github.com/ubuntu/yaru) by Ubuntu developers.
+- CC BY-SA/GPL3 © 2018-2020 [Suru Icons](https://github.com/snwh/suru-icon-theme) by [Sam Hewitt](https://github.com/snwh).
+- LGPL3/CC-BY-SA © [Adwaita Icons](https://github.com/GNOME/adwaita-icon-theme) by 2019-2020 GNOME Project
+- GPL3 © [Papirus](https://github.com/PapirusDevelopmentTeam/) by [Alexey Varfolomeev](https://github.com/varlesh).
+- GPL3 © 2019-2020 Yaru++ by Andrea Bonanni and Gustavo Costa.
 
 GNOME icons and Humanity icons are all licensed under the GPL.
 
