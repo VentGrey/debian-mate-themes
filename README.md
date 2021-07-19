@@ -15,13 +15,8 @@ Since Debian 11 does not have the Ubuntu Humanity Icons, I decided to package th
 If you want to cooperate you are free to.
 
 # TODO List (Improvements)
-- [ ] Create a `debian/` directory for debian packaging.
-- [ ] Create an installation script / instructions.
-- [ ] Replace remaining Ubuntu Mate branded icons
-    - [ ] Yaru Desktop icon
-    - [x] `start-here` icon
-- [ ] Add Ubuntu MATE panel layouts
 
+Read the [issues tab](https://github.com/VentGrey/debian-mate-themes/issues)
 
 # Dependencies
 Most dependencies are already included, like Humanity Icon Theme + Ravefinity addons.
