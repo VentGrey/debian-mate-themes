@@ -5,4 +5,4 @@ ModuleName=script
 
 [script]
 ImageDir=/usr/share/plymouth/themes/debian-mate-logo
-ScriptFile=/usr/share/plymouth/themes/debian-mate-logo/ubuntu-mate-logo.script
+ScriptFile=/usr/share/plymouth/themes/debian-mate-logo/debian-mate-logo.script
