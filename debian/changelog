@@ -2,4 +2,4 @@ debian-mate-theme-pack (1.4.2) bookworm; urgency=medium
 
   * Add debian packaging and fixed plymouth script path
 
- -- John Faulk <johnny.faulk00@yahoo.com@>  Sun, 14 Apr 2024 19:20:24 -500
+ -- John Faulk <johnny.faulk00@yahoo.com>  Sun, 14 Apr 2024 19:20:24 -500
