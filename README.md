@@ -41,7 +41,7 @@ These icons will maintain their original upstream licenses being:
    * Martin Wimpress.
    * Jack Mohegan.
    * Michael Tunnell.
-   * Daniel Foré.
+   * Danielle Foré.
    * Carlo Lobrano
    * Didier Roche
    * Frederik Feichtmeier
@@ -71,7 +71,7 @@ A big thanks to the people who is making this possible:
 
 * @flexiondotorg (Martin Wimpress)
 * @Raveit65
-* @danrabbit (Dabien Foré)
+* @danrabbit (Danielle Foré)
 
 - Ravefinity Icons
     * Jared sot <ravefinity@gmail.com>
