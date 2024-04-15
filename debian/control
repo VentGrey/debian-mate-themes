@@ -1,0 +1,12 @@
+Source: debian-mate-theme-pack
+Section: gnome
+Priority: optional
+Maintainer: Foo Bar <foo@foo.com>
+Build-Depends: debhelper (>= 9)
+Standards-Version: 3.9.5
+
+Package: debian-mate-theme-pack
+Architecture: all
+Description: Debian MATE Theme
+A Debian Remake of the Ubuntu MATE theme,including its various components
+such as humanity icons, wallpapers, etc. 
