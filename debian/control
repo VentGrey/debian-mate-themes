@@ -8,5 +8,6 @@ Standards-Version: 3.9.5
 Package: debian-mate-theme-pack
 Architecture: all
 Description: Debian MATE Theme
-A Debian Remake of the Ubuntu MATE theme,including its various components
-such as humanity icons, wallpapers, etc. 
+ A Debian Remake of the Ubuntu MATE theme,
+ including its various components such as 
+ humanity icons, wallpapers, etc 
